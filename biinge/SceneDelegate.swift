@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  biinge
+//  Biinge
 //
 //  Created by Matthew Christopher Albert on 07/04/22.
 //

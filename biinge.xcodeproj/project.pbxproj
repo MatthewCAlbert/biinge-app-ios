@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C97D10427FE09D6005989A7 /* biinge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = biinge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C97D10427FE09D6005989A7 /* Biinge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biinge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97D10727FE09D6005989A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97D10927FE09D6005989A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C97D10B27FE09D6005989A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			children = (
 				4C97D11D27FE0ADB005989A7 /* README.md */,
 				4C97D11B27FE0A67005989A7 /* .gitignore */,
-				4C97D10627FE09D6005989A7 /* biinge */,
+				4C97D10627FE09D6005989A7 /* Biinge */,
 				4C97D10527FE09D6005989A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 		4C97D10527FE09D6005989A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C97D10427FE09D6005989A7 /* biinge.app */,
+				4C97D10427FE09D6005989A7 /* Biinge.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C97D10627FE09D6005989A7 /* biinge */ = {
+		4C97D10627FE09D6005989A7 /* Biinge */ = {
 			isa = PBXGroup;
 			children = (
 				4C97D12627FE80D4005989A7 /* Data */,
@@ -72,7 +72,7 @@
 				4C97D11227FE09D8005989A7 /* LaunchScreen.storyboard */,
 				4C97D11527FE09D8005989A7 /* Info.plist */,
 			);
-			path = biinge;
+			path = Biinge;
 			sourceTree = "<group>";
 		};
 		4C97D12027FE75B6005989A7 /* Workers */ = {
@@ -124,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C97D10327FE09D6005989A7 /* biinge */ = {
+		4C97D10327FE09D6005989A7 /* Biinge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C97D11827FE09D8005989A7 /* Build configuration list for PBXNativeTarget "biinge" */;
+			buildConfigurationList = 4C97D11827FE09D8005989A7 /* Build configuration list for PBXNativeTarget "Biinge" */;
 			buildPhases = (
 				4C97D10027FE09D6005989A7 /* Sources */,
 				4C97D10127FE09D6005989A7 /* Frameworks */,
@@ -136,9 +136,9 @@
 			);
 			dependencies = (
 			);
-			name = biinge;
-			productName = biinge;
-			productReference = 4C97D10427FE09D6005989A7 /* biinge.app */;
+			name = Biinge;
+			productName = Biinge;
+			productReference = 4C97D10427FE09D6005989A7 /* Biinge.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C97D0FF27FE09D6005989A7 /* Build configuration list for PBXProject "biinge" */;
+			buildConfigurationList = 4C97D0FF27FE09D6005989A7 /* Build configuration list for PBXProject "Biinge" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C97D10327FE09D6005989A7 /* biinge */,
+				4C97D10327FE09D6005989A7 /* Biinge */,
 			);
 		};
 /* End PBXProject section */
@@ -336,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = biinge/Info.plist;
+				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -364,7 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = biinge/Info.plist;
+				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -387,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C97D0FF27FE09D6005989A7 /* Build configuration list for PBXProject "biinge" */ = {
+		4C97D0FF27FE09D6005989A7 /* Build configuration list for PBXProject "Biinge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C97D11627FE09D8005989A7 /* Debug */,
@@ -396,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C97D11827FE09D8005989A7 /* Build configuration list for PBXNativeTarget "biinge" */ = {
+		4C97D11827FE09D8005989A7 /* Build configuration list for PBXNativeTarget "Biinge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C97D11927FE09D8005989A7 /* Debug */,
