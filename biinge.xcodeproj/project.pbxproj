@@ -15,6 +15,12 @@
 		4C97D11C27FE0A67005989A7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D11B27FE0A67005989A7 /* .gitignore */; };
 		4C97D11E27FE0ADB005989A7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D11D27FE0ADB005989A7 /* README.md */; };
 		4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D12C27FE83FF005989A7 /* Home.storyboard */; };
+		A84375B327FF2F8600A95770 /* SetTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84375B227FF2F8600A95770 /* SetTimerViewController.swift */; };
+		A8CB7E0627FFE35F00741AFD /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8CB7E0227FFE35F00741AFD /* SFCompactDisplay-Regular.ttf */; };
+		A8CB7E0727FFE35F00741AFD /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8CB7E0327FFE35F00741AFD /* SFProDisplay-Bold.ttf */; };
+		A8CB7E0827FFE35F00741AFD /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8CB7E0427FFE35F00741AFD /* SFProDisplay-Semibold.ttf */; };
+		A8CB7E0927FFE35F00741AFD /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8CB7E0527FFE35F00741AFD /* SFProDisplay-Regular.ttf */; };
+		A8CB7E0A27FFE3FC00741AFD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D11527FE09D8005989A7 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,11 @@
 		4C97D11B27FE0A67005989A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4C97D11D27FE0ADB005989A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C97D12C27FE83FF005989A7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		A84375B227FF2F8600A95770 /* SetTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerViewController.swift; sourceTree = "<group>"; };
+		A8CB7E0227FFE35F00741AFD /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		A8CB7E0327FFE35F00741AFD /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		A8CB7E0427FFE35F00741AFD /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		A8CB7E0527FFE35F00741AFD /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 		4C97D10627FE09D6005989A7 /* biinge */ = {
 			isa = PBXGroup;
 			children = (
+				A8CB7E0027FFDEF700741AFD /* Resources */,
 				4C97D12627FE80D4005989A7 /* Data */,
 				4C97D12927FE815D005989A7 /* Scenes */,
 				4C97D12027FE75B6005989A7 /* Workers */,
@@ -116,9 +128,29 @@
 			isa = PBXGroup;
 			children = (
 				4C97D10B27FE09D6005989A7 /* HomeViewController.swift */,
+				A84375B227FF2F8600A95770 /* SetTimerViewController.swift */,
 				4C97D12C27FE83FF005989A7 /* Home.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A8CB7E0027FFDEF700741AFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A8CB7E0127FFDF0E00741AFD /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A8CB7E0127FFDF0E00741AFD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A8CB7E0227FFE35F00741AFD /* SFCompactDisplay-Regular.ttf */,
+				A8CB7E0327FFE35F00741AFD /* SFProDisplay-Bold.ttf */,
+				A8CB7E0527FFE35F00741AFD /* SFProDisplay-Regular.ttf */,
+				A8CB7E0427FFE35F00741AFD /* SFProDisplay-Semibold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,11 +211,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CB7E0927FFE35F00741AFD /* SFProDisplay-Regular.ttf in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
+				A8CB7E0827FFE35F00741AFD /* SFProDisplay-Semibold.ttf in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
 				4C97D11127FE09D8005989A7 /* Assets.xcassets in Resources */,
+				A8CB7E0727FFE35F00741AFD /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
+				A8CB7E0A27FFE3FC00741AFD /* Info.plist in Resources */,
+				A8CB7E0627FFE35F00741AFD /* SFCompactDisplay-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +234,7 @@
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
+				A84375B327FF2F8600A95770 /* SetTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

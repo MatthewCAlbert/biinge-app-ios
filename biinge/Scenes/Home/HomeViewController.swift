@@ -9,16 +9,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var helloLbl: UILabel!
+    var watchLimit: String?
     
-    @IBAction func HelloButtonPressed(_ sender: UIButton) {
-        helloLbl.text = "Hello World"
-    }
+    @IBOutlet weak var hiUsernameLabel: UILabel!
+    @IBOutlet weak var homeMessageLabel: UILabel!
+    @IBOutlet weak var timerLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        timerLabel.setTitle(watchLimit, for: .normal)
     }
+    
 
+    @IBAction func startTimerPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func setTimerPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToSetTimer", sender: self)
+    }
+    
 }
 
