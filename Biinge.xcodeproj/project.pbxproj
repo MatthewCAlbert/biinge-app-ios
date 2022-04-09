@@ -19,6 +19,9 @@
 		4C97D11C27FE0A67005989A7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D11B27FE0A67005989A7 /* .gitignore */; };
 		4C97D11E27FE0ADB005989A7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D11D27FE0ADB005989A7 /* README.md */; };
 		4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D12C27FE83FF005989A7 /* Home.storyboard */; };
+		A84A1921280017D6003BB8F4 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */; };
+		A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A192528002B1E003BB8F4 /* DefaultReminderViewController.swift */; };
+		A84A192828002B45003BB8F4 /* DefaultReminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A84A192728002B45003BB8F4 /* DefaultReminder.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		4C97D11B27FE0A67005989A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4C97D11D27FE0ADB005989A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C97D12C27FE83FF005989A7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
+		A84A192528002B1E003BB8F4 /* DefaultReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultReminderViewController.swift; sourceTree = "<group>"; };
+		A84A192728002B45003BB8F4 /* DefaultReminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefaultReminder.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A84A1923280029D7003BB8F4 /* Onboarding */,
 				4C97D12B27FE827B005989A7 /* Home */,
 			);
 			path = Scenes;
@@ -143,10 +150,36 @@
 		4C97D12B27FE827B005989A7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4C97D10B27FE09D6005989A7 /* HomeViewController.swift */,
-				4C97D12C27FE83FF005989A7 /* Home.storyboard */,
+				A8898C632801560C003F62DA /* HomeSetUp */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A84A1923280029D7003BB8F4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A84A192428002ACF003BB8F4 /* DefaultReminder */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A84A192428002ACF003BB8F4 /* DefaultReminder */ = {
+			isa = PBXGroup;
+			children = (
+				A84A192528002B1E003BB8F4 /* DefaultReminderViewController.swift */,
+				A84A192728002B45003BB8F4 /* DefaultReminder.storyboard */,
+			);
+			path = DefaultReminder;
+			sourceTree = "<group>";
+		};
+		A8898C632801560C003F62DA /* HomeSetUp */ = {
+			isa = PBXGroup;
+			children = (
+				4C97D10B27FE09D6005989A7 /* HomeViewController.swift */,
+				A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */,
+				4C97D12C27FE83FF005989A7 /* Home.storyboard */,
+			);
+			path = HomeSetUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +246,7 @@
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
 				4C97D11127FE09D8005989A7 /* Assets.xcassets in Resources */,
+				A84A192828002B45003BB8F4 /* DefaultReminder.storyboard in Resources */,
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
@@ -226,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A84A1921280017D6003BB8F4 /* SetTimeViewController.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
+				A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 			);

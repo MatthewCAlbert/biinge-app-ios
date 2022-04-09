@@ -51,31 +51,3 @@ class SetTimeViewController: UIViewController {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-- -- --
-//    @IBAction func watchTimePickerSelected(_ sender: UIDatePicker) {
-//        let timeFormatter = DateFormatter()
-//        timeFormatter.timeStyle = DateFormatter.Style.short
-//        let strTime = timeFormatter.string(from: watchTimePicker.date)
-//        watchLimitPassed = strTime
-//
-//    }
