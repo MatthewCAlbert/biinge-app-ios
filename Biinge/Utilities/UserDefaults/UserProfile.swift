@@ -29,10 +29,6 @@ class UserProfile {
         
     }
     
-    static func getInstance() -> UserProfile {
-        return shared
-    }
-    
     var id: String? {
         get {
             return self._id

@@ -58,17 +58,16 @@ class Settings {
         
     }
     
-    static func getInstance() -> Settings {
-        return shared
-    }
-    
     var notificationType: NotificationType? {
         get {
             return self._notificationType
         }
         set(newValue) {
+            guard let notificationType = newValue else {
+                return
+            }
             self._notificationType = newValue
-            UserDefaults.standard.set(newValue, forKey: SettingType.notificationType.rawValue)
+            UserDefaults.standard.set(notificationType.rawValue, forKey: SettingType.notificationType.rawValue)
         }
     }
 
