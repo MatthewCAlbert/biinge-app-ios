@@ -11,6 +11,16 @@
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
 		4C60567627FFF4100022D107 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567227FFF4100022D107 /* SFProDisplay-Regular.ttf */; };
+		4C60567C280141F10022D107 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60567B280141F10022D107 /* Session.swift */; };
+		4C90F11A2801471900C9FF4F /* SeederCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F1192801471900C9FF4F /* SeederCoreDataStore.swift */; };
+		4C90F11E28014F2000C9FF4F /* PointHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F11D28014F2000C9FF4F /* PointHistory.swift */; };
+		4C90F1202801511300C9FF4F /* PreferencePreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F11F2801511300C9FF4F /* PreferencePreset.swift */; };
+		4C90F1232801523500C9FF4F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F1222801523500C9FF4F /* Settings.swift */; };
+		4C90F1252801528100C9FF4F /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F1242801528100C9FF4F /* SessionRepository.swift */; };
+		4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F1262801575400C9FF4F /* UserProfile.swift */; };
+		4C90F12928015E0300C9FF4F /* PointHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F12828015E0300C9FF4F /* PointHistoryRepository.swift */; };
+		4C90F12B28015E9100C9FF4F /* PreferencePresetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F12A28015E9100C9FF4F /* PreferencePresetRepository.swift */; };
+		4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C90F12C280165BC00C9FF4F /* AppColor.swift */; };
 		4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97D10727FE09D6005989A7 /* AppDelegate.swift */; };
 		4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97D10927FE09D6005989A7 /* SceneDelegate.swift */; };
 		4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97D10B27FE09D6005989A7 /* HomeViewController.swift */; };
@@ -26,6 +36,16 @@
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		4C60567227FFF4100022D107 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		4C60567B280141F10022D107 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		4C90F1192801471900C9FF4F /* SeederCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeederCoreDataStore.swift; sourceTree = "<group>"; };
+		4C90F11D28014F2000C9FF4F /* PointHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHistory.swift; sourceTree = "<group>"; };
+		4C90F11F2801511300C9FF4F /* PreferencePreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePreset.swift; sourceTree = "<group>"; };
+		4C90F1222801523500C9FF4F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4C90F1242801528100C9FF4F /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		4C90F1262801575400C9FF4F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		4C90F12828015E0300C9FF4F /* PointHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHistoryRepository.swift; sourceTree = "<group>"; };
+		4C90F12A28015E9100C9FF4F /* PreferencePresetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePresetRepository.swift; sourceTree = "<group>"; };
+		4C90F12C280165BC00C9FF4F /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		4C97D10427FE09D6005989A7 /* Biinge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biinge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C97D10727FE09D6005989A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C97D10927FE09D6005989A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,14 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C60566D27FFF3DA0022D107 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4C60566E27FFF3DF0022D107 /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,58 @@
 				4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4C6056772801400F0022D107 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				4C60566E27FFF3DF0022D107 /* Fonts */,
+				4C605679280140440022D107 /* UI */,
+				4C6056782801403C0022D107 /* Colors */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		4C6056782801403C0022D107 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				4C90F12C280165BC00C9FF4F /* AppColor.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		4C605679280140440022D107 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4C60567A280140680022D107 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4C60567B280141F10022D107 /* Session.swift */,
+				4C90F11D28014F2000C9FF4F /* PointHistory.swift */,
+				4C90F11F2801511300C9FF4F /* PreferencePreset.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		4C90F117280146FF00C9FF4F /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				4C90F1192801471900C9FF4F /* SeederCoreDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		4C90F1212801521B00C9FF4F /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				4C90F1222801523500C9FF4F /* Settings.swift */,
+				4C90F1262801575400C9FF4F /* UserProfile.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		4C97D0FB27FE09D6005989A7 = {
@@ -89,11 +153,11 @@
 		4C97D10627FE09D6005989A7 /* Biinge */ = {
 			isa = PBXGroup;
 			children = (
-				4C60566D27FFF3DA0022D107 /* Resources */,
+				4C6056772801400F0022D107 /* Themes */,
 				4C97D12627FE80D4005989A7 /* Data */,
 				4C97D12927FE815D005989A7 /* Scenes */,
 				4C97D12027FE75B6005989A7 /* Workers */,
-				4C97D12A27FE8175005989A7 /* Utils */,
+				4C97D12A27FE8175005989A7 /* Utilities */,
 				4C97D10727FE09D6005989A7 /* AppDelegate.swift */,
 				4C97D10927FE09D6005989A7 /* SceneDelegate.swift */,
 				4C97D11027FE09D8005989A7 /* Assets.xcassets */,
@@ -121,6 +185,10 @@
 		4C97D12827FE814E005989A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C90F117280146FF00C9FF4F /* DataStore */,
+				4C90F1242801528100C9FF4F /* SessionRepository.swift */,
+				4C90F12828015E0300C9FF4F /* PointHistoryRepository.swift */,
+				4C90F12A28015E9100C9FF4F /* PreferencePresetRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,11 +201,13 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		4C97D12A27FE8175005989A7 /* Utils */ = {
+		4C97D12A27FE8175005989A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4C90F1212801521B00C9FF4F /* UserDefaults */,
+				4C60567A280140680022D107 /* CoreData */,
 			);
-			path = Utils;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		4C97D12B27FE827B005989A7 /* Home */ = {
@@ -226,9 +296,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C90F11A2801471900C9FF4F /* SeederCoreDataStore.swift in Sources */,
+				4C90F11E28014F2000C9FF4F /* PointHistory.swift in Sources */,
+				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
+				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
+				4C60567C280141F10022D107 /* Session.swift in Sources */,
+				4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */,
+				4C90F12928015E0300C9FF4F /* PointHistoryRepository.swift in Sources */,
+				4C90F12B28015E9100C9FF4F /* PreferencePresetRepository.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
+				4C90F1252801528100C9FF4F /* SessionRepository.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
+				4C90F1202801511300C9FF4F /* PreferencePreset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
