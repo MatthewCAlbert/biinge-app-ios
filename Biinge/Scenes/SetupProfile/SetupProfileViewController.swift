@@ -59,9 +59,17 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     @IBAction func tapNext() {
         if let tf = userField.text {
             UserProfile.shared.username = tf
-            print(UserProfile.shared.username)
+            print("your set username:")
+            print(UserProfile.shared.username!)
         }
-        print("navigated")
+        print("navigate bro")
+//        let storyboard = UIStoryboard(name:"Home", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as UIViewController
+//        present(vc, animated: true, completion: nil)
+////        let vc = SecondViewController()
+//        let navVC = UINavigationController(rootViewController: vc)
+//        navVC.modalPresentationStyle = .fullScreen
+//        present(navVC, animated: true)
     }
 
     // edit profile button
@@ -108,20 +116,4 @@ extension SetupProfileViewController: UIImagePickerControllerDelegate, UINavigat
     }
 }
 
-extension UIColor {
-   convenience init(red: Int, green: Int, blue: Int) {
-       assert(red >= 0 && red <= 255, "Invalid red component")
-       assert(green >= 0 && green <= 255, "Invalid green component")
-       assert(blue >= 0 && blue <= 255, "Invalid blue component")
 
-       self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-   }
-
-   convenience init(rgb: Int) {
-       self.init(
-           red: (rgb >> 16) & 0xFF,
-           green: (rgb >> 8) & 0xFF,
-           blue: rgb & 0xFF
-       )
-   }
-}

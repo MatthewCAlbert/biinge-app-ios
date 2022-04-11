@@ -9,7 +9,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     var image: UIImage = UIImage(named: "setan.jpg")!
-
+    var _accomplish: Int = UserProfile.shared.accomplish
+    var _exceed: Int = UserProfile.shared.exceed
+    var _point: Int = UserProfile.shared.points
+    var _streak: Int = UserProfile.shared.streak
+    var _username: String = UserProfile.shared.username!
     
     @IBOutlet weak var rankImage: UIImageView!
     @IBOutlet weak var streakImage: UIImageView!
@@ -23,9 +27,22 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var infoStack: UIStackView!
     @IBOutlet weak var infoStack2: UIStackView!
+    
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var accomLabel: UILabel!
+    @IBOutlet weak var exceedLabel: UILabel!
+    @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var streakLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserProfile.shared.accomplish = _accomplish + 1
+        accomLabel.text = "\(_accomplish)/\(_accomplish+_exceed)"
+        exceedLabel.text = "\(_exceed)/\(_accomplish+_exceed)"
+        pointLabel.text = "\(_point) Points"
+        streakLabel.text = "\(_streak) streaks in a row"
+        userLabel.text = _username
         rankImage.image = UIImage(named:"piala.png")
         streakImage.image = UIImage(named:"api.png")
         watchImage.image = UIImage(named:"popcorn.png")
@@ -43,13 +60,6 @@ class ProfileViewController: UIViewController {
         profileImage.layer.borderColor = UIColor(rgb: 0x8D8D92).cgColor
         profileImage.layer.cornerRadius = profileImage.frame.size.width/2
         profileImage.clipsToBounds = true
-        
-//        let cp = CircularProgressView(frame: CGRect(x: 10.0, y:10.0, width: 100.0, height: 100.0))
-////        cp.trackColor = UIColor.red
-////        cp.progressColor = UIColor.yellow
-//        self.view.addSubview(cp)
-
-        // Do any additional setup after loading the view.
     }
     
     func setView(view: UIView){
@@ -72,3 +82,5 @@ class ProfileViewController: UIViewController {
     */
 
 }
+
+

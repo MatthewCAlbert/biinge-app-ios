@@ -192,7 +192,7 @@
                                         <color key="textColor" red="1" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO3-gs-9Gs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO3-gs-9Gs">
                                         <rect key="frame" x="122" y="65" width="79" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -260,14 +260,20 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="accomLabel" destination="UON-mg-PFW" id="nAG-eP-4cQ"/>
+                        <outlet property="circleProgress" destination="6eF-oh-Jcy" id="MUl-0z-ojO"/>
+                        <outlet property="exceedLabel" destination="BNx-Rj-C7a" id="JS4-vw-C7e"/>
                         <outlet property="infoStack" destination="Pg1-lE-Bh5" id="cdV-4t-yJW"/>
                         <outlet property="infoStack2" destination="xAk-ZD-z7C" id="Ftx-Td-Zcd"/>
                         <outlet property="infoView" destination="UFY-It-i77" id="oVQ-Hc-tBl"/>
                         <outlet property="infoView2" destination="Gsx-HQ-EmY" id="yUf-HQ-uq4"/>
+                        <outlet property="pointLabel" destination="k2f-yt-e5U" id="f8l-Dd-zfI"/>
                         <outlet property="profileImage" destination="vIT-Pv-44k" id="5hD-6K-hPc"/>
                         <outlet property="profileView" destination="q6z-w5-KmT" id="d3q-bH-tHt"/>
                         <outlet property="rankImage" destination="rve-c8-h3M" id="UBz-ER-qiA"/>
                         <outlet property="streakImage" destination="j3Z-xT-zG9" id="UGr-MW-8T2"/>
+                        <outlet property="streakLabel" destination="OGc-Vz-xCG" id="sV9-sV-ypb"/>
+                        <outlet property="userLabel" destination="YO3-gs-9Gs" id="nHu-RV-ZVF"/>
                         <outlet property="watchImage" destination="DYM-sA-CKc" id="zNa-hN-Wn0"/>
                     </connections>
                 </viewController>
