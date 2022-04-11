@@ -28,9 +28,6 @@ class SessionHelper {
     }
     
     private func abort() {
-        // Cancel AV
-        AVHelper.shared.end()
-        
         // Cancel Timer
         // TODO: Cancel timer here
         
@@ -78,8 +75,6 @@ class SessionHelper {
                 throw error
             }
         }
-        
-        AVHelper.shared.start()
     }
     
     func end() throws {
@@ -101,7 +96,6 @@ class SessionHelper {
             self.abort()
             throw error
         }
-        AVHelper.shared.end()
     }
     
     func getDayTotalTimeInMinute(_ date: Date = Date()) -> Int {
