@@ -7,24 +7,24 @@
 
 import Foundation
 
-struct PointReward {
-    static let success = 10
-    static let failed = 0
-}
-
 // Will also function as timer facade
 class SessionHelper {
     
     static let shared = SessionHelper()
     let sessionRepository = SessionRepository.shared
-    let pointHistoryRepository = PointHistoryRepository.shared
     
     let currentSessionPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
         NSPredicate(format: "end == nil"),
         NSPredicate(format: "appSession == %@", Settings.shared.currentSessionStart as NSDate)
     ])
+    let calendar: Calendar
     
     private init() {
+        // Get the current calendar with local time zone
+        var calendar = Calendar.current
+        calendar.timeZone = NSTimeZone.local
+        
+        self.calendar = calendar
     }
     
     private func abort() {
@@ -94,13 +94,7 @@ class SessionHelper {
             let session = try self.sessionRepository.update(found)
             if let obey = session.isObey() {
                 if obey {
-                    let newHistory = PointHistory()
-                    newHistory.amount = Int32(PointReward.success)
-                    newHistory.createdAt = Date()
-                    newHistory.action = PointActionType.restSuccess
-                    
-                    _ = try pointHistoryRepository.create(newHistory)
-                    UserProfile.shared.addPoints(PointReward.success)
+                    try PointHelper.shared.addPoints(action: PointActionType.restSuccess)
                 }
             }
         } catch let error{
@@ -111,10 +105,6 @@ class SessionHelper {
     }
     
     func getDayTotalTimeInMinute(_ date: Date = Date()) -> Int {
-        // Get the current calendar with local time zone
-        var calendar = Calendar.current
-        calendar.timeZone = NSTimeZone.local
-
         // Get today's beginning & end
         let dateFrom = calendar.startOfDay(for: date)
         let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
@@ -132,6 +122,31 @@ class SessionHelper {
         } catch {
             return 0
         }
+    }
+    
+    func isDayUnderLimit(_ date: Date = Date()) -> Bool {
+        let dateTotal = self.getDayTotalTimeInMinute(date)
+        return dateTotal <= Settings.shared.targetMaxDailySessionInMinute
+    }
+    
+    // MARK: Only invoke on streak adding
+    private func evaluateDay(_ date: Date = Date()) {
+        let dateFrom = calendar.startOfDay(for: date)
+        let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
+        if (date as NSDate).isLessThanDate(dateToCompare: dateTo! as NSDate) {
+            print("Cannot evaluate non-passed day")
+            return
+        }
+        
+        if self.isDayUnderLimit(date) {
+            do {
+                try PointHelper.shared.addPoints(action: PointActionType.dailyTargetSuccess)
+            } catch {
+                
+            }
+        }
+        
+        // TODO: if failed target
     }
     
     // TODO: Count here
