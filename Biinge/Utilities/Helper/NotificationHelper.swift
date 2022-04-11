@@ -12,13 +12,11 @@ import UserNotifications
 // TODO: Create Notif Category & Actions
 struct Notification {
     struct Category {
-        static let tutorial = "tutorial"
+        static let session = "session"
     }
     
     struct Action {
-        static let readLater = "readLater"
-        static let showDetails = "showDetails"
-        static let unsubscribe = "unsubscribe"
+        static let goToHome = "goToHome"
     }
 }
 
@@ -36,20 +34,19 @@ class NotificationHelper: NSObject {
         configureUserNotificationsCenter()
     }
     
-    // TODO: Create Notif Category & Actions
     private func configureUserNotificationsCenter() {
         notificationCenter.delegate = self
         
         // Define Actions
-        let actionReadLater = UNNotificationAction(identifier: Notification.Action.readLater, title: "Read Later", options: [])
-        let actionShowDetails = UNNotificationAction(identifier: Notification.Action.showDetails, title: "Show Details", options: [.foreground])
-        let actionUnsubscribe = UNNotificationAction(identifier: Notification.Action.unsubscribe, title: "Unsubscribe", options: [.destructive, .authenticationRequired])
+        let actionGoToHome = UNNotificationAction(identifier: Notification.Action.goToHome, title: "Go to Home", options: [])
+//        let actionShowDetails = UNNotificationAction(identifier: Notification.Action.showDetails, title: "Show Details", options: [.foreground])
+//        let actionUnsubscribe = UNNotificationAction(identifier: Notification.Action.unsubscribe, title: "Unsubscribe", options: [.destructive, .authenticationRequired])
         
         // Define Category
-        let tutorialCategory = UNNotificationCategory(identifier: Notification.Category.tutorial, actions: [actionReadLater, actionShowDetails, actionUnsubscribe], intentIdentifiers: [], options: [])
+        let sessionCategory = UNNotificationCategory(identifier: Notification.Category.session, actions: [actionGoToHome], intentIdentifiers: [], options: [])
         
         // Register Category
-        notificationCenter.setNotificationCategories([tutorialCategory])
+        notificationCenter.setNotificationCategories([sessionCategory])
     }
     
     func requestAuthorization(completionHandler: @escaping (_ success: Bool) -> ()) {
@@ -84,14 +81,13 @@ class NotificationHelper: NSObject {
         }
     }
     
-    // TODO: Modify to enable multiple category & customized props, probably add another function extension
-    func requestNotification(title: String, body: String, sound: UNNotificationSound, badge: Int, notificationType: NotificationType) {
+    func requestNotification(title: String, body: String, sound: UNNotificationSound, badge: Int, notificationType: NotificationType, category: String = Notification.Category.session) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
         content.sound = sound
         content.badge = NSNumber(value: badge)
-        content.categoryIdentifier = Notification.Category.tutorial
+        content.categoryIdentifier = category
         let identifier = notificationType
         var request = UNNotificationRequest(identifier: notificationType.rawValue, content: content, trigger: nil)
         if notificationType == NotificationType.Local {
@@ -103,18 +99,7 @@ class NotificationHelper: NSObject {
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
             request = UNNotificationRequest(identifier: identifier.rawValue, content: content, trigger: trigger)
         } else {
-            // TODO: Remove this later (unused and no resource here)
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-            if let url = Bundle.main.url(forResource: "octo",
-                                         withExtension: "png") {
-                if let attachment = try? UNNotificationAttachment(identifier: identifier.rawValue,
-                                                                  url: url,
-                                                                  options: nil)
-                {
-                    content.attachments = [attachment]
-                }
-            }
-            request = UNNotificationRequest(identifier: identifier.rawValue, content: content, trigger: trigger)
+            return
         }
         
         self.notificationCenter.add(request) { (error) in
@@ -124,6 +109,10 @@ class NotificationHelper: NSObject {
                 print("Notif dispatched")
             }
         }
+    }
+    
+    func cancelAllScheduledNotification() {
+        self.notificationCenter.removeAllPendingNotificationRequests()
     }
     
     // MARK: Example Only
@@ -157,12 +146,8 @@ extension NotificationHelper: UNUserNotificationCenterDelegate {
         let category = response.notification.request.content.categoryIdentifier
         print(category)
         switch response.actionIdentifier {
-        case Notification.Action.readLater:
-            print("Save Tutorial For Later")
-        case Notification.Action.unsubscribe:
-            print("Unsubscribe Reader")
-        default:
-            print("Show Details")
+            default:
+                print("Go To Home")
         }
         completionHandler()
     }

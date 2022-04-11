@@ -19,12 +19,19 @@ class TestViewController: UIViewController {
         Task {
             await self.printStatus()
         }
+        
+        // TODO: Remove this later
+        AVHelper.shared.start()
     }
     
     private func printStatus() async {
         let result: UNNotificationSettings = await NotificationHelper.shared.notificationCenter.notificationSettings()
         switch result.authorizationStatus {
         case .notDetermined:
+            NotificationHelper.shared.requestAuthorization(completionHandler: { (success) in
+                guard success else { return }
+                print("The application is allowed to display notifications")
+            })
             self.statusLbl.text = "Not Determined"
         case .authorized:
             self.statusLbl.text = "Authorized"
@@ -45,7 +52,14 @@ class TestViewController: UIViewController {
     }
     
     @IBAction func TriggerNormalNotif(_ sender: UIButton) {
-        NotificationHelper.shared.requestNotification(title: NotificationType.Local.rawValue, body: "This is example how to create " + "\(NotificationType.Local) Notifications", sound: .default, badge: 1, notificationType: .Local)
+        NotificationHelper.shared.requestNotification(
+            title: NotificationType.Local.rawValue,
+            body: "This is example how to create " + "\(NotificationType.Local) Notifications",
+            sound: .default,
+            badge: 1,
+            notificationType: .Local,
+            category: Notification.Category.session
+        )
     }
 
     @IBAction func TriggerCallNotif(_ sender: UIButton) {

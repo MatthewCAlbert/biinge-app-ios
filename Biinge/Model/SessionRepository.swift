@@ -117,5 +117,28 @@ class SessionRepository {
             throw error
         }
     }
+
+    func deleteOne(_ entity: Session) throws -> Bool {
+        guard let id = entity.id else { throw CoreDataError.coreDataEntryNotFound }
+        let result = self.repository.get(predicate: NSPredicate(format: "id == %@", id), sortDescriptors: nil)
+        switch result {
+        case .success(let sessions):
+            if sessions.isEmpty {
+                throw CoreDataError.coreDataEntryNotFound
+            }
+            
+            let session = sessions.first
+            
+            let deleteResult = self.repository.deleteOne(entity: session!)
+            switch deleteResult {
+                case .success(_):
+                    return true
+                case .failure(_):
+                    return false
+            }
+        case .failure(let error):
+            throw error
+        }
+    }
     
 }

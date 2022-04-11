@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
+		4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFB2804278200D788DA /* SessionHelper.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -43,6 +44,7 @@
 		4CAF32422803CC5600E58F89 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF32412803CC5600E58F89 /* Test.storyboard */; };
 		4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32432803CC6700E58F89 /* TestViewController.swift */; };
 		4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */; };
+		4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF324828041D0B00E58F89 /* AVHelper.swift */; };
 		A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C9072802D14700C0E5B5 /* InfoViewController.swift */; };
 		A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */; };
 		A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A843C90C28037DE600C0E5B5 /* TabBar.storyboard */; };
@@ -54,6 +56,7 @@
 /* Begin PBXFileReference section */
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		4C123DFB2804278200D788DA /* SessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		4CAF32412803CC5600E58F89 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		4CAF32432803CC6700E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		4CAF324828041D0B00E58F89 /* AVHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVHelper.swift; sourceTree = "<group>"; };
 		A843C9072802D14700C0E5B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A843C90C28037DE600C0E5B5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */,
+				4CAF324828041D0B00E58F89 /* AVHelper.swift */,
+				4C123DFB2804278200D788DA /* SessionHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -434,10 +440,12 @@
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
+				4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */,
 				4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
 				4CAF32312803261B00E58F89 /* CDSession+CoreDataClass.swift in Sources */,
 				4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */,
+				4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
@@ -497,6 +505,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				"DEVELOPMENT_TEAM[sdk=*]" = GXV96JYG87;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -584,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C77567662R;
+				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
@@ -613,7 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C77567662R;
+				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
