@@ -40,8 +40,9 @@
 		4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323528033C3500E58F89 /* PointHistory.swift */; };
 		4CAF323828033C4B00E58F89 /* PreferencePreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323728033C4B00E58F89 /* PreferencePreset.swift */; };
 		4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323928033DFB00E58F89 /* PreferencePresetRepository.swift */; };
-		4CAF323F2803C81200E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323D2803C81200E58F89 /* TestViewController.swift */; };
-		4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF323E2803C81200E58F89 /* TestViewController.xib */; };
+		4CAF32422803CC5600E58F89 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF32412803CC5600E58F89 /* Test.storyboard */; };
+		4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32432803CC6700E58F89 /* TestViewController.swift */; };
+		4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */; };
 		A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C9072802D14700C0E5B5 /* InfoViewController.swift */; };
 		A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */; };
 		A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A843C90C28037DE600C0E5B5 /* TabBar.storyboard */; };
@@ -86,8 +87,9 @@
 		4CAF323528033C3500E58F89 /* PointHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHistory.swift; sourceTree = "<group>"; };
 		4CAF323728033C4B00E58F89 /* PreferencePreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePreset.swift; sourceTree = "<group>"; };
 		4CAF323928033DFB00E58F89 /* PreferencePresetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePresetRepository.swift; sourceTree = "<group>"; };
-		4CAF323D2803C81200E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		4CAF323E2803C81200E58F89 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		4CAF32412803CC5600E58F89 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		4CAF32432803CC6700E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		A843C9072802D14700C0E5B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A843C90C28037DE600C0E5B5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		4C97D12A27FE8175005989A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4CAF32452803D64C00E58F89 /* Helper */,
 				4C90F1212801521B00C9FF4F /* UserDefaults */,
 				4C60567A280140680022D107 /* CoreData */,
 			);
@@ -281,10 +284,18 @@
 		4CAF323C2803C81200E58F89 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				4CAF323D2803C81200E58F89 /* TestViewController.swift */,
-				4CAF323E2803C81200E58F89 /* TestViewController.xib */,
+				4CAF32412803CC5600E58F89 /* Test.storyboard */,
+				4CAF32432803CC6700E58F89 /* TestViewController.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		4CAF32452803D64C00E58F89 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A843C90928037DAB00C0E5B5 /* TabBar */ = {
@@ -386,11 +397,11 @@
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
-				4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
 				4C97D11127FE09D8005989A7 /* Assets.xcassets in Resources */,
 				A84A192828002B45003BB8F4 /* DefaultReminder.storyboard in Resources */,
+				4CAF32422803CC5600E58F89 /* Test.storyboard in Resources */,
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
@@ -411,6 +422,7 @@
 				A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */,
 				A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */,
 				3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */,
+				4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */,
 				4CAF323828033C4B00E58F89 /* PreferencePreset.swift in Sources */,
 				4CAF32302803261B00E58F89 /* CDPointHistory+CoreDataProperties.swift in Sources */,
 				4C90F17E2802F0F200C9FF4F /* BaseEntity.swift in Sources */,
@@ -430,7 +442,7 @@
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
 				4CAF323428033C0200E58F89 /* PointHistoryRepository.swift in Sources */,
-				4CAF323F2803C81200E58F89 /* TestViewController.swift in Sources */,
+				4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */,
 				4CAF32322803261B00E58F89 /* CDSession+CoreDataProperties.swift in Sources */,
 				4C90F1402802D2FF00C9FF4F /* CoreDataStack.swift in Sources */,
 				4CAF32262803228200E58F89 /* BiingeModel.xcdatamodeld in Sources */,
