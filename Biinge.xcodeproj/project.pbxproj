@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
+		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
+		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */,
+				3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */,
+			);
+			path = SetupProfile;
+			sourceTree = "<group>";
+		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +236,7 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */,
 				4C97D12B27FE827B005989A7 /* Home */,
 			);
 			path = Scenes;
@@ -240,8 +254,8 @@
 		4C97D12B27FE827B005989A7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4C97D10B27FE09D6005989A7 /* HomeViewController.swift */,
 				4C97D12C27FE83FF005989A7 /* Home.storyboard */,
+				4C97D10B27FE09D6005989A7 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -312,6 +326,7 @@
 				4C97D11127FE09D8005989A7 /* Assets.xcassets in Resources */,
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
+				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */,
 				4CAF323828033C4B00E58F89 /* PreferencePreset.swift in Sources */,
 				4CAF32302803261B00E58F89 /* CDPointHistory+CoreDataProperties.swift in Sources */,
 				4C90F17E2802F0F200C9FF4F /* BaseEntity.swift in Sources */,
@@ -483,6 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C77567662R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
@@ -511,6 +528,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C77567662R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
