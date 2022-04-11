@@ -58,16 +58,10 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     // Next Button Action
     @IBAction func tapNext() {
         if let tf = userField.text {
-            print(tf)
+            UserProfile.shared.username = tf
+            print(UserProfile.shared.username!)
         }
-        print("navigate bro")
-//        let storyboard = UIStoryboard(name:"Home", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as UIViewController
-//        present(vc, animated: true, completion: nil)
-////        let vc = SecondViewController()
-//        let navVC = UINavigationController(rootViewController: vc)
-//        navVC.modalPresentationStyle = .fullScreen
-//        present(navVC, animated: true)
+        print("navigated")
     }
 
     // edit profile button
@@ -81,23 +75,6 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     }
     
 }
-
-//class SecondViewController: UIViewController {
-//
-//    @IBOutlet weak var helloLbl: UILabel!
-//
-//    @IBAction func HelloButtonPressed(_ sender: UIButton) {
-//        helloLbl.text = "Hello World"
-//    }
-//    private let button = UIButton()
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        view.backgroundColor = .systemRed
-//        // Do any additional setup after loading the view.
-//    }
-//
-//}
 
 extension SetupProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

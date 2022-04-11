@@ -116,6 +116,13 @@
 			path = SetupProfile;
 			sourceTree = "<group>";
 		};
+		3CDA1EF628041F2D00C88313 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +259,7 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA1EF628041F2D00C88313 /* New Group1 */,
 				4CAF323C2803C81200E58F89 /* Test */,
 				A843C90928037DAB00C0E5B5 /* TabBar */,
 				A84A1923280029D7003BB8F4 /* OnBoarding */,
