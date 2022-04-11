@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3391DFA92803D4B600DD3C30 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFA82803D4B600DD3C30 /* WelcomeViewController.swift */; };
+		3391DFAB2803D4D300DD3C30 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFAA2803D4D300DD3C30 /* Welcome.storyboard */; };
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3391DFA82803D4B600DD3C30 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3391DFAA2803D4D300DD3C30 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3391DFA72803D44E00DD3C30 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFA82803D4B600DD3C30 /* WelcomeViewController.swift */,
+				3391DFAA2803D4D300DD3C30 /* Welcome.storyboard */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +312,7 @@
 		A84A1923280029D7003BB8F4 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				3391DFA72803D44E00DD3C30 /* Welcome */,
 				A84A192428002ACF003BB8F4 /* DefaultReminder */,
 			);
 			path = OnBoarding;
@@ -395,6 +409,7 @@
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
+				3391DFAB2803D4D300DD3C30 /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +441,7 @@
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
 				4CAF32312803261B00E58F89 /* CDSession+CoreDataClass.swift in Sources */,
 				4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */,
+				3391DFA92803D4B600DD3C30 /* WelcomeViewController.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
