@@ -10,6 +10,7 @@
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
 		4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFB2804278200D788DA /* SessionHelper.swift */; };
+		4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFE28043D9700D788DA /* NSDate+Ext.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -57,6 +58,7 @@
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4C123DFB2804278200D788DA /* SessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
+		4C123DFE28043D9700D788DA /* NSDate+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Ext.swift"; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 				3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */,
 			);
 			path = SetupProfile;
+			sourceTree = "<group>";
+		};
+		4C123DFD28043D8800D788DA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C123DFE28043D9700D788DA /* NSDate+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
@@ -270,6 +280,7 @@
 		4C97D12A27FE8175005989A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4C123DFD28043D8800D788DA /* Extension */,
 				4CAF32452803D64C00E58F89 /* Helper */,
 				4C90F1212801521B00C9FF4F /* UserDefaults */,
 				4C60567A280140680022D107 /* CoreData */,
@@ -428,6 +439,7 @@
 				A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */,
 				A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */,
 				3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */,
+				4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */,
 				4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */,
 				4CAF323828033C4B00E58F89 /* PreferencePreset.swift in Sources */,
 				4CAF32302803261B00E58F89 /* CDPointHistory+CoreDataProperties.swift in Sources */,

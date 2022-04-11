@@ -12,6 +12,10 @@ class SessionHelper {
     
     static let shared = SessionHelper()
     let sessionRepository = SessionRepository.shared
+    let currentSessionPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
+        NSPredicate(format: "end == nil"),
+        NSPredicate(format: "appSession == %@", Settings.shared.currentSessionStart as NSDate)
+    ])
     
     private init() {
     }
@@ -36,21 +40,30 @@ class SessionHelper {
     }
     
     func start() throws {
-        let found = try sessionRepository.getOne(
-            predicate: NSPredicate(format: "end == nil")
-        )
+        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
+            NSPredicate(format: "end == nil"),
+            NSPredicate(format: "appSession != %@", Settings.shared.currentSessionStart as NSDate)
+        ])
+        let founds = try sessionRepository.getAll(predicate: predicate)
         
         // TODO: Start timer here
         
-        if let _ = found {
-            // TODO: Do something with previous session
+        if !founds.isEmpty {
+            _ = try sessionRepository.deleteMany(predicate: predicate)
+        }
+        
+        if let _ = try sessionRepository.getOne(predicate: self.currentSessionPredicate) {
+            print("Cannot start another session before stopped!")
+            return
         } else {
             // Start new session
             do {
                 let newSession = Session()
                 newSession.start = Date()
                 newSession.end = nil
-                newSession.targetEnd = nil // Date + Settings.shared.sessionLengthInMinute
+                let targetEnd = NSDate().addMinutes(minutesToAdd: Settings.shared.sessionLengthInMinute
+                )
+                newSession.targetEnd = targetEnd as Date
                 
                 _ = try self.sessionRepository.create(newSession)
             } catch let error{
@@ -64,7 +77,7 @@ class SessionHelper {
     
     func end() throws {
         guard let found = try sessionRepository.getOne(
-            predicate: NSPredicate(format: "end == nil")
+            predicate: self.currentSessionPredicate
         ) else { return }
         
         // TODO: Stop timer here
@@ -77,6 +90,11 @@ class SessionHelper {
             throw error
         }
         AVHelper.shared.end()
+    }
+    
+    // TODO: Count here
+    func countStreaks() -> Int {
+        return 0
     }
     
 }

@@ -21,6 +21,7 @@ enum SettingType: String, CaseIterable {
 
 class Settings {
     
+    public let currentSessionStart = Date()
     private var _notificationType: NotificationPreferenceType? = nil
     private var _targetMaxDailySessionInMinute: Int = 0
     private var _sessionLengthInMinute: Int = 0
@@ -29,6 +30,7 @@ class Settings {
     static let shared = Settings()
     
     private init() {
+        print(currentSessionStart)
         if let notificationType = UserDefaults.standard.string(forKey: SettingType.notificationType.rawValue) {
             self._notificationType = NotificationPreferenceType(rawValue: notificationType)
         } else {
