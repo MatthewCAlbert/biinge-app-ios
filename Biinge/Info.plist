@@ -23,10 +23,12 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Home</string>
+					<string>SetupProfile</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
+	<key>Privach - Photo Library Usage</key>
+	<string>Please allow access to gallery</string>
 </dict>
 </plist>
