@@ -83,12 +83,8 @@ class CoreDataRepository<T: NSManagedObject>: AbstractCoreDataRepository {
     /// - Parameter entity: The NSManagedObject to be deleted.
     /// - Returns: A result consisting of either a Bool set to true or an Error.
     func deleteOne(entity: Entity) -> Result<Bool, Error> {
-        do {
-            try self.context.delete(entity)
-            return .success(true)
-        } catch let error as NSError {
-            return .failure(error)
-        }
+        self.context.delete(entity)
+        return .success(true)
     }
 
     /// Deletes many NSManagedObject entity.

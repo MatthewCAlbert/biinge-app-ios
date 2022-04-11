@@ -63,5 +63,6 @@ class TestViewController: UIViewController {
     }
 
     @IBAction func TriggerCallNotif(_ sender: UIButton) {
+        CallHelper.shared.call(timeoutSeconds: 5.0)
     }
 }

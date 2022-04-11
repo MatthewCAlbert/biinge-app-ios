@@ -13,6 +13,11 @@
 		4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFE28043D9700D788DA /* NSDate+Ext.swift */; };
 		4C123E01280448A300D788DA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E00280448A200D788DA /* Date+Ext.swift */; };
 		4C123E0328044CC200D788DA /* PointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0228044CC200D788DA /* PointHelper.swift */; };
+		4C123E06280454AC00D788DA /* ProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E05280454AC00D788DA /* ProviderDelegate.swift */; };
+		4C123E08280460FF00D788DA /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E07280460FF00D788DA /* CallManager.swift */; };
+		4C123E0B2804612E00D788DA /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0A2804612E00D788DA /* Call.swift */; };
+		4C123E0D2804619400D788DA /* CallAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0C2804619400D788DA /* CallAudio.swift */; };
+		4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0E2804656E00D788DA /* CallHelper.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -63,6 +68,12 @@
 		4C123DFE28043D9700D788DA /* NSDate+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Ext.swift"; sourceTree = "<group>"; };
 		4C123E00280448A200D788DA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		4C123E0228044CC200D788DA /* PointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHelper.swift; sourceTree = "<group>"; };
+		4C123E05280454AC00D788DA /* ProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDelegate.swift; sourceTree = "<group>"; };
+		4C123E07280460FF00D788DA /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
+		4C123E0A2804612E00D788DA /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		4C123E0C2804619400D788DA /* CallAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAudio.swift; sourceTree = "<group>"; };
+		4C123E0E2804656E00D788DA /* CallHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHelper.swift; sourceTree = "<group>"; };
+		4C123E122804727900D788DA /* Biinge.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Biinge.entitlements; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -135,6 +146,16 @@
 				4C123E00280448A200D788DA /* Date+Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		4C123E092804611A00D788DA /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				4C123E07280460FF00D788DA /* CallManager.swift */,
+				4C123E0A2804612E00D788DA /* Call.swift */,
+				4C123E0C2804619400D788DA /* CallAudio.swift */,
+			);
+			path = Call;
 			sourceTree = "<group>";
 		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
@@ -236,6 +257,7 @@
 		4C97D10627FE09D6005989A7 /* Biinge */ = {
 			isa = PBXGroup;
 			children = (
+				4C123E122804727900D788DA /* Biinge.entitlements */,
 				4C6056772801400F0022D107 /* Themes */,
 				4C97D12627FE80D4005989A7 /* Model */,
 				4C97D12927FE815D005989A7 /* Scenes */,
@@ -243,6 +265,7 @@
 				4C97D12A27FE8175005989A7 /* Utilities */,
 				4C97D10727FE09D6005989A7 /* AppDelegate.swift */,
 				4C97D10927FE09D6005989A7 /* SceneDelegate.swift */,
+				4C123E05280454AC00D788DA /* ProviderDelegate.swift */,
 				4C97D11027FE09D8005989A7 /* Assets.xcassets */,
 				4C97D11227FE09D8005989A7 /* LaunchScreen.storyboard */,
 				4C97D11527FE09D8005989A7 /* Info.plist */,
@@ -285,6 +308,7 @@
 		4C97D12A27FE8175005989A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4C123E092804611A00D788DA /* Call */,
 				4C123DFD28043D8800D788DA /* Extension */,
 				4CAF32452803D64C00E58F89 /* Helper */,
 				4C90F1212801521B00C9FF4F /* UserDefaults */,
@@ -317,6 +341,7 @@
 				4CAF324828041D0B00E58F89 /* AVHelper.swift */,
 				4C123DFB2804278200D788DA /* SessionHelper.swift */,
 				4C123E0228044CC200D788DA /* PointHelper.swift */,
+				4C123E0E2804656E00D788DA /* CallHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -442,6 +467,7 @@
 				A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */,
 				A84A1921280017D6003BB8F4 /* SetTimeViewController.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
+				4C123E08280460FF00D788DA /* CallManager.swift in Sources */,
 				A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */,
 				A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */,
 				3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */,
@@ -453,12 +479,14 @@
 				4CAF322D2803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift in Sources */,
 				4CAF322F2803261B00E58F89 /* CDPointHistory+CoreDataClass.swift in Sources */,
 				4C90F17A2802E8A200C9FF4F /* Session.swift in Sources */,
+				4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */,
 				4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */,
 				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
 				4C123E01280448A300D788DA /* Date+Ext.swift in Sources */,
+				4C123E0B2804612E00D788DA /* Call.swift in Sources */,
 				4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */,
 				4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
@@ -466,9 +494,11 @@
 				4CAF32312803261B00E58F89 /* CDSession+CoreDataClass.swift in Sources */,
 				4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */,
 				4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */,
+				4C123E06280454AC00D788DA /* ProviderDelegate.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
+				4C123E0D2804619400D788DA /* CallAudio.swift in Sources */,
 				4CAF323428033C0200E58F89 /* PointHistoryRepository.swift in Sources */,
 				4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */,
 				4CAF32322803261B00E58F89 /* CDSession+CoreDataProperties.swift in Sources */,
@@ -611,6 +641,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Biinge/Biinge.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GXV96JYG87;
@@ -629,6 +661,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = morning.team11.biinge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -640,6 +673,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Biinge/Biinge.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GXV96JYG87;
@@ -658,6 +693,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = morning.team11.biinge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

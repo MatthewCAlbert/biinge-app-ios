@@ -6,6 +6,10 @@
 
 - Swift 5
 - UIKit
+- AVKit
+- UserDefaults
+- CoreData
+- CallKit
 
 ## Features
 
@@ -18,6 +22,21 @@
 - [ ] Point Works
 - [ ] Share to Social Media
 - [ ] Leaderboard
+
+## Backend Wise
+
+- [x] Set Preferences
+- [x] Set Profile (username)
+- [ ] Set Profile (photo)
+- [x] Notification
+- [x] Notification as Call
+- [x] Point Works
+- [ ] Share to Social Media
+- [ ] Leaderboard
+
+## Bugs
+
+- CallerID Profile not yet working.
 
 ## Development
 
