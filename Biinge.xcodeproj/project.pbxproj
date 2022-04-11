@@ -29,12 +29,6 @@
 		4C97D11C27FE0A67005989A7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D11B27FE0A67005989A7 /* .gitignore */; };
 		4C97D11E27FE0ADB005989A7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D11D27FE0ADB005989A7 /* README.md */; };
 		4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C97D12C27FE83FF005989A7 /* Home.storyboard */; };
-		A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C9072802D14700C0E5B5 /* InfoViewController.swift */; };
-		A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */; };
-		A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A843C90C28037DE600C0E5B5 /* TabBar.storyboard */; };
-		A84A1921280017D6003BB8F4 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */; };
-		A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A192528002B1E003BB8F4 /* DefaultReminderViewController.swift */; };
-		A84A192828002B45003BB8F4 /* DefaultReminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A84A192728002B45003BB8F4 /* DefaultReminder.storyboard */; };
 		4CAF32262803228200E58F89 /* BiingeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32242803228200E58F89 /* BiingeModel.xcdatamodeld */; };
 		4CAF322D2803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32272803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift */; };
 		4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32282803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift */; };
@@ -46,6 +40,14 @@
 		4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323528033C3500E58F89 /* PointHistory.swift */; };
 		4CAF323828033C4B00E58F89 /* PreferencePreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323728033C4B00E58F89 /* PreferencePreset.swift */; };
 		4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323928033DFB00E58F89 /* PreferencePresetRepository.swift */; };
+		4CAF323F2803C81200E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323D2803C81200E58F89 /* TestViewController.swift */; };
+		4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF323E2803C81200E58F89 /* TestViewController.xib */; };
+		A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C9072802D14700C0E5B5 /* InfoViewController.swift */; };
+		A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */; };
+		A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A843C90C28037DE600C0E5B5 /* TabBar.storyboard */; };
+		A84A1921280017D6003BB8F4 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */; };
+		A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A192528002B1E003BB8F4 /* DefaultReminderViewController.swift */; };
+		A84A192828002B45003BB8F4 /* DefaultReminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A84A192728002B45003BB8F4 /* DefaultReminder.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,12 +75,6 @@
 		4C97D11B27FE0A67005989A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4C97D11D27FE0ADB005989A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C97D12C27FE83FF005989A7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		A843C9072802D14700C0E5B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		A843C90C28037DE600C0E5B5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
-		A84A192528002B1E003BB8F4 /* DefaultReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultReminderViewController.swift; sourceTree = "<group>"; };
-		A84A192728002B45003BB8F4 /* DefaultReminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefaultReminder.storyboard; sourceTree = "<group>"; };
 		4CAF32252803228200E58F89 /* BiingeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BiingeModel.xcdatamodel; sourceTree = "<group>"; };
 		4CAF32272803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPreferencePreset+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4CAF32282803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPreferencePreset+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -90,6 +86,14 @@
 		4CAF323528033C3500E58F89 /* PointHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHistory.swift; sourceTree = "<group>"; };
 		4CAF323728033C4B00E58F89 /* PreferencePreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePreset.swift; sourceTree = "<group>"; };
 		4CAF323928033DFB00E58F89 /* PreferencePresetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePresetRepository.swift; sourceTree = "<group>"; };
+		4CAF323D2803C81200E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4CAF323E2803C81200E58F89 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		A843C9072802D14700C0E5B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A843C90C28037DE600C0E5B5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
+		A84A192528002B1E003BB8F4 /* DefaultReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultReminderViewController.swift; sourceTree = "<group>"; };
+		A84A192728002B45003BB8F4 /* DefaultReminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefaultReminder.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4CAF323C2803C81200E58F89 /* Test */,
 				A843C90928037DAB00C0E5B5 /* TabBar */,
 				A84A1923280029D7003BB8F4 /* OnBoarding */,
 				3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */,
@@ -271,6 +276,15 @@
 				A8898C632801560C003F62DA /* HomeSetUp */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		4CAF323C2803C81200E58F89 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF323D2803C81200E58F89 /* TestViewController.swift */,
+				4CAF323E2803C81200E58F89 /* TestViewController.xib */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		A843C90928037DAB00C0E5B5 /* TabBar */ = {
@@ -302,7 +316,6 @@
 		A8898C632801560C003F62DA /* HomeSetUp */ = {
 			isa = PBXGroup;
 			children = (
-				4C97D10B27FE09D6005989A7 /* HomeViewController.swift */,
 				A84A1920280017D6003BB8F4 /* SetTimeViewController.swift */,
 				A843C9072802D14700C0E5B5 /* InfoViewController.swift */,
 				4C97D12C27FE83FF005989A7 /* Home.storyboard */,
@@ -373,6 +386,7 @@
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
+				4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
 				4C97D11127FE09D8005989A7 /* Assets.xcassets in Resources */,
@@ -416,6 +430,7 @@
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
 				4CAF323428033C0200E58F89 /* PointHistoryRepository.swift in Sources */,
+				4CAF323F2803C81200E58F89 /* TestViewController.swift in Sources */,
 				4CAF32322803261B00E58F89 /* CDSession+CoreDataProperties.swift in Sources */,
 				4C90F1402802D2FF00C9FF4F /* CoreDataStack.swift in Sources */,
 				4CAF32262803228200E58F89 /* BiingeModel.xcdatamodeld in Sources */,

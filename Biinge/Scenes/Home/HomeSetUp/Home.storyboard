@@ -197,8 +197,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Set" cornerStyle="medium"/>
                                 <connections>
-                                    <action selector="setButtonPressed:" destination="5Hf-OV-eOr" eventType="touchUpInside" id="Lho-vG-KLx"/>
-                                    <segue destination="jhK-oM-dhu" kind="unwind" unwindAction="didUnwindFromSetTimeVC:" id="zeH-yu-Ybc"/>
+                                    <segue destination="jhK-oM-dhu" kind="unwind" unwindAction="didUnwindFromSetTimeVC:" id="i0y-r0-Zqs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watch time limit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4G-Ir-at7">
