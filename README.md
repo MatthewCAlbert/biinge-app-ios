@@ -5,7 +5,19 @@
 ## Using
 
 - Swift 5
-- UIKit 
+- UIKit
+
+## Features
+
+- [ ] Onboarding
+- [ ] Set Preferences
+- [ ] Set Profile (username)
+- [ ] Set Profile (photo)
+- [ ] Notification
+- [ ] Notification as Call
+- [ ] Point Works
+- [ ] Share to Social Media
+- [ ] Leaderboard
 
 ## Development
 
