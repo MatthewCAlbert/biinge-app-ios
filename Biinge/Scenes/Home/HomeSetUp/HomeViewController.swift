@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         breakReminderLabel.text = breakLimitMessage
         
     }
+    
     @IBAction func changeModePressed(_ sender: UIButton) {
         if breakTimeLabel.isHidden == true {
             breakTimeLabel.isHidden = false
@@ -56,6 +57,11 @@ class HomeViewController: UIViewController {
             watchReminderLabel.isHidden = false
         }
     }
+    
+    @IBAction func infoPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToInfo", sender: self)
+    }
+    
     
 }
 

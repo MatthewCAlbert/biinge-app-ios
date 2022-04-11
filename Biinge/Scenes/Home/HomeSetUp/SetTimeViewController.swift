@@ -12,9 +12,11 @@ class SetTimeViewController: UIViewController {
     
     @IBOutlet weak var watchTimePicker: UIDatePicker!
     @IBOutlet weak var breakTimePicker: UIDatePicker!
+    @IBOutlet weak var setButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setButton.layer.cornerRadius = 30
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,17 +39,18 @@ class SetTimeViewController: UIViewController {
         
         let hoursWatchLimitTime = hoursLimitFormatter.string(from: watchTimePicker.date)
         let minutesWatchLimitTime = minutesLimitFormatter.string(from: watchTimePicker.date)
-        
         let hoursBreakLimitTime = hoursLimitFormatter.string(from: breakTimePicker.date)
         let minutesBreakLimitTime = minutesLimitFormatter.string(from: breakTimePicker.date)
         
+//        let hoursWatchLimitCount = Int(hoursWatchLimitTime)
+//        let minuteWatchLimitCount = Int(minutesWatchLimitTime)
+//        let hoursBreakLimitCount = Int(hoursBreakLimitTime)
+//        let minutesBreakLimitCount = Int(minutesBreakLimitTime)
+//        
         
         //Set Time Limit Message
         homeVC.watchLimitMessage = "remaining from \(hoursWatchLimitTime)h \(minutesWatchLimitTime)m of your watch time limit"
-        homeVC.breakLimitMessage = "minutes remaining from \(minutesBreakLimitTime) minutes of your watch break time"
-        
-        
-        
+        homeVC.breakLimitMessage = "minutes remaining from \(minutesBreakLimitTime) minutes of your break time"
     }
     
 }
