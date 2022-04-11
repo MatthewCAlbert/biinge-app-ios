@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Privach - Photo Library Usage</key>
+	<string>Please allow access to gallery</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SFCompactDisplay-Regular.ttf</string>
@@ -23,12 +25,16 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>SetupProfile</string>
+					<string>Test</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
-	<key>Privach - Photo Library Usage</key>
-	<string>Please allow access to gallery</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>remote-notification</string>
+		<string>voip</string>
+	</array>
 </dict>
 </plist>
