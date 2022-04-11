@@ -59,7 +59,7 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     @IBAction func tapNext() {
         if let tf = userField.text {
             UserProfile.shared.username = tf
-            print(UserProfile.shared.username!)
+            print(UserProfile.shared.username)
         }
         print("navigated")
     }
@@ -75,6 +75,23 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     }
     
 }
+
+//class SecondViewController: UIViewController {
+//
+//    @IBOutlet weak var helloLbl: UILabel!
+//
+//    @IBAction func HelloButtonPressed(_ sender: UIButton) {
+//        helloLbl.text = "Hello World"
+//    }
+//    private let button = UIButton()
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        view.backgroundColor = .systemRed
+//        // Do any additional setup after loading the view.
+//    }
+//
+//}
 
 extension SetupProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
