@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NotificationType: String, CaseIterable {
+enum NotificationPreferenceType: String, CaseIterable {
     case callNotif = "CallNotification"
     case normalNotif = "NormalNotification"
 }
@@ -21,7 +21,8 @@ enum SettingType: String, CaseIterable {
 
 class Settings {
     
-    private var _notificationType: NotificationType? = nil
+    public let currentSessionStart = Date()
+    private var _notificationType: NotificationPreferenceType? = nil
     private var _targetMaxDailySessionInMinute: Int = 0
     private var _sessionLengthInMinute: Int = 0
     private var _targetRestInMinute: Int = 0
@@ -29,10 +30,11 @@ class Settings {
     static let shared = Settings()
     
     private init() {
+        print(currentSessionStart)
         if let notificationType = UserDefaults.standard.string(forKey: SettingType.notificationType.rawValue) {
-            self._notificationType = NotificationType(rawValue: notificationType)
+            self._notificationType = NotificationPreferenceType(rawValue: notificationType)
         } else {
-            self.notificationType = NotificationType.callNotif
+            self.notificationType = NotificationPreferenceType.callNotif
         }
 
         let targetMaxDailySessionInMinute = UserDefaults.standard.integer(forKey: SettingType.targetMaxDailySessionInMinute.rawValue)
@@ -58,7 +60,7 @@ class Settings {
         
     }
     
-    var notificationType: NotificationType? {
+    var notificationType: NotificationPreferenceType? {
         get {
             return self._notificationType
         }
