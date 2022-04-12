@@ -20,6 +20,7 @@ extension CDSession {
     @NSManaged public var id: UUID?
     @NSManaged public var start: Date?
     @NSManaged public var targetEnd: Date?
+    @NSManaged public var appSession: Date?
 
 }
 

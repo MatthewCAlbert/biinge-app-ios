@@ -16,7 +16,8 @@ protocol AbstractCoreDataRepository {
     
     func get(predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> Result<[Entity], Error>
     func create() -> Result<Entity, Error>
-    func delete(entity: Entity) -> Result<Bool, Error>
+    func deleteOne(entity: Entity) -> Result<Bool, Error>
+    func deleteMany(predicate: NSPredicate?) -> Result<Bool, Error>
 }
 
 enum CoreDataError: Error {
@@ -81,8 +82,24 @@ class CoreDataRepository<T: NSManagedObject>: AbstractCoreDataRepository {
     /// Deletes a NSManagedObject entity.
     /// - Parameter entity: The NSManagedObject to be deleted.
     /// - Returns: A result consisting of either a Bool set to true or an Error.
-    func delete(entity: Entity) -> Result<Bool, Error> {
+    func deleteOne(entity: Entity) -> Result<Bool, Error> {
         self.context.delete(entity)
         return .success(true)
+    }
+
+    /// Deletes many NSManagedObject entity.
+    /// - Parameter entity: The NSManagedObject to be deleted.
+    /// - Returns: A result consisting of either a Bool set to true or an Error.
+    func deleteMany(predicate: NSPredicate?) -> Result<Bool, Error> {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: self.entityName)
+        fetchRequest.predicate = predicate
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try context.execute(deleteRequest)
+            return .success(true)
+        } catch let error as NSError {
+            return .failure(error)
+        }
     }
 }
