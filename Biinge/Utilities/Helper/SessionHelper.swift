@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 // Will also function as timer facade
 class SessionHelper {
@@ -19,12 +20,35 @@ class SessionHelper {
     ])
     let calendar: Calendar
     
+    // Timer 
+    private var sessionTimer = Timer()
+    private var totalTimer = Timer()
+    
+    private func startTimer() {
+        sessionTimer.invalidate()
+        totalTimer.invalidate()
+        sessionTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateSessionTimer), userInfo: nil, repeats: true)
+        totalTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTotalTimer), userInfo: nil, repeats: true)
+    }
+
+    @objc func updateSessionTimer() {
+    }
+    
+    @objc func updateTotalTimer() {
+    }
+    
+    // Computed Elapsed
+    var sessionElapsed: Counter = Counter(0);
+    var totalInDayElapsed: Counter = Counter(0);
+    
     private init() {
         // Get the current calendar with local time zone
         var calendar = Calendar.current
         calendar.timeZone = NSTimeZone.local
-        
         self.calendar = calendar
+        
+        // Get today total time
+        self.totalInDayElapsed = Counter(self.getDayTotalTimeInMinute() * 60)
     }
     
     private func abort() {
@@ -128,6 +152,7 @@ class SessionHelper {
         }
     }
     
+    // TODO: Fix this logic not by day
     func isDayUnderLimit(_ date: Date = Date()) -> Bool {
         let dateTotal = self.getDayTotalTimeInMinute(date)
         return dateTotal <= Settings.shared.targetMaxDailySessionInMinute

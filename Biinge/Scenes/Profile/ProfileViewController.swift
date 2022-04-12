@@ -8,6 +8,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+
     var image: UIImage = UIImage(named: "setan.jpg")!
     var _accomplish: Int = UserProfile.shared.accomplish
     var _exceed: Int = UserProfile.shared.exceed
@@ -82,21 +83,6 @@ class ProfileViewController: UIViewController {
 
     }
     
-    @IBAction func tapShare() {
-
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 

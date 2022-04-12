@@ -12,11 +12,16 @@ enum NotificationPreferenceType: String, CaseIterable {
     case normalNotif = "NormalNotification"
 }
 
+enum OnboardingStatus: Int {
+    case notDetermined, notDone, completed
+}
+
 enum SettingType: String, CaseIterable {
     case notificationType = "NotificationType"
-    case targetMaxDailySessionInMinute = "TargetMaxDailySessionInMinute"
+    case targetMaxDailySessionInMinute = "TargetMaxDailySessionInMinute" // unused
     case sessionLengthInMinute = "SessionLengthInMinute"
-    case targetRestInMinute = "TargetRestInMinute"
+    case targetRestInMinute = "TargetRestInMinute" // unused
+    case onboardingDone = "OnboardingDone"
 }
 
 class Settings {
@@ -26,6 +31,7 @@ class Settings {
     private var _targetMaxDailySessionInMinute: Int = 0
     private var _sessionLengthInMinute: Int = 0
     private var _targetRestInMinute: Int = 0
+    private var _onboardingDone: OnboardingStatus = OnboardingStatus.notDetermined
     
     static let shared = Settings()
     
@@ -57,6 +63,9 @@ class Settings {
         } else {
             self.targetRestInMinute = 5
         }
+        
+        let onboardingDone = UserDefaults.standard.integer(forKey: SettingType.onboardingDone.rawValue)
+        self._onboardingDone = OnboardingStatus(rawValue: onboardingDone) ?? OnboardingStatus.notDetermined
         
     }
     
@@ -100,6 +109,16 @@ class Settings {
         set(newValue) {
             self._targetRestInMinute = newValue
             UserDefaults.standard.set(newValue, forKey: SettingType.targetRestInMinute.rawValue)
+        }
+    }
+    
+    var onboardingDone: OnboardingStatus {
+        get {
+            return self._onboardingDone
+        }
+        set(newValue) {
+            self._onboardingDone = newValue
+            UserDefaults.standard.set(newValue.rawValue, forKey: SettingType.onboardingDone.rawValue)
         }
     }
     
