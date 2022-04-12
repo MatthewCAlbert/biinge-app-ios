@@ -13,9 +13,6 @@
 		3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */; };
 		3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFBE2804636B00DD3C30 /* BreakViewController.swift */; };
 		3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */; };
-		3391DFC32804F93800DD3C30 /* failMsn.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC22804F93800DD3C30 /* failMsn.gif */; };
-		3391DFC52804FA0D00DD3C30 /* gifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFC42804FA0D00DD3C30 /* gifLoader.swift */; };
-		3391DFEF28051F4D00DD3C30 /* successGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFEE28051F4D00DD3C30 /* successGif.gif */; };
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
@@ -66,9 +63,6 @@
 		3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessStoryboard.storyboard; sourceTree = "<group>"; };
 		3391DFBE2804636B00DD3C30 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreakStoryboard.storyboard; sourceTree = "<group>"; };
-		3391DFC22804F93800DD3C30 /* failMsn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = failMsn.gif; sourceTree = "<group>"; };
-		3391DFC42804FA0D00DD3C30 /* gifLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoader.swift; sourceTree = "<group>"; };
-		3391DFEE28051F4D00DD3C30 /* successGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = successGif.gif; sourceTree = "<group>"; };
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -147,7 +141,6 @@
 		3391DFB42804620800DD3C30 /* SuccessPoints */ = {
 			isa = PBXGroup;
 			children = (
-				3391DFEE28051F4D00DD3C30 /* successGif.gif */,
 				3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */,
 				3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */,
 			);
@@ -157,10 +150,8 @@
 		3391DFB52804622300DD3C30 /* MissionFailed */ = {
 			isa = PBXGroup;
 			children = (
-				3391DFC22804F93800DD3C30 /* failMsn.gif */,
 				3391DFB62804627C00DD3C30 /* FailViewController.swift */,
 				3391DFB82804629500DD3C30 /* FailStoryboard.storyboard */,
-				3391DFC42804FA0D00DD3C30 /* gifLoader.swift */,
 			);
 			path = MissionFailed;
 			sourceTree = "<group>";
@@ -444,11 +435,9 @@
 				4C60567627FFF4100022D107 /* SFProDisplay-Regular.ttf in Resources */,
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
-				3391DFEF28051F4D00DD3C30 /* successGif.gif in Resources */,
 				3391DFB92804629500DD3C30 /* FailStoryboard.storyboard in Resources */,
 				3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
-				3391DFC32804F93800DD3C30 /* failMsn.gif in Resources */,
 				4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
@@ -491,7 +480,6 @@
 				4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
 				4CAF32312803261B00E58F89 /* CDSession+CoreDataClass.swift in Sources */,
-				3391DFC52804FA0D00DD3C30 /* gifLoader.swift in Sources */,
 				4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */,
@@ -640,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C77567662R;
+				DEVELOPMENT_TEAM = 8CKV7N92SQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
@@ -669,7 +657,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C77567662R;
+				DEVELOPMENT_TEAM = 8CKV7N92SQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
