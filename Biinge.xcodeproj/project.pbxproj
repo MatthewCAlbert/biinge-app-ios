@@ -15,8 +15,7 @@
 		3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */; };
 		3391DFC32804F93800DD3C30 /* failMsn.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC22804F93800DD3C30 /* failMsn.gif */; };
 		3391DFC52804FA0D00DD3C30 /* gifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFC42804FA0D00DD3C30 /* gifLoader.swift */; };
-		3391DFC7280500C000DD3C30 /* breakGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC6280500C000DD3C30 /* breakGif.gif */; };
-		3391DFC92805038300DD3C30 /* successGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC82805038300DD3C30 /* successGif.gif */; };
+		3391DFEF28051F4D00DD3C30 /* successGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFEE28051F4D00DD3C30 /* successGif.gif */; };
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
@@ -69,8 +68,7 @@
 		3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreakStoryboard.storyboard; sourceTree = "<group>"; };
 		3391DFC22804F93800DD3C30 /* failMsn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = failMsn.gif; sourceTree = "<group>"; };
 		3391DFC42804FA0D00DD3C30 /* gifLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoader.swift; sourceTree = "<group>"; };
-		3391DFC6280500C000DD3C30 /* breakGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = breakGif.gif; sourceTree = "<group>"; };
-		3391DFC82805038300DD3C30 /* successGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = successGif.gif; sourceTree = "<group>"; };
+		3391DFEE28051F4D00DD3C30 /* successGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = successGif.gif; sourceTree = "<group>"; };
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 		3391DFB3280461F000DD3C30 /* BreakTimePoints */ = {
 			isa = PBXGroup;
 			children = (
-				3391DFC6280500C000DD3C30 /* breakGif.gif */,
 				3391DFBE2804636B00DD3C30 /* BreakViewController.swift */,
 				3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */,
 			);
@@ -150,7 +147,7 @@
 		3391DFB42804620800DD3C30 /* SuccessPoints */ = {
 			isa = PBXGroup;
 			children = (
-				3391DFC82805038300DD3C30 /* successGif.gif */,
+				3391DFEE28051F4D00DD3C30 /* successGif.gif */,
 				3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */,
 				3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */,
 			);
@@ -447,6 +444,7 @@
 				4C60567627FFF4100022D107 /* SFProDisplay-Regular.ttf in Resources */,
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
+				3391DFEF28051F4D00DD3C30 /* successGif.gif in Resources */,
 				3391DFB92804629500DD3C30 /* FailStoryboard.storyboard in Resources */,
 				3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
@@ -459,9 +457,7 @@
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
-				3391DFC92805038300DD3C30 /* successGif.gif in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
-				3391DFC7280500C000DD3C30 /* breakGif.gif in Resources */,
 				3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
