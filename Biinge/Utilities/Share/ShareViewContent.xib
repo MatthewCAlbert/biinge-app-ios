@@ -146,6 +146,10 @@ with my total watch time of</string>
                     <rect key="frame" x="563" y="786" width="269" height="264"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlueFlameIcon" translatesAutoresizingMaskIntoConstraints="NO" id="M3V-qk-MZq">
+                    <rect key="frame" x="278" y="1061" width="77" height="74"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Rhh-aA-fsp"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -165,6 +169,7 @@ with my total watch time of</string>
         </view>
     </objects>
     <resources>
+        <image name="BlueFlameIcon" width="159" height="200"/>
         <image name="WrappedStoryShare" width="950" height="1688"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -24,6 +24,7 @@
 - [ ] Point Works
 - [x] Share to Social Media
 - [ ] Settings
+- [ ] History
 - [ ] Leaderboard (dropped)
 
 ## Backend Wise
@@ -35,7 +36,7 @@
 - [x] Notification
 - [x] Notification as Call
 - [x] Point Works
-- [x] Share to Social Media
+- [x] Share to Social Media (Render + Templating)
 - [ ] Leaderboard (dropped)
 
 ## Bugs
