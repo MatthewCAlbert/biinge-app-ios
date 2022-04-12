@@ -20,7 +20,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Biinge" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                                 <color key="textColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Une-TK-3sY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Une-TK-3sY">
                                 <rect key="frame" x="16" y="367" width="358" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="80"/>
@@ -63,6 +63,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Start" cornerStyle="medium">
                                     <color key="baseBackgroundColor" red="0.023529411764705882" green="0.37254901960784315" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hBa-87-HTc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hm-ge-x56">
                                 <rect key="frame" x="45" y="638" width="104" height="48"/>
@@ -72,7 +75,7 @@
                                     <color key="baseBackgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="5Hf-OV-eOr" kind="show" id="GnL-6I-X6f"/>
+                                    <segue destination="5Hf-OV-eOr" kind="presentation" id="GnL-6I-X6f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOy-mI-hcy">
@@ -112,18 +115,20 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="film" catalog="system" id="6Jc-9B-F8X"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="breakReminderLabel" destination="f4A-gW-U6V" id="i6p-HK-ndk"/>
                         <outlet property="breakTimeLabel" destination="T5c-es-XKl" id="5Es-Hi-rbA"/>
                         <outlet property="usernameLabel" destination="g1P-9Y-6ZL" id="mDy-6Q-Nlw"/>
                         <outlet property="watchReminderLabel" destination="FcP-Tg-o5Z" id="ED0-bv-bor"/>
                         <outlet property="watchTimeLabel" destination="Une-TK-3sY" id="yDs-5r-bW8"/>
-                        <segue destination="wJM-gt-Qir" kind="show" identifier="goToInfo" id="8kK-bR-ibQ"/>
+                        <segue destination="wJM-gt-Qir" kind="presentation" identifier="goToInfo" id="8kK-bR-ibQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27.69230769230769" y="83.175355450236964"/>
+            <point key="canvasLocation" x="956.92307692307691" y="83.175355450236964"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="kLk-0C-BgH">
@@ -181,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CG9-Mb-05J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.61538461538464" y="819.66824644549763"/>
+            <point key="canvasLocation" x="957" y="849"/>
         </scene>
         <!--Set Time View Controller-->
         <scene sceneID="Uya-TB-g7w">
@@ -207,8 +212,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Break time from watching" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-VG-VRC">
-                                <rect key="frame" x="111" y="437" width="169" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Break time from watching (minutes)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-VG-VRC">
+                                <rect key="frame" x="78" y="437" width="236" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -223,12 +228,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                             </view>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="120" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oro-6t-1H0">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWf-dV-dt2">
                                 <rect key="frame" x="88" y="465" width="214" height="155"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Up Reminder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-J0-t5O">
-                                <rect key="frame" x="115" y="64" width="160" height="76"/>
+                                <rect key="frame" x="115" y="64" width="160" height="71.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
                                 <color key="textColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,7 +245,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="UUd-qr-K2r"/>
                     <connections>
-                        <outlet property="breakTimePicker" destination="oro-6t-1H0" id="zvy-Iv-9MF"/>
+                        <outlet property="breakTimePicker" destination="ZWf-dV-dt2" id="fKC-Q0-SSj"/>
                         <outlet property="setButton" destination="1HX-mk-hDq" id="Gob-Dc-XuV"/>
                         <outlet property="watchTimePicker" destination="84p-vK-Oxl" id="vre-XY-tty"/>
                     </connections>
@@ -248,10 +253,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyF-dT-h2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="jhK-oM-dhu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="744.61538461538464" y="83.886255924170612"/>
+            <point key="canvasLocation" x="1846" y="96"/>
         </scene>
     </scenes>
     <resources>
+        <image name="film" catalog="system" width="128" height="93"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

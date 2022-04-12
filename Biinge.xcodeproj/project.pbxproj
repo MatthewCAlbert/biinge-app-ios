@@ -296,9 +296,9 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A84A1923280029D7003BB8F4 /* OnBoarding */,
 				4CAF323C2803C81200E58F89 /* Test */,
 				A843C90928037DAB00C0E5B5 /* TabBar */,
-				A84A1923280029D7003BB8F4 /* OnBoarding */,
 				3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */,
 				4C97D12B27FE827B005989A7 /* Home */,
 			);
