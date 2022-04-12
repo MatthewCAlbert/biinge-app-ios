@@ -13,10 +13,12 @@
 
 ## Features
 
-- [ ] Onboarding
+- [x] Onboarding
 - [ ] Set Preferences
-- [ ] Set Profile (username)
+- [x] Set Profile (username)
 - [ ] Set Profile (photo)
+- [x] Timer
+- [x] Set Timer
 - [ ] Notification
 - [ ] Notification as Call
 - [ ] Point Works
@@ -26,7 +28,7 @@
 
 ## Backend Wise
 
-- [ ] CoreData Abstraction
+- [x] CoreData Abstraction
 - [x] Set Preferences
 - [x] Set Profile (username)
 - [ ] Set Profile (photo)

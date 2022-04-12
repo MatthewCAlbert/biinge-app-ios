@@ -97,6 +97,16 @@ class SessionHelper {
             throw error
         }
     }
+
+    func getLifetimeTotalTimeInMinute() -> Int {
+        do {
+            let rows = try sessionRepository.getAll(predicate: NSPredicate(format: "end != nil"))
+            let res = rows.reduce(0) { $0 + (($1.end! - $1.start!).minute ?? 0) }
+            return res
+        } catch {
+            return 0
+        }
+    }
     
     func getDayTotalTimeInMinute(_ date: Date = Date()) -> Int {
         // Get today's beginning & end
