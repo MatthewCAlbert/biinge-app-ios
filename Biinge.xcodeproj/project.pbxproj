@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3391DFB72804627C00DD3C30 /* FailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFB62804627C00DD3C30 /* FailViewController.swift */; };
+		3391DFB92804629500DD3C30 /* FailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFB82804629500DD3C30 /* FailStoryboard.storyboard */; };
+		3391DFBB280462AD00DD3C30 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */; };
+		3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */; };
+		3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFBE2804636B00DD3C30 /* BreakViewController.swift */; };
+		3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */; };
 		3391DFA92803D4B600DD3C30 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFA82803D4B600DD3C30 /* WelcomeViewController.swift */; };
 		3391DFAB2803D4D300DD3C30 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFAA2803D4D300DD3C30 /* Welcome.storyboard */; };
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
@@ -74,6 +80,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3391DFB62804627C00DD3C30 /* FailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailViewController.swift; sourceTree = "<group>"; };
+		3391DFB82804629500DD3C30 /* FailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FailStoryboard.storyboard; sourceTree = "<group>"; };
+		3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessStoryboard.storyboard; sourceTree = "<group>"; };
+		3391DFBE2804636B00DD3C30 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
+		3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreakStoryboard.storyboard; sourceTree = "<group>"; };
 		3391DFA82803D4B600DD3C30 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3391DFAA2803D4D300DD3C30 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
@@ -154,6 +166,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3391DFB2280461C900DD3C30 /* GetPoints */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFB52804622300DD3C30 /* MissionFailed */,
+				3391DFB42804620800DD3C30 /* SuccessPoints */,
+				3391DFB3280461F000DD3C30 /* BreakTimePoints */,
+			);
+			path = GetPoints;
+			sourceTree = "<group>";
+		};
+		3391DFB3280461F000DD3C30 /* BreakTimePoints */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFBE2804636B00DD3C30 /* BreakViewController.swift */,
+				3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */,
+			);
+			path = BreakTimePoints;
+			sourceTree = "<group>";
+		};
+		3391DFB42804620800DD3C30 /* SuccessPoints */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */,
+				3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */,
+			);
+			path = SuccessPoints;
+			sourceTree = "<group>";
+		};
+		3391DFB52804622300DD3C30 /* MissionFailed */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFB62804627C00DD3C30 /* FailViewController.swift */,
+				3391DFB82804629500DD3C30 /* FailStoryboard.storyboard */,
+			);
+			path = MissionFailed;
+			sourceTree = "<group>";
+		};
 		3391DFA72803D44E00DD3C30 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +434,7 @@
 		4C97D12B27FE827B005989A7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3391DFB2280461C900DD3C30 /* GetPoints */,
 				A8898C632801560C003F62DA /* HomeSetUp */,
 			);
 			path = Home;
@@ -521,6 +571,8 @@
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
 				4C123E2128055CEA00D788DA /* ShareViewContent.xib in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
+				3391DFB92804629500DD3C30 /* FailStoryboard.storyboard in Resources */,
+				3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
@@ -533,6 +585,7 @@
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
 				3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
+				3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */,
 				3391DFAB2803D4D300DD3C30 /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +612,7 @@
 				4CAF32302803261B00E58F89 /* CDPointHistory+CoreDataProperties.swift in Sources */,
 				4C90F17E2802F0F200C9FF4F /* BaseEntity.swift in Sources */,
 				4CAF322D2803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift in Sources */,
+				3391DFB72804627C00DD3C30 /* FailViewController.swift in Sources */,
 				4CAF322F2803261B00E58F89 /* CDPointHistory+CoreDataClass.swift in Sources */,
 				4C90F17A2802E8A200C9FF4F /* Session.swift in Sources */,
 				3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */,
@@ -568,6 +622,7 @@
 				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
 				3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
+				3391DFBB280462AD00DD3C30 /* SuccessViewController.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
 				4C123E232805609D00D788DA /* ShareViewContent.swift in Sources */,
@@ -584,6 +639,7 @@
 				4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */,
 				4C123E06280454AC00D788DA /* ProviderDelegate.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
+				3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
 				4C123E0D2804619400D788DA /* CallAudio.swift in Sources */,
