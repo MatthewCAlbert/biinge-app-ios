@@ -8,7 +8,7 @@
 import UIKit
 
 class SetupProfileViewController: UIViewController, UITextFieldDelegate{
-    var image: UIImage = UIImage(named: "setan.jpg")!
+    var image: UIImage = UIImage(named: "PersonPlaceholder")!
     let editImage: UIImage = UIImage(named: "circleedit.png")!
     var pic: NSData? = nil
 
@@ -52,11 +52,24 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     // Next Button Action
     @IBAction func tapNext() {
         if let tf = userField.text {
+            if tf == "" {
+                Toast.show(message: "Please fill your username first", controller: self)
+                return
+            }
             UserProfile.shared.username = tf
+        } else {
+            Toast.show(message: "Please fill your username first", controller: self)
+            return
         }
         UserProfile.shared.pic = pic!
+        performSegue(withIdentifier: "goToOnboardingSetReminder", sender: self)
     }
 
+    // Later Button Action
+    @IBAction func laterNext(_ sender: UIButton) {
+        
+    }
+    
     // edit profile button
     @IBAction func chooseProfile(){
         let vc = UIImagePickerController()

@@ -75,11 +75,22 @@
                         <outlet property="pageControl" destination="eiW-2C-MZQ" id="xLI-7e-gKQ"/>
                         <outlet property="textOnBoard" destination="2kW-W9-DfN" id="KL8-NG-txX"/>
                         <outlet property="titleIntro" destination="q4E-oh-pp4" id="4lt-1s-6kc"/>
+                        <segue destination="cvr-Mb-Gmt" kind="presentation" identifier="skipOnboarding" modalPresentationStyle="fullScreen" id="sdH-EC-gyj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.84615384615384" y="64.691943127962077"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="lNE-5P-7II">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="cvr-Mb-Gmt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gqH-E0-2CN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuX-Lu-InE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="155"/>
         </scene>
         <!--SetupProfile-->
         <scene sceneID="SaD-P7-czH">

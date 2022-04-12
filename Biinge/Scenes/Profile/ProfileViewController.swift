@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    var image: UIImage = UIImage(data: UserProfile.shared.pic as Data)!
+    var image: UIImage = UIImage(data: UserProfile.shared.pic as Data) ?? UIImage(named: "PersonPlaceholder")!
     var _accomplish: Int = UserProfile.shared.accomplish
     var _exceed: Int = UserProfile.shared.exceed
     var _point: Int = UserProfile.shared.points

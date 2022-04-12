@@ -41,15 +41,6 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // check onboarding status
-        print(Settings.shared.onboardingDone)
-        if Settings.shared.onboardingDone == OnboardingStatus.completed {
-            // Skip onboarding
-            print("skip onboarding")
-            performSegue(withIdentifier: "goToSetupProfile", sender: self)
-        }
-        
-        // continue
         logoOnBoard.image = logoOnBoards[currentPage]
         titleIntro.text = titleIntros[currentPage]
         textOnBoard.text = textOnBoards[currentPage]

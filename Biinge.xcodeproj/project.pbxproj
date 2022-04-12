@@ -26,6 +26,7 @@
 		4C123E1528052EE800D788DA /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E1428052EE800D788DA /* Counter.swift */; };
 		4C123E2128055CEA00D788DA /* ShareViewContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C123E2028055CEA00D788DA /* ShareViewContent.xib */; };
 		4C123E232805609D00D788DA /* ShareViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E222805609D00D788DA /* ShareViewContent.swift */; };
+		4C43C4D42805CE940067B111 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43C4D32805CE940067B111 /* Toast.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -93,6 +94,7 @@
 		4C123E1428052EE800D788DA /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		4C123E2028055CEA00D788DA /* ShareViewContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareViewContent.xib; sourceTree = "<group>"; };
 		4C123E222805609D00D788DA /* ShareViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewContent.swift; sourceTree = "<group>"; };
+		4C43C4D32805CE940067B111 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -214,6 +216,14 @@
 				4C123E222805609D00D788DA /* ShareViewContent.swift */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		4C43C4D22805CE8A0067B111 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				4C43C4D32805CE940067B111 /* Toast.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
@@ -360,6 +370,7 @@
 		4C97D12A27FE8175005989A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4C43C4D22805CE8A0067B111 /* Toast */,
 				4C123E1B28055A9E00D788DA /* Share */,
 				4C123E1328052ED600D788DA /* Counter */,
 				4C123E092804611A00D788DA /* Call */,
@@ -553,6 +564,7 @@
 				3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */,
 				4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */,
 				4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */,
+				4C43C4D42805CE940067B111 /* Toast.swift in Sources */,
 				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
 				3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,

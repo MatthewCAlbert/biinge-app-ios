@@ -39,7 +39,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="V2t-cn-sOb">
             <objects>
-                <tabBarController id="56I-TT-ycK" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="56I-TT-ycK" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cxh-sT-ZTB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>

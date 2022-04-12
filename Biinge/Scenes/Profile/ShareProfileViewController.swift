@@ -22,7 +22,7 @@ class ShareProfileViewController: UIViewController {
     // MARK: Social Share
     
     var storyImg = UIImage()
-    var profileImg: UIImage = UIImage(named: "setan.jpg")!.circleMasked!
+    var profileImg: UIImage = UIImage(data: UserProfile.shared.pic as Data) ?? UIImage(named: "PersonPlaceholder")!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,6 +31,8 @@ class ShareProfileViewController: UIViewController {
         let contentView = UINib(nibName: "ShareViewContent", bundle: bundle)
         let contentViewShow = contentView.instantiate(withOwner: self, options: nil)[0] as! ShareViewContent
         
+        contentViewShow.userProfileImg.image = self.profileImg.circleMasked
+        
         // TODO: Connect this to real data
         contentViewShow.monthYearLbl.text = "April 2022"
         contentViewShow.totalWatchTimeLbl.text = "89 h 54 m"
@@ -38,7 +40,6 @@ class ShareProfileViewController: UIViewController {
         contentViewShow.sessionTotalLbl.text = "320"
         contentViewShow.longestStreakLbl.text = "170"
         contentViewShow.accuracyRateLbl.text = "86 %"
-        contentViewShow.userProfileImg.image = self.profileImg
         
         self.storyImg = contentViewShow.asImage()
     }
