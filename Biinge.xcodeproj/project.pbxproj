@@ -58,6 +58,8 @@
 		4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32432803CC6700E58F89 /* TestViewController.swift */; };
 		4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */; };
 		4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF324828041D0B00E58F89 /* AVHelper.swift */; };
+		A83621E628051A4F0096F631 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83621E528051A4F0096F631 /* HistoryViewController.swift */; };
+		A83621E828051A5B0096F631 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83621E728051A5B0096F631 /* History.storyboard */; };
 		A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C9072802D14700C0E5B5 /* InfoViewController.swift */; };
 		A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */; };
 		A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A843C90C28037DE600C0E5B5 /* TabBar.storyboard */; };
@@ -121,6 +123,8 @@
 		4CAF32432803CC6700E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		4CAF324828041D0B00E58F89 /* AVHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVHelper.swift; sourceTree = "<group>"; };
+		A83621E528051A4F0096F631 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		A83621E728051A5B0096F631 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		A843C9072802D14700C0E5B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A843C90C28037DE600C0E5B5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -325,11 +329,11 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A83621E428051A370096F631 /* History */,
 				3CDA1EF628041F2D00C88313 /* Profile */,
 				A84A1923280029D7003BB8F4 /* OnBoarding */,
 				4CAF323C2803C81200E58F89 /* Test */,
 				A843C90928037DAB00C0E5B5 /* TabBar */,
-				3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */,
 				4C97D12B27FE827B005989A7 /* Home */,
 			);
 			path = Scenes;
@@ -376,6 +380,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		A83621E428051A370096F631 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A83621E528051A4F0096F631 /* HistoryViewController.swift */,
+				A83621E728051A5B0096F631 /* History.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		A843C90928037DAB00C0E5B5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				3391DFA72803D44E00DD3C30 /* Welcome */,
+				3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */,
 				A84A192428002ACF003BB8F4 /* DefaultReminder */,
 			);
 			path = OnBoarding;
@@ -483,6 +497,7 @@
 				4CAF32422803CC5600E58F89 /* Test.storyboard in Resources */,
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
+				A83621E828051A5B0096F631 /* History.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
 				3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
@@ -524,6 +539,7 @@
 				4C123E0B2804612E00D788DA /* Call.swift in Sources */,
 				4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */,
 				4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */,
+				A83621E628051A4F0096F631 /* HistoryViewController.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
 				4C123E0328044CC200D788DA /* PointHelper.swift in Sources */,
 				4CAF32312803261B00E58F89 /* CDSession+CoreDataClass.swift in Sources */,

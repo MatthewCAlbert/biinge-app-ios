@@ -37,7 +37,6 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserProfile.shared.accomplish = _accomplish + 1
         accomLabel.text = "\(_accomplish)/\(_accomplish+_exceed)"
         exceedLabel.text = "\(_exceed)/\(_accomplish+_exceed)"
         pointLabel.text = "\(_point) Points"
