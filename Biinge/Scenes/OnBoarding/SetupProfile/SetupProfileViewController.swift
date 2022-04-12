@@ -35,13 +35,6 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
         
         // buat style text field
         self.userField.delegate = self
-//        userField.becomeFirstResponder()
-//        let bottomLine = CALayer()
-//        bottomLine.frame = CGRect(x:0,y:userField.frame.height-2,width:userField.frame.width, height:2)
-//        bottomLine.backgroundColor = UIColor.white.cgColor
-//        userField.borderStyle = .none
-//        userField.layer.addSublayer(bottomLine)
-        
     }
     
     // hide keyboard
@@ -59,17 +52,8 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     @IBAction func tapNext() {
         if let tf = userField.text {
             UserProfile.shared.username = tf
-            print("your set username:")
-            print(UserProfile.shared.username!)
         }
-        print("navigate bro")
-//        let storyboard = UIStoryboard(name:"Home", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as UIViewController
-//        present(vc, animated: true, completion: nil)
-////        let vc = SecondViewController()
-//        let navVC = UINavigationController(rootViewController: vc)
-//        navVC.modalPresentationStyle = .fullScreen
-//        present(navVC, animated: true)
+
     }
 
     // edit profile button
@@ -84,22 +68,6 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     
 }
 
-//class SecondViewController: UIViewController {
-//
-//    @IBOutlet weak var helloLbl: UILabel!
-//
-//    @IBAction func HelloButtonPressed(_ sender: UIButton) {
-//        helloLbl.text = "Hello World"
-//    }
-//    private let button = UIButton()
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        view.backgroundColor = .systemRed
-//        // Do any additional setup after loading the view.
-//    }
-//
-//}
 
 extension SetupProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

@@ -14,6 +14,8 @@ class ProfileViewController: UIViewController {
     var _point: Int = UserProfile.shared.points
     var _streak: Int = UserProfile.shared.streak
     var _username: String = UserProfile.shared.username!
+    var hour: Int = 0
+    var minute: Int = 0
     
     @IBOutlet weak var rankImage: UIImageView!
     @IBOutlet weak var streakImage: UIImageView!
@@ -33,10 +35,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var exceedLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var streakLabel: UILabel!
+    @IBOutlet weak var watchTotalLabel: UILabel!
+    
+    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hour = SessionHelper.shared.getLifetimeTotalTimeInMinute()/60
+        minute = SessionHelper.shared.getLifetimeTotalTimeInMinute()%60
+        watchTotalLabel.text = "\(hour) hr \(minute) min"
         accomLabel.text = "\(_accomplish)/\(_accomplish+_exceed)"
         exceedLabel.text = "\(_exceed)/\(_accomplish+_exceed)"
         pointLabel.text = "\(_point) Points"
@@ -67,6 +76,14 @@ class ProfileViewController: UIViewController {
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = 1
         view.layer.cornerRadius = 10
+    }
+    
+    @IBAction func tapSettings() {
+
+    }
+    
+    @IBAction func tapShare() {
+
     }
     
 
