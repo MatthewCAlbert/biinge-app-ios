@@ -99,18 +99,18 @@
             </objects>
             <point key="canvasLocation" x="-25" y="18"/>
         </scene>
-        <!--Home-->
+        <!--TabBar-->
         <scene sceneID="OeX-LP-UHy">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="QIU-9U-5yd" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TabBar" id="QIU-9U-5yd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjH-pc-oQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="-114"/>
         </scene>
-        <!--Home-->
+        <!--TabBar-->
         <scene sceneID="9cZ-rV-d2B">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="Vld-o3-Gaj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TabBar" id="Vld-o3-Gaj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w44-PA-s4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="165"/>
