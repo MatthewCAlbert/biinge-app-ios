@@ -21,10 +21,12 @@
 - [ ] Notification as Call
 - [ ] Point Works
 - [ ] Share to Social Media
+- [ ] Settings
 - [ ] Leaderboard
 
 ## Backend Wise
 
+- [ ] CoreData Abstraction
 - [x] Set Preferences
 - [x] Set Profile (username)
 - [ ] Set Profile (photo)
@@ -36,7 +38,7 @@
 
 ## Bugs
 
-- CallerID Profile not yet working.
+- CallerID Profile Picture not yet working.
 
 ## Development
 
