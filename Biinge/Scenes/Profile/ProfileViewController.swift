@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     var _exceed: Int = UserProfile.shared.exceed
     var _point: Int = UserProfile.shared.points
     var _streak: Int = UserProfile.shared.streak
-    var _username: String = UserProfile.shared.username!
+    var _username: String = UserProfile.shared.username ?? "Watcher"
     var hour: Int = 0
     var minute: Int = 0
     

@@ -13,6 +13,8 @@
 
 ## Features
 
+- [x] Dark Mode
+- [x] Splash Screen
 - [x] Onboarding
 - [x] Set Preferences (only current Session)
 - [x] Set Profile (username)
@@ -32,7 +34,7 @@
 - [x] CoreData Abstraction
 - [x] Set Preferences
 - [x] Set Profile (username)
-- [ ] Set Profile (photo)
+- [x] Set Profile (photo)
 - [x] Notification
 - [x] Notification as Call
 - [x] Point Works
@@ -42,6 +44,7 @@
 ## Bugs
 
 - CallerID Profile Picture not yet working.
+- Splashscreen not showing.
 
 ## Development
 
