@@ -11,6 +11,18 @@
 		3391DFAB2803D4D300DD3C30 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFAA2803D4D300DD3C30 /* Welcome.storyboard */; };
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
+		3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA1EF72804430500C88313 /* Profile.storyboard */; };
+		3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA1EF92804433F00C88313 /* ProfileViewController.swift */; };
+		3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA1EFB2804747100C88313 /* CircularProgressView.swift */; };
+		4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFB2804278200D788DA /* SessionHelper.swift */; };
+		4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFE28043D9700D788DA /* NSDate+Ext.swift */; };
+		4C123E01280448A300D788DA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E00280448A200D788DA /* Date+Ext.swift */; };
+		4C123E0328044CC200D788DA /* PointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0228044CC200D788DA /* PointHelper.swift */; };
+		4C123E06280454AC00D788DA /* ProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E05280454AC00D788DA /* ProviderDelegate.swift */; };
+		4C123E08280460FF00D788DA /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E07280460FF00D788DA /* CallManager.swift */; };
+		4C123E0B2804612E00D788DA /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0A2804612E00D788DA /* Call.swift */; };
+		4C123E0D2804619400D788DA /* CallAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0C2804619400D788DA /* CallAudio.swift */; };
+		4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0E2804656E00D788DA /* CallHelper.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -42,8 +54,10 @@
 		4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323528033C3500E58F89 /* PointHistory.swift */; };
 		4CAF323828033C4B00E58F89 /* PreferencePreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323728033C4B00E58F89 /* PreferencePreset.swift */; };
 		4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323928033DFB00E58F89 /* PreferencePresetRepository.swift */; };
-		4CAF323F2803C81200E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF323D2803C81200E58F89 /* TestViewController.swift */; };
-		4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF323E2803C81200E58F89 /* TestViewController.xib */; };
+		4CAF32422803CC5600E58F89 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF32412803CC5600E58F89 /* Test.storyboard */; };
+		4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32432803CC6700E58F89 /* TestViewController.swift */; };
+		4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */; };
+		4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF324828041D0B00E58F89 /* AVHelper.swift */; };
 		A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C9072802D14700C0E5B5 /* InfoViewController.swift */; };
 		A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */; };
 		A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A843C90C28037DE600C0E5B5 /* TabBar.storyboard */; };
@@ -57,6 +71,19 @@
 		3391DFAA2803D4D300DD3C30 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		3CDA1EF72804430500C88313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3CDA1EF92804433F00C88313 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3CDA1EFB2804747100C88313 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Biinge/Scenes/Profile/CircularProgressView.swift; sourceTree = SOURCE_ROOT; };
+		4C123DFB2804278200D788DA /* SessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
+		4C123DFE28043D9700D788DA /* NSDate+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Ext.swift"; sourceTree = "<group>"; };
+		4C123E00280448A200D788DA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		4C123E0228044CC200D788DA /* PointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHelper.swift; sourceTree = "<group>"; };
+		4C123E05280454AC00D788DA /* ProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDelegate.swift; sourceTree = "<group>"; };
+		4C123E07280460FF00D788DA /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
+		4C123E0A2804612E00D788DA /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		4C123E0C2804619400D788DA /* CallAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAudio.swift; sourceTree = "<group>"; };
+		4C123E0E2804656E00D788DA /* CallHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHelper.swift; sourceTree = "<group>"; };
+		4C123E122804727900D788DA /* Biinge.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Biinge.entitlements; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -90,8 +117,10 @@
 		4CAF323528033C3500E58F89 /* PointHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointHistory.swift; sourceTree = "<group>"; };
 		4CAF323728033C4B00E58F89 /* PreferencePreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePreset.swift; sourceTree = "<group>"; };
 		4CAF323928033DFB00E58F89 /* PreferencePresetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePresetRepository.swift; sourceTree = "<group>"; };
-		4CAF323D2803C81200E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		4CAF323E2803C81200E58F89 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		4CAF32412803CC5600E58F89 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		4CAF32432803CC6700E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		4CAF324828041D0B00E58F89 /* AVHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVHelper.swift; sourceTree = "<group>"; };
 		A843C9072802D14700C0E5B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A843C90A28037DDA00C0E5B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A843C90C28037DE600C0E5B5 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -129,6 +158,34 @@
 			path = SetupProfile;
 			sourceTree = "<group>";
 		};
+		3CDA1EF628041F2D00C88313 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA1EF72804430500C88313 /* Profile.storyboard */,
+				3CDA1EF92804433F00C88313 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4C123DFD28043D8800D788DA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C123DFE28043D9700D788DA /* NSDate+Ext.swift */,
+				4C123E00280448A200D788DA /* Date+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4C123E092804611A00D788DA /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				4C123E07280460FF00D788DA /* CallManager.swift */,
+				4C123E0A2804612E00D788DA /* Call.swift */,
+				4C123E0C2804619400D788DA /* CallAudio.swift */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +218,7 @@
 		4C605679280140440022D107 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA1EFB2804747100C88313 /* CircularProgressView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -228,6 +286,7 @@
 		4C97D10627FE09D6005989A7 /* Biinge */ = {
 			isa = PBXGroup;
 			children = (
+				4C123E122804727900D788DA /* Biinge.entitlements */,
 				4C6056772801400F0022D107 /* Themes */,
 				4C97D12627FE80D4005989A7 /* Model */,
 				4C97D12927FE815D005989A7 /* Scenes */,
@@ -235,6 +294,7 @@
 				4C97D12A27FE8175005989A7 /* Utilities */,
 				4C97D10727FE09D6005989A7 /* AppDelegate.swift */,
 				4C97D10927FE09D6005989A7 /* SceneDelegate.swift */,
+				4C123E05280454AC00D788DA /* ProviderDelegate.swift */,
 				4C97D11027FE09D8005989A7 /* Assets.xcassets */,
 				4C97D11227FE09D8005989A7 /* LaunchScreen.storyboard */,
 				4C97D11527FE09D8005989A7 /* Info.plist */,
@@ -265,9 +325,10 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA1EF628041F2D00C88313 /* Profile */,
+				A84A1923280029D7003BB8F4 /* OnBoarding */,
 				4CAF323C2803C81200E58F89 /* Test */,
 				A843C90928037DAB00C0E5B5 /* TabBar */,
-				A84A1923280029D7003BB8F4 /* OnBoarding */,
 				3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */,
 				4C97D12B27FE827B005989A7 /* Home */,
 			);
@@ -277,6 +338,9 @@
 		4C97D12A27FE8175005989A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4C123E092804611A00D788DA /* Call */,
+				4C123DFD28043D8800D788DA /* Extension */,
+				4CAF32452803D64C00E58F89 /* Helper */,
 				4C90F1212801521B00C9FF4F /* UserDefaults */,
 				4C60567A280140680022D107 /* CoreData */,
 			);
@@ -294,10 +358,22 @@
 		4CAF323C2803C81200E58F89 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				4CAF323D2803C81200E58F89 /* TestViewController.swift */,
-				4CAF323E2803C81200E58F89 /* TestViewController.xib */,
+				4CAF32412803CC5600E58F89 /* Test.storyboard */,
+				4CAF32432803CC6700E58F89 /* TestViewController.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		4CAF32452803D64C00E58F89 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */,
+				4CAF324828041D0B00E58F89 /* AVHelper.swift */,
+				4C123DFB2804278200D788DA /* SessionHelper.swift */,
+				4C123E0228044CC200D788DA /* PointHelper.swift */,
+				4C123E0E2804656E00D788DA /* CallHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A843C90928037DAB00C0E5B5 /* TabBar */ = {
@@ -400,14 +476,15 @@
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
-				4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
 				4C97D11127FE09D8005989A7 /* Assets.xcassets in Resources */,
 				A84A192828002B45003BB8F4 /* DefaultReminder.storyboard in Resources */,
+				4CAF32422803CC5600E58F89 /* Test.storyboard in Resources */,
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
+				3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
 				3391DFAB2803D4D300DD3C30 /* Welcome.storyboard in Resources */,
 			);
@@ -423,30 +500,43 @@
 				A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */,
 				A84A1921280017D6003BB8F4 /* SetTimeViewController.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
+				4C123E08280460FF00D788DA /* CallManager.swift in Sources */,
 				A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */,
 				A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */,
 				3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */,
+				4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */,
+				4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */,
 				4CAF323828033C4B00E58F89 /* PreferencePreset.swift in Sources */,
 				4CAF32302803261B00E58F89 /* CDPointHistory+CoreDataProperties.swift in Sources */,
 				4C90F17E2802F0F200C9FF4F /* BaseEntity.swift in Sources */,
 				4CAF322D2803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift in Sources */,
 				4CAF322F2803261B00E58F89 /* CDPointHistory+CoreDataClass.swift in Sources */,
 				4C90F17A2802E8A200C9FF4F /* Session.swift in Sources */,
+				3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */,
+				4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */,
 				4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */,
 				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
+				3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
+				4C123E01280448A300D788DA /* Date+Ext.swift in Sources */,
+				4C123E0B2804612E00D788DA /* Call.swift in Sources */,
+				4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */,
 				4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
+				4C123E0328044CC200D788DA /* PointHelper.swift in Sources */,
 				4CAF32312803261B00E58F89 /* CDSession+CoreDataClass.swift in Sources */,
 				4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */,
 				3391DFA92803D4B600DD3C30 /* WelcomeViewController.swift in Sources */,
+				4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */,
+				4C123E06280454AC00D788DA /* ProviderDelegate.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
+				4C123E0D2804619400D788DA /* CallAudio.swift in Sources */,
 				4CAF323428033C0200E58F89 /* PointHistoryRepository.swift in Sources */,
-				4CAF323F2803C81200E58F89 /* TestViewController.swift in Sources */,
+				4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */,
 				4CAF32322803261B00E58F89 /* CDSession+CoreDataProperties.swift in Sources */,
 				4C90F1402802D2FF00C9FF4F /* CoreDataStack.swift in Sources */,
 				4CAF32262803228200E58F89 /* BiingeModel.xcdatamodeld in Sources */,
@@ -501,6 +591,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				"DEVELOPMENT_TEAM[sdk=*]" = GXV96JYG87;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -586,9 +677,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Biinge/Biinge.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C77567662R;
+				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
@@ -604,6 +697,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = morning.team11.biinge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -615,9 +709,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Biinge/Biinge.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C77567662R;
+				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
@@ -633,6 +729,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = morning.team11.biinge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

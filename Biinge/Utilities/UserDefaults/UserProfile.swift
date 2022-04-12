@@ -12,6 +12,9 @@ class UserProfile {
     private var _id: String?
     private var _username: String?
     private var _points: Int
+    private var _accomplish: Int
+    private var _exceed: Int
+    private var _streak: Int
     
     static let shared = UserProfile()
     
@@ -26,7 +29,9 @@ class UserProfile {
         
         self._username = UserDefaults.standard.string(forKey: "username")
         self._points = UserDefaults.standard.integer(forKey: "userPoints")
-        
+        self._accomplish = UserDefaults.standard.integer(forKey: "userAccom")
+        self._exceed = UserDefaults.standard.integer(forKey: "userExceed")
+        self._streak = UserDefaults.standard.integer(forKey: "userStreak")
     }
     
     var id: String? {
@@ -57,6 +62,35 @@ class UserProfile {
             UserDefaults.standard.set(newValue, forKey: "userPoints")
         }
     }
+    
+    var accomplish: Int {
+        get {
+            return self._accomplish
+        }
+        set(newValue) {
+            self._accomplish = newValue
+            UserDefaults.standard.set(newValue, forKey: "userAccom")
+        }
+    }
+    var exceed: Int {
+        get {
+            return self._exceed
+        }
+        set(newValue) {
+            self._exceed = newValue
+            UserDefaults.standard.set(newValue, forKey: "userExceed")
+        }
+    }
+    var streak: Int {
+        get {
+            return self._streak
+        }
+        set(newValue) {
+            self._streak = newValue
+            UserDefaults.standard.set(newValue, forKey: "userStreak")
+        }
+    }
+
     
     func addPoints(_ value: Int) {
         self.points = self.points + value

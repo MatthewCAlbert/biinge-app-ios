@@ -11,8 +11,19 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+    let callManager = CallManager()
+    var providerDelegate: ProviderDelegate!
+
+    class var shared: AppDelegate {
+      return UIApplication.shared.delegate as! AppDelegate
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        _ = Settings.shared
+        self.providerDelegate = ProviderDelegate(callManager: callManager)
+        
         return true
     }
 
@@ -30,6 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    // MARK: CallKit
+
+    func displayIncomingCall(
+      uuid: UUID,
+      handle: String,
+      completion: ((Error?) -> Void)?
+    ) {
+        self.providerDelegate.reportIncomingCall(
+            uuid: uuid,
+            handle: handle,
+            completion: completion
+        )
+    }
 
 }
 
