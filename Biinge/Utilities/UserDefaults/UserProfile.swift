@@ -90,6 +90,15 @@ class UserProfile {
             UserDefaults.standard.set(newValue, forKey: "userStreak")
         }
     }
+    
+    var pic: NSData {
+        get {
+            return UserDefaults.standard.object(forKey: "userPic") as! NSData
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: "userPic")
+        }
+    }
 
     
     func addPoints(_ value: Int) {

@@ -10,7 +10,7 @@ import UIKit
 class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     var image: UIImage = UIImage(named: "setan.jpg")!
     let editImage: UIImage = UIImage(named: "circleedit.png")!
-//    var tf: String?
+    var pic: NSData? = nil
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -25,13 +25,14 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         textLabel.textColor = UIColor(rgb: 0x8D8D92)
         laterButton.setTitleColor(UIColor(rgb: 0x8D8D92), for: .normal)
-//        editImage.size.width = profileImage.frame.size.width
         profileImage.image = image
         profileImage.layer.borderWidth = 1.0
         profileImage.layer.masksToBounds = false
         profileImage.layer.borderColor = UIColor(rgb: 0x8D8D92).cgColor
         profileImage.layer.cornerRadius = profileImage.frame.size.width/2
         profileImage.clipsToBounds = true
+        pic = image.jpegData(compressionQuality: 0.5)! as NSData
+        UserProfile.shared.pic = pic!
         
         // buat style text field
         self.userField.delegate = self
@@ -53,12 +54,11 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
         if let tf = userField.text {
             UserProfile.shared.username = tf
         }
-
+        UserProfile.shared.pic = pic!
     }
 
     // edit profile button
     @IBAction func chooseProfile(){
-        print("hehe")
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
@@ -74,6 +74,7 @@ extension SetupProfileViewController: UIImagePickerControllerDelegate, UINavigat
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")]as? UIImage{
             profileImage.image = image
+            pic = image.jpegData(compressionQuality: 0.5)! as NSData
         }
         
         picker.dismiss(animated: true, completion: nil)
