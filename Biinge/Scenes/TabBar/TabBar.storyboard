@@ -7,34 +7,60 @@
     </dependencies>
     <scenes>
         <!--Home-->
-        <scene sceneID="g2v-Wd-6iH">
+        <scene sceneID="LXi-rV-9YI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="tbc-7Q-o1N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="film" catalog="system" badgeValue="Home" id="vEn-Q6-nzP"/>
+                <viewControllerPlaceholder storyboardName="Home" id="ajh-a0-h0T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="film" catalog="system" id="vSQ-vW-cDZ"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GSh-T2-zdW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qnp-bF-Rb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-577" y="171"/>
+            <point key="canvasLocation" x="-429" y="162"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="btV-JB-9XI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="H8Z-fp-cJX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="QNg-Ij-bVp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AN5-dn-OcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="161"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="o7G-RB-ARV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="History" id="aVu-c1-PtW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="clock" catalog="system" id="WHe-Fy-ZT3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDD-7L-vIy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712" y="161"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="V2t-cn-sOb">
             <objects>
                 <tabBarController id="56I-TT-ycK" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cxh-sT-ZTB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.023529411764705882" green="0.37254901960784315" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tbc-7Q-o1N" kind="relationship" relationship="viewControllers" id="rot-fO-VbH"/>
+                        <segue destination="ajh-a0-h0T" kind="relationship" relationship="viewControllers" id="Cbg-7I-3AJ"/>
+                        <segue destination="H8Z-fp-cJX" kind="relationship" relationship="viewControllers" id="CYw-p4-0Q6"/>
+                        <segue destination="aVu-c1-PtW" kind="relationship" relationship="viewControllers" id="qTg-Vv-kHD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzL-K4-2YC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="-258"/>
+            <point key="canvasLocation" x="134" y="-314"/>
         </scene>
     </scenes>
     <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
         <image name="film" catalog="system" width="128" height="93"/>
+        <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>
