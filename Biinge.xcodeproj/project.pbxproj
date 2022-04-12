@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
+		3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA1EF72804430500C88313 /* Profile.storyboard */; };
+		3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA1EF92804433F00C88313 /* ProfileViewController.swift */; };
+		3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA1EFB2804747100C88313 /* CircularProgressView.swift */; };
 		4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFB2804278200D788DA /* SessionHelper.swift */; };
 		4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFE28043D9700D788DA /* NSDate+Ext.swift */; };
 		4C123E01280448A300D788DA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E00280448A200D788DA /* Date+Ext.swift */; };
@@ -64,6 +67,9 @@
 /* Begin PBXFileReference section */
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		3CDA1EF72804430500C88313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3CDA1EF92804433F00C88313 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3CDA1EFB2804747100C88313 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Biinge/Scenes/Profile/CircularProgressView.swift; sourceTree = SOURCE_ROOT; };
 		4C123DFB2804278200D788DA /* SessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
 		4C123DFE28043D9700D788DA /* NSDate+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Ext.swift"; sourceTree = "<group>"; };
 		4C123E00280448A200D788DA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
@@ -139,6 +145,15 @@
 			path = SetupProfile;
 			sourceTree = "<group>";
 		};
+		3CDA1EF628041F2D00C88313 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA1EF72804430500C88313 /* Profile.storyboard */,
+				3CDA1EF92804433F00C88313 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		4C123DFD28043D8800D788DA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +205,7 @@
 		4C605679280140440022D107 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA1EFB2804747100C88313 /* CircularProgressView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -296,6 +312,7 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA1EF628041F2D00C88313 /* Profile */,
 				A84A1923280029D7003BB8F4 /* OnBoarding */,
 				4CAF323C2803C81200E58F89 /* Test */,
 				A843C90928037DAB00C0E5B5 /* TabBar */,
@@ -453,6 +470,7 @@
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
+				3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,9 +497,11 @@
 				4CAF322D2803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift in Sources */,
 				4CAF322F2803261B00E58F89 /* CDPointHistory+CoreDataClass.swift in Sources */,
 				4C90F17A2802E8A200C9FF4F /* Session.swift in Sources */,
+				3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */,
 				4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */,
 				4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */,
 				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
+				3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
