@@ -13,8 +13,7 @@ class CircularProgressView: UIView {
     fileprivate var trackLayer = CAShapeLayer()
     var _accomplish: Int = UserProfile.shared.accomplish
     var _exceed: Int = UserProfile.shared.exceed
-//    var _accomplish: Int? = 1
-//    var _exceed: Int? = 1
+
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -65,7 +64,6 @@ class CircularProgressView: UIView {
         progressLayer.strokeColor = progressColor.cgColor
         progressLayer.lineWidth = 10.0
         progressLayer.strokeEnd = CGFloat(_exceed)/CGFloat(_exceed + _accomplish)
-//        progressLayer.strokeEnd = 0.5
         layer.addSublayer(progressLayer)
     }
 
