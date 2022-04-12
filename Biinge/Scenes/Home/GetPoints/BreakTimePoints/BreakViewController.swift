@@ -9,6 +9,8 @@ import UIKit
 
 class BreakViewController: UIViewController {
 
+    let texts = ["Sit in an upright position with neutral shoulders. Rotate the neck clockwise for 10-30 seconds, and vice versa.","Take a grab-able foods like fruit, cut-up veggies, and drink a glass of water!","Let’s strech your body by turning your body to the right and left while doing inhale and exhale.","Close the screen for a while to relax your eyes. Looking at a bright screen for long time can cause eye strain and headache."]
+    
     //var
     var a1 : UIImage!
     var a2 : UIImage!
@@ -111,10 +113,11 @@ class BreakViewController: UIViewController {
         
         images = [a1, a2, a3, a4, a5, a6, a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29,a30,a31,a32,a33,a34,a35,a36,a37,a38,a39,a40]
         
-        animatedImage = UIImage.animatedImage(with: images, duration: 1.0)
+        animatedImage = UIImage.animatedImage(with: images, duration: 2.0)
         
         viewImage.image = animatedImage 
         // Do any additional setup after loading the view.
+        tipsText.text = texts.randomElement()
     }
     
 
