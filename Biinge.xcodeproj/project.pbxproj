@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3391DFB72804627C00DD3C30 /* FailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFB62804627C00DD3C30 /* FailViewController.swift */; };
+		3391DFB92804629500DD3C30 /* FailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFB82804629500DD3C30 /* FailStoryboard.storyboard */; };
+		3391DFBB280462AD00DD3C30 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */; };
+		3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */; };
+		3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFBE2804636B00DD3C30 /* BreakViewController.swift */; };
+		3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */; };
+		3391DFC32804F93800DD3C30 /* failMsn.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC22804F93800DD3C30 /* failMsn.gif */; };
+		3391DFC52804FA0D00DD3C30 /* gifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFC42804FA0D00DD3C30 /* gifLoader.swift */; };
+		3391DFC7280500C000DD3C30 /* breakGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC6280500C000DD3C30 /* breakGif.gif */; };
+		3391DFC92805038300DD3C30 /* successGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC82805038300DD3C30 /* successGif.gif */; };
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
@@ -51,6 +61,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3391DFB62804627C00DD3C30 /* FailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailViewController.swift; sourceTree = "<group>"; };
+		3391DFB82804629500DD3C30 /* FailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FailStoryboard.storyboard; sourceTree = "<group>"; };
+		3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessStoryboard.storyboard; sourceTree = "<group>"; };
+		3391DFBE2804636B00DD3C30 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
+		3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreakStoryboard.storyboard; sourceTree = "<group>"; };
+		3391DFC22804F93800DD3C30 /* failMsn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = failMsn.gif; sourceTree = "<group>"; };
+		3391DFC42804FA0D00DD3C30 /* gifLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoader.swift; sourceTree = "<group>"; };
+		3391DFC6280500C000DD3C30 /* breakGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = breakGif.gif; sourceTree = "<group>"; };
+		3391DFC82805038300DD3C30 /* successGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = successGif.gif; sourceTree = "<group>"; };
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -107,6 +127,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3391DFB2280461C900DD3C30 /* GetPoints */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFB52804622300DD3C30 /* MissionFailed */,
+				3391DFB42804620800DD3C30 /* SuccessPoints */,
+				3391DFB3280461F000DD3C30 /* BreakTimePoints */,
+			);
+			path = GetPoints;
+			sourceTree = "<group>";
+		};
+		3391DFB3280461F000DD3C30 /* BreakTimePoints */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFC6280500C000DD3C30 /* breakGif.gif */,
+				3391DFBE2804636B00DD3C30 /* BreakViewController.swift */,
+				3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */,
+			);
+			path = BreakTimePoints;
+			sourceTree = "<group>";
+		};
+		3391DFB42804620800DD3C30 /* SuccessPoints */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFC82805038300DD3C30 /* successGif.gif */,
+				3391DFBA280462AD00DD3C30 /* SuccessViewController.swift */,
+				3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */,
+			);
+			path = SuccessPoints;
+			sourceTree = "<group>";
+		};
+		3391DFB52804622300DD3C30 /* MissionFailed */ = {
+			isa = PBXGroup;
+			children = (
+				3391DFC22804F93800DD3C30 /* failMsn.gif */,
+				3391DFB62804627C00DD3C30 /* FailViewController.swift */,
+				3391DFB82804629500DD3C30 /* FailStoryboard.storyboard */,
+				3391DFC42804FA0D00DD3C30 /* gifLoader.swift */,
+			);
+			path = MissionFailed;
+			sourceTree = "<group>";
+		};
 		3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +334,7 @@
 		4C97D12B27FE827B005989A7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3391DFB2280461C900DD3C30 /* GetPoints */,
 				A8898C632801560C003F62DA /* HomeSetUp */,
 			);
 			path = Home;
@@ -385,7 +447,10 @@
 				4C60567627FFF4100022D107 /* SFProDisplay-Regular.ttf in Resources */,
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
+				3391DFB92804629500DD3C30 /* FailStoryboard.storyboard in Resources */,
+				3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
+				3391DFC32804F93800DD3C30 /* failMsn.gif in Resources */,
 				4CAF32402803C81200E58F89 /* TestViewController.xib in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
 				4C97D11E27FE0ADB005989A7 /* README.md in Resources */,
@@ -394,7 +459,10 @@
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
+				3391DFC92805038300DD3C30 /* successGif.gif in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
+				3391DFC7280500C000DD3C30 /* breakGif.gif in Resources */,
+				3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,18 +483,22 @@
 				4CAF32302803261B00E58F89 /* CDPointHistory+CoreDataProperties.swift in Sources */,
 				4C90F17E2802F0F200C9FF4F /* BaseEntity.swift in Sources */,
 				4CAF322D2803261B00E58F89 /* CDPreferencePreset+CoreDataClass.swift in Sources */,
+				3391DFB72804627C00DD3C30 /* FailViewController.swift in Sources */,
 				4CAF322F2803261B00E58F89 /* CDPointHistory+CoreDataClass.swift in Sources */,
 				4C90F17A2802E8A200C9FF4F /* Session.swift in Sources */,
 				4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */,
 				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
+				3391DFBB280462AD00DD3C30 /* SuccessViewController.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
 				4C90F12D280165BD00C9FF4F /* AppColor.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
 				4CAF32312803261B00E58F89 /* CDSession+CoreDataClass.swift in Sources */,
+				3391DFC52804FA0D00DD3C30 /* gifLoader.swift in Sources */,
 				4CAF323A28033DFB00E58F89 /* PreferencePresetRepository.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
+				3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
 				4CAF323428033C0200E58F89 /* PointHistoryRepository.swift in Sources */,
