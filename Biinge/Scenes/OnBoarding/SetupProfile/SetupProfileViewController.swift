@@ -25,7 +25,7 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         textLabel.textColor = UIColor(rgb: 0x8D8D92)
         laterButton.setTitleColor(UIColor(rgb: 0x8D8D92), for: .normal)
-        profileImage.image = image
+        profileImage.image = UserProfile.shared.profileImageSet ? UIImage(data: UserProfile.shared.pic as Data) : image
         profileImage.layer.borderWidth = 1.0
         profileImage.layer.masksToBounds = false
         profileImage.layer.borderColor = UIColor(rgb: 0x8D8D92).cgColor
@@ -63,6 +63,7 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
             return
         }
         UserProfile.shared.pic = pic!
+        UserProfile.shared.profileImageSet = true
         performSegue(withIdentifier: "goToOnboardingSetReminder", sender: self)
     }
 

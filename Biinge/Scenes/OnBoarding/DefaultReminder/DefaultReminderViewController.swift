@@ -29,39 +29,36 @@ class DefaultReminderViewController: UIViewController {
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "setDefaultHome" {
 //            let homeVC = segue.destination as! HomeViewController
-//            
+//
 //            //Format for Watch Limit Time Indicator
 //            let timeFormatter = DateFormatter()
 //            timeFormatter.dateFormat = "HH:mm:ss"
 //            let strLimitTime = timeFormatter.string(from: watchTimePicker.date)
-//            
+//
 //            //Set Time Indicator
 //            homeVC.watchLimit = strLimitTime
 //            homeVC.breakLimit = "\(strBreakTime):00"
-//            
+//
 //            //Format for Watch Time Limit Message
 //            let hoursLimitFormatter = DateFormatter()
 //            hoursLimitFormatter.dateFormat = "HH"
 //            let hoursWatchLimitTime = hoursLimitFormatter.string(from: watchTimePicker.date)
-//            
+//
 //            let minutesLimitFormatter = DateFormatter()
 //            minutesLimitFormatter.dateFormat = "mm"
 //            let minutesWatchLimitTime = minutesLimitFormatter.string(from: watchTimePicker.date)
-//            
-//            
+//
+//
 //            //Set Time Limit Message
 //            homeVC.watchLimitMessage = "remaining from \(hoursWatchLimitTime)h \(minutesWatchLimitTime)m of your watch time limit"
 //            homeVC.breakLimitMessage = "minutes remaining from \(strBreakTime) minutes of your break time"
-//            
+//
 //            let totalWatchMinutes = (Int(hoursWatchLimitTime) ?? 0) * 60 + (Int(minutesWatchLimitTime) ?? 0)
-//            
+//
 //            Settings.shared.sessionLengthInMinute = totalWatchMinutes
 //            Settings.shared.targetRestInMinute = Int(strBreakTime) ?? 0
-//
 //        }
-        
 //    }
-    
     
 }
 

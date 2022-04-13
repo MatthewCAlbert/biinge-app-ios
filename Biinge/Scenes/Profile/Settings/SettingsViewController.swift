@@ -23,4 +23,11 @@ class SettingsViewController: UIViewController {
             Settings.shared.notificationType = NotificationPreferenceType.normalNotif
         }
     }
+    @IBAction func resetOnboardingAction(_ sender: UIButton) {
+        Settings.shared.onboardingDone = OnboardingStatus.notDone
+        Toast.show(message: "Onboarding will be opened when you relaunch the app", controller: self)
+    }
+    @IBAction func exitAction(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 }

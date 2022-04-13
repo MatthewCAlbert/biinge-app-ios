@@ -33,7 +33,7 @@
                                         <rect key="frame" x="314.66666666666669" y="14.333333333333337" width="46.333333333333314" height="30.666666666666671"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system">
-                                            <color key="baseForegroundColor" name="Primary"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="tapSettings" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K2P-YN-VEP"/>
@@ -92,16 +92,6 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6w-jC-Pbh">
-                                        <rect key="frame" x="329" y="16" width="33" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="tapSettings" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K2P-YN-VEP"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Primary"/>
                                 <constraints>
@@ -318,7 +308,7 @@
                 <viewControllerPlaceholder storyboardName="SettingStoryboard" id="49l-Lw-gJO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lc9-A4-qmS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456" y="-186"/>
+            <point key="canvasLocation" x="684" y="-19"/>
         </scene>
         <!--Profile-->
         <scene sceneID="KQv-by-Mxe">
@@ -377,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P93-x4-mpl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.61538461538453" y="62.559241706161131"/>
+            <point key="canvasLocation" x="1280" y="63"/>
         </scene>
     </scenes>
     <resources>

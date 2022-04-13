@@ -91,6 +91,14 @@ class UserProfile {
             UserDefaults.standard.set(newValue, forKey: "userStreak")
         }
     }
+    var profileImageSet: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "userPicSet")
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: "userPicSet")
+        }
+    }
     
     var pic: NSData {
         get {

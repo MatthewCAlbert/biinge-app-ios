@@ -22,12 +22,12 @@
 - [x] Set Profile (photo)
 - [x] Timer
 - [x] Set Timer
-- [ ] Notification
-- [ ] Notification as Call
+- [x] Notification
+- [x] Notification as Call
 - [x] Point Works
 - [x] Share to Social Media
-- [ ] Settings
-- [ ] History
+- [x] Settings
+- [x] History
 - [ ] Leaderboard (dropped)
 
 ## Backend Wise
