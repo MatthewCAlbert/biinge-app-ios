@@ -9,7 +9,7 @@ import Foundation
 
 enum PointActionType: String, CaseIterable {
     case restSuccess = "RestSuccess"
-    case dailyTargetSuccess =  "DailyTargetSuccess"
+    case restSuccessStreak = "RestSuccessStreak"
 }
 
 class PointHistory: BaseEntity {

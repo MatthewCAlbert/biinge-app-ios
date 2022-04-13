@@ -23,12 +23,13 @@ class SessionRepository {
             start: cd.start,
             end: cd.end,
             targetEnd: cd.targetEnd,
-            appSession: cd.appSession
+            appSession: cd.appSession,
+            streakCount: Int(cd.streakCount)
         )
     }
     
-    func getAll(predicate: NSPredicate?) throws -> [Session] {
-        let result = self.repository.get(predicate: predicate, sortDescriptors: nil)
+    func getAll(predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]? = nil) throws -> [Session] {
+        let result = self.repository.get(predicate: predicate, sortDescriptors: sortDescriptors)
         switch result {
         case .success(let sessions):
             // Transform the NSManagedObject objects to domain objects
@@ -43,8 +44,8 @@ class SessionRepository {
         }
     }
 
-    func getOne(predicate: NSPredicate?) throws -> Session? {
-        let result = self.repository.get(predicate: predicate, sortDescriptors: nil)
+    func getOne(predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]? = nil) throws -> Session? {
+        let result = self.repository.get(predicate: predicate, sortDescriptors: sortDescriptors)
         switch result {
         case .success(let sessions):
             // Transform the NSManagedObject objects to domain objects
@@ -56,6 +57,26 @@ class SessionRepository {
             // Return the Core Data error.
             throw error
         }
+    }
+    
+    func getOneLastSession(isDone: Bool = false, appSession: Date? = nil) throws -> Session? {
+        var predicates = [NSPredicate]()
+        let sortDescriptors = [
+            NSSortDescriptor(key: "start", ascending: false)
+        ]
+        
+        if isDone {
+            predicates.append(NSPredicate(format: "end != nil"))
+        } else {
+            predicates.append(NSPredicate(format: "end == nil"))
+        }
+        
+        if let appSession = appSession {
+            predicates.append(NSPredicate(format: "appSession == %@", appSession as NSDate))
+        }
+        
+        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        return try self.getOne(predicate: predicate, sortDescriptors: sortDescriptors)
     }
     
     func getOne(id: String) throws -> Session? {
@@ -87,6 +108,7 @@ class SessionRepository {
             session?.start = entity.start
             session?.end = entity.end
             session?.targetEnd = entity.targetEnd
+            session?.streakCount = Int32(entity.streakCount)
             
             _ = self.repository.save()
             return self.toDomain(session!)
@@ -106,7 +128,9 @@ class SessionRepository {
             }
             session.start = entity.start
             session.end = entity.end
+            session.targetEnd = entity.targetEnd
             session.appSession = entity.appSession ?? Settings.shared.currentSessionStart
+            session.streakCount = Int32(entity.streakCount)
             
             if !self.repository.save() {
                 throw CoreDataError.coreDataFailedToSave

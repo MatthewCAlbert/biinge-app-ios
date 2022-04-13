@@ -29,13 +29,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi, Username!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-9Y-6ZL">
-                                <rect key="frame" x="99" y="117" width="192" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
-                                <color key="textColor" name="Black"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="remaining from 03h 00m of your watch time limit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcP-Tg-o5Z">
                                 <rect key="frame" x="81" y="426" width="228" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -112,6 +105,13 @@
                                     <action selector="infoPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Nej-NF-1Wu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi, Username!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-9Y-6ZL">
+                                <rect key="frame" x="31" y="117" width="315" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
+                                <color key="textColor" name="Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="WhiteDarkGreyBg"/>
@@ -121,6 +121,8 @@
                     <connections>
                         <outlet property="breakReminderLabel" destination="f4A-gW-U6V" id="i6p-HK-ndk"/>
                         <outlet property="breakTimeLabel" destination="T5c-es-XKl" id="5Es-Hi-rbA"/>
+                        <outlet property="setTimeBtn" destination="8Hm-ge-x56" id="Il0-Yv-EY4"/>
+                        <outlet property="timerStartEndBtn" destination="Mja-1z-41M" id="VQ6-3z-4iq"/>
                         <outlet property="usernameLabel" destination="g1P-9Y-6ZL" id="mDy-6Q-Nlw"/>
                         <outlet property="watchReminderLabel" destination="FcP-Tg-o5Z" id="ED0-bv-bor"/>
                         <outlet property="watchTimeLabel" destination="Une-TK-3sY" id="yDs-5r-bW8"/>

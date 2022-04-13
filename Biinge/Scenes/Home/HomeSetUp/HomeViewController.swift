@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +22,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var watchReminderLabel: UILabel!
     @IBOutlet weak var breakReminderLabel: UILabel!
+    
+    @IBOutlet weak var timerStartEndBtn: UIButton!
+    @IBOutlet weak var setTimeBtn: UIButton!
     
     // MARK: Reactive Timer
     
@@ -38,17 +42,7 @@ class HomeViewController: UIViewController {
         breakTimeLabel.text = String(format: "%02d:%02d:%02d", h, m, s)
     }
     
-    let cancellable = SessionHelper.shared.sessionElapsed.publisher.sink(
-        receiveCompletion: { completion in
-            switch completion {
-                case .finished:
-                break
-            }
-        },
-        receiveValue: { repo in
-            print(repo)
-        }
-    )
+    var sessionSubscriber: AnyCancellable?
 
     
     // MARK: UI Lifecycle + Trigger
@@ -60,6 +54,34 @@ class HomeViewController: UIViewController {
         
         watchReminderLabel.text = watchLimitMessage
         breakReminderLabel.text = breakLimitMessage
+        
+        usernameLabel.text = "Hi, \(UserProfile.shared.username ?? "Watcher")!"
+        
+        self.sessionSubscriber = SessionHelper.shared.publisher.sink(
+            receiveCompletion: { completion in
+                switch completion {
+                    case .finished:
+                    break
+                }
+            },
+            receiveValue: { sessionMessage in
+                let timeLimit = Settings.shared.sessionLengthInMinute * 60
+                self.updateWatchTimer(timeLimit - sessionMessage.sessionElapsedInSeconds)
+                self.updateBreakTimer(sessionMessage.totalElapsedInSeconds)
+                
+                if sessionMessage.running && self.timerStartEndBtn.title(for: .normal) != "End" {
+                    self.timerStartEndBtn.setTitle("End", for: .normal)
+                } else if !sessionMessage.running && self.timerStartEndBtn.title(for: .normal) != "Start" {
+                    self.timerStartEndBtn.setTitle("Start", for: .normal)
+                }
+                
+                if self.setTimeBtn.isEnabled && sessionMessage.running {
+                    self.setTimeBtn.isEnabled = false
+                } else if !self.setTimeBtn.isEnabled && !sessionMessage.running {
+                    self.setTimeBtn.isEnabled = true
+                }
+            }
+        )
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,7 +119,15 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startPressed(_ sender: UIButton) {
-        _ = SessionHelper.shared.sessionElapsed.value
+        do {
+            if !SessionHelper.shared.sessionMessage.running {
+                try SessionHelper.shared.start()
+            } else {
+                try SessionHelper.shared.end()
+            }
+        } catch {
+            
+        }
     }
     
 }

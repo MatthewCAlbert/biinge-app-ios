@@ -10,9 +10,6 @@ import Combine
 
 class Counter {
     var publisher: AnyPublisher<Int, Never> {
-        // Here we're "erasing" the information of which type
-        // that our subject actually is, only letting our outside
-        // code know that it's a read-only publisher:
         subject.eraseToAnyPublisher()
     }
 
@@ -20,15 +17,48 @@ class Counter {
         didSet { subject.send(self.value) }
     }
 
-    // By storing our subject in a private property, we'll only
-    // be able to send new values to it from within this class:
     private let subject = PassthroughSubject<Int, Never>()
-
-    func increment() {
-        self.value += 1
+    private var isPaused = false
+    
+    private var timer = Timer()
+    init(_ value: Int = 0) {
+        self.value = value
     }
     
-    init(_ value: Int) {
+    func setCurrentTime(_ value: Int) {
         self.value = value
+    }
+    
+    func start(_ value: Int = 0) {
+        timer.invalidate()
+        self.value = value
+        
+        // Start another timer
+        self.resume()
+    }
+    
+    func resume() {
+        self.isPaused = false
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    func pause() {
+        timer.invalidate()
+        self.isPaused = true
+    }
+    
+    func end() {
+        timer.invalidate()
+    }
+    
+    func end(value: Int) {
+        self.value = value
+        timer.invalidate()
+    }
+    
+    @objc func updateCounter() {
+        if !self.isPaused {
+            self.value += 1
+        }
     }
 }

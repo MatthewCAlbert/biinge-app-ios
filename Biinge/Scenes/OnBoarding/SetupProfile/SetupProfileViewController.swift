@@ -36,6 +36,7 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
         
         // buat style text field
         self.userField.delegate = self
+        self.userField.text = UserProfile.shared.username ?? ""
     }
     
     // hide keyboard

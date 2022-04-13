@@ -34,18 +34,29 @@ class ShareProfileViewController: UIViewController {
         contentViewShow.userProfileImg.image = self.profileImg.circleMasked
         
         // TODO: Connect this to real data
-        contentViewShow.monthYearLbl.text = "April 2022"
-        contentViewShow.totalWatchTimeLbl.text = "89 h 54 m"
-        contentViewShow.sessionSuccessLbl.text = "190"
-        contentViewShow.sessionTotalLbl.text = "320"
-        contentViewShow.longestStreakLbl.text = "170"
-        contentViewShow.accuracyRateLbl.text = "86 %"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM YYYY"
+        
+        let monthTotalWatchtime = SessionHelper.shared.getLifetimeTotalTimeInSecond()
+        let (h, m, _) = (monthTotalWatchtime / 3600, (monthTotalWatchtime % 3600) / 60, (monthTotalWatchtime % 3600) % 60)
+        
+        let totalSession = UserProfile.shared.exceed + UserProfile.shared.accomplish
+        
+        contentViewShow.monthYearLbl.text = dateFormatter.string(from: Date())
+        contentViewShow.totalWatchTimeLbl.text = "\(h) h \(m) m"
+        contentViewShow.sessionSuccessLbl.text = String(UserProfile.shared.accomplish)
+        contentViewShow.sessionTotalLbl.text = String(totalSession)
+        contentViewShow.longestStreakLbl.text = String(UserProfile.shared.streak)
+        contentViewShow.accuracyRateLbl.text = String(format: "%.1f", Double(UserProfile.shared.accomplish) / Double(totalSession) * 100.0) + " %"
         
         self.storyImg = contentViewShow.asImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         previewShareImage.image = self.storyImg
+        previewShareImage.layer.borderWidth = 3
+        previewShareImage.layer.borderColor = UIColor(named: "GrayText")?.cgColor
+        previewShareImage.layer.cornerRadius = 15
     }
     
     @IBAction func shareToIGStory() {

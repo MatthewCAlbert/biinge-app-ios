@@ -10,6 +10,7 @@
 - UserDefaults
 - CoreData
 - CallKit
+- Combine
 
 ## Features
 
@@ -18,12 +19,12 @@
 - [x] Onboarding
 - [x] Set Preferences (only current Session)
 - [x] Set Profile (username)
-- [ ] Set Profile (photo)
+- [x] Set Profile (photo)
 - [x] Timer
 - [x] Set Timer
 - [ ] Notification
 - [ ] Notification as Call
-- [ ] Point Works
+- [x] Point Works
 - [x] Share to Social Media
 - [ ] Settings
 - [ ] History
@@ -44,7 +45,6 @@
 ## Bugs
 
 - CallerID Profile Picture not yet working.
-- Splashscreen not showing.
 
 ## Development
 
