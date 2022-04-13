@@ -98,11 +98,27 @@ class HomeViewController: UIViewController {
                 }
             }
         )
+        
+        Task {
+           await self.recheckPermission()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         breakTimeLabel.isHidden = true
         breakReminderLabel.isHidden = true
+    }
+    
+    func recheckPermission() async{
+        let result: UNNotificationSettings = await NotificationHelper.shared.notificationCenter.notificationSettings()
+        switch result.authorizationStatus {
+            case .notDetermined:
+                NotificationHelper.shared.requestAuthorization(completionHandler: { (success) in
+                    guard success else { return }
+                })
+            default:
+                break
+        }
     }
     
     @IBAction func didUnwindFromSetTimeVC(_ sender: UIStoryboardSegue) {

@@ -18,7 +18,6 @@ class ProfileViewController: UIViewController {
     var hour: Int = 0
     var minute: Int = 0
     
-    @IBOutlet weak var rankImage: UIImageView!
     @IBOutlet weak var streakImage: UIImageView!
     @IBOutlet weak var watchImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -82,7 +81,6 @@ class ProfileViewController: UIViewController {
         pointLabel.text = "\(_point) Points"
         streakLabel.text = "\(_streak) streaks in a row"
         userLabel.text = _username
-        rankImage.image = UIImage(named:"piala.png")
         streakImage.image = UIImage(named:"api.png")
         watchImage.image = UIImage(named:"popcorn.png")
     }

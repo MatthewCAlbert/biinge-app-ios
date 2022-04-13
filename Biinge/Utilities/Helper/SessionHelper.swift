@@ -76,6 +76,7 @@ class SessionHelper {
         )
         
         // Re-entry total watch time
+        UserProfile.shared.points = self.getLifetimeTotalPoint()
         self.totalWatchDaySeconds = self.getDayTotalTimeInSecond()
     }
     
@@ -229,6 +230,19 @@ class SessionHelper {
         do {
             let rows = try sessionRepository.getAll(predicate: NSPredicate(format: "end != nil"))
             let res: Int = rows.reduce(0) { $0 + (($1.end! - $1.start!).second!) }
+            return res
+        } catch {
+            return 0
+        }
+    }
+    
+    func getLifetimeTotalPoint() -> Int {
+        do {
+            let rows = try sessionRepository.getAll(predicate: NSPredicate(format: "end != nil"))
+            let res = rows.reduce(0) { $0 + (
+                $1.isObey()! ?
+                    $1.streakCount > 0 ? PointReward.restSuccessStreak : PointReward.restSuccess : 0
+            ) }
             return res
         } catch {
             return 0
