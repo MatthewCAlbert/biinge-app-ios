@@ -296,6 +296,15 @@ class SessionHelper {
         ) }
         return res
     }
+    
+    func getDayStreak(_ date: Date = Date()) -> Int {
+        let rows = self.getDayFinishedSessions(date)
+        let res = rows.reduce(0) { $0 + (
+            $1.isObey()! ?
+                $1.streakCount > 0 ? 1 : 0 : 0
+        ) }
+        return res
+    }
 
     func getDayTotalTimeInMinute(_ date: Date = Date()) -> Int {
         return self.getDayTotalTimeInSecond(date) / 60

@@ -76,6 +76,7 @@
                         <outlet property="textOnBoard" destination="2kW-W9-DfN" id="KL8-NG-txX"/>
                         <outlet property="titleIntro" destination="q4E-oh-pp4" id="4lt-1s-6kc"/>
                         <segue destination="cvr-Mb-Gmt" kind="presentation" identifier="skipOnboarding" modalPresentationStyle="fullScreen" id="sdH-EC-gyj"/>
+                        <segue destination="uvD-7m-by4" kind="presentation" identifier="nextAfterWelcome" id="KN2-5v-7s6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,7 +91,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuX-Lu-InE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="155"/>
+            <point key="canvasLocation" x="602" y="-56"/>
         </scene>
         <!--SetupProfile-->
         <scene sceneID="SaD-P7-czH">
@@ -100,9 +101,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVb-Fq-mXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="268"/>
+            <point key="canvasLocation" x="928" y="100"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KN2-5v-7s6"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -47,7 +47,7 @@ class ShareProfileViewController: UIViewController {
         contentViewShow.sessionSuccessLbl.text = String(UserProfile.shared.accomplish)
         contentViewShow.sessionTotalLbl.text = String(totalSession)
         contentViewShow.longestStreakLbl.text = String(UserProfile.shared.streak)
-        contentViewShow.accuracyRateLbl.text = String(format: "%.1f", Double(UserProfile.shared.accomplish) / Double(totalSession) * 100.0) + " %"
+        contentViewShow.accuracyRateLbl.text = totalSession > 0 ? String(format: "%.1f", Double(UserProfile.shared.accomplish) / Double(totalSession) * 100.0) + " %" : "- %"
         
         self.storyImg = contentViewShow.asImage()
     }

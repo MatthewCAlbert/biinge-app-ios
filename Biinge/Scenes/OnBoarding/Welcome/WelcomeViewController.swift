@@ -49,8 +49,13 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func buttonNext(_ sender: Any) {
-        currentPage = (currentPage + 1) % logoOnBoards.count
-        changeBoard()
+        if currentPage + 1 >= logoOnBoards.count {
+            Settings.shared.onboardingDone = OnboardingStatus.completed
+            performSegue(withIdentifier: "nextAfterWelcome", sender: self)
+        } else {
+            currentPage = currentPage + 1
+            changeBoard()
+        }
     }
      
     @IBAction func buttonSkip(_ sender: UIButton) {

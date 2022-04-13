@@ -97,7 +97,7 @@ class HistoryViewController: UIViewController {
         pointsLabel.text = "\(pointsPerDay) \nPoints"
         
         //Set Streaks from date selected
-        self.streaksPerDay = UserProfile.shared.streak
+        self.streaksPerDay = SessionHelper.shared.getDayStreak(date)
         streaksLabel.text = "\(streaksPerDay) \nStreaks"
         
         
