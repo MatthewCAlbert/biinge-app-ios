@@ -15,6 +15,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        let enableRedirect: Bool? = Bundle.main.object(forInfoDictionaryKey: "Enable Onboarding Skip") as? Bool
+        
+        if let enableRedirect = enableRedirect {
+            if !enableRedirect {
+                return
+            }
+        }
+        
         if let windowScene = scene as? UIWindowScene {
             // check onboarding status
             if Settings.shared.onboardingDone == OnboardingStatus.completed {
