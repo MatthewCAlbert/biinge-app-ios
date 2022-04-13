@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.instructionNotifLbl.isHidden = true
+        self.switchControl.isOn = Settings.shared.notificationType == NotificationPreferenceType.callNotif
         
         Task {
             await self.printStatus()
