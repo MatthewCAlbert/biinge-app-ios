@@ -11,10 +11,10 @@ import Combine
 class HomeViewController: UIViewController {
     
     //Var for indicator & message
-    var watchLimit: String?
-    var breakLimit: String?
-    var watchLimitMessage: String?
-    var breakLimitMessage: String?
+    var watchLimit: String!
+    var breakLimit: String!
+    var watchLimitMessage: String!
+    var breakLimitMessage: String!
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var watchTimeLabel: UILabel!
@@ -50,11 +50,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        watchTimeLabel.text = watchLimit
-        breakTimeLabel.text = breakLimit
+        watchTimeLabel.text = UserDefaults.standard.string(forKey: "watchLimit")
+        breakTimeLabel.text = UserDefaults.standard.string(forKey: "breakLimit")
         
-        watchReminderLabel.text = watchLimitMessage
-        breakReminderLabel.text = breakLimitMessage
+        watchReminderLabel.text = UserDefaults.standard.string(forKey: "watchLimitMessage")
+        breakReminderLabel.text = UserDefaults.standard.string(forKey: "breakLimitMessage")
         
         usernameLabel.text = "Hi, \(UserProfile.shared.username ?? "Watcher")!"
         
