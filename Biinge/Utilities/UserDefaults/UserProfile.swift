@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class UserProfile {
     
@@ -93,7 +94,10 @@ class UserProfile {
     
     var pic: NSData {
         get {
-            return UserDefaults.standard.object(forKey: "userPic") as! NSData
+            if let userPicImg = UserDefaults.standard.object(forKey: "userPic") {
+                return userPicImg as! NSData
+            }
+            return UIImage(named: "PersonPlaceholder")!.jpegData(compressionQuality: 0.8)! as NSData
         }
         set(newValue) {
             UserDefaults.standard.set(newValue, forKey: "userPic")
