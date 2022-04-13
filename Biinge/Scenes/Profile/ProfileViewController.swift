@@ -8,12 +8,13 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    var image: UIImage = UIImage(data: UserProfile.shared.pic as Data)!
-    var _accomplish: Int = UserProfile.shared.accomplish
-    var _exceed: Int = UserProfile.shared.exceed
-    var _point: Int = UserProfile.shared.points
-    var _streak: Int = UserProfile.shared.streak
-    var _username: String = UserProfile.shared.username!
+
+    var image: UIImage = UIImage(data: UserProfile.shared.pic as Data) ?? UIImage(named: "PersonPlaceholder")!
+    var _accomplish: Int = 0
+    var _exceed: Int = 0
+    var _point: Int = 0
+    var _streak: Int = 0
+    var _username: String = ""
     var hour: Int = 0
     var minute: Int = 0
     
@@ -43,17 +44,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hour = SessionHelper.shared.getLifetimeTotalTimeInMinute()/60
-        minute = SessionHelper.shared.getLifetimeTotalTimeInMinute()%60
-        watchTotalLabel.text = "\(hour) hr \(minute) min"
-        accomLabel.text = "\(_accomplish)/\(_accomplish+_exceed)"
-        exceedLabel.text = "\(_exceed)/\(_accomplish+_exceed)"
-        pointLabel.text = "\(_point) Points"
-        streakLabel.text = "\(_streak) streaks in a row"
-        userLabel.text = _username
-        rankImage.image = UIImage(named:"piala.png")
-        streakImage.image = UIImage(named:"api.png")
-        watchImage.image = UIImage(named:"popcorn.png")
+        
         setView(view: infoView)
         setView(view: infoView2)
         setView(view: profileView)
@@ -70,6 +61,32 @@ class ProfileViewController: UIViewController {
         profileImage.clipsToBounds = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadProfileData()
+    }
+    
+    func loadProfileData() {
+        self._accomplish = UserProfile.shared.accomplish
+        self._exceed = UserProfile.shared.exceed
+        self._point = UserProfile.shared.points
+        self._streak = UserProfile.shared.streak
+        self._username = UserProfile.shared.username ?? "No Username"
+        
+        let lifetimeTotalWatchtime = SessionHelper.shared.getLifetimeTotalTimeInSecond()
+        (hour, minute, _) = (lifetimeTotalWatchtime / 3600, (lifetimeTotalWatchtime % 3600) / 60, (lifetimeTotalWatchtime % 3600) % 60)
+        
+        watchTotalLabel.text = "\(hour) hr \(minute) min"
+        accomLabel.text = "\(_accomplish)/\(_accomplish+_exceed)"
+        exceedLabel.text = "\(_exceed)/\(_accomplish+_exceed)"
+        pointLabel.text = "\(_point) Points"
+        streakLabel.text = "\(_streak) streaks in a row"
+        userLabel.text = _username
+        rankImage.image = UIImage(named:"piala.png")
+        streakImage.image = UIImage(named:"api.png")
+        watchImage.image = UIImage(named:"popcorn.png")
+    }
+    
     func setView(view: UIView){
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 1
@@ -82,21 +99,6 @@ class ProfileViewController: UIViewController {
 
     }
     
-    @IBAction func tapShare() {
-
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 

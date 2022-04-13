@@ -55,15 +55,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-77-HXk">
-                                <rect key="frame" x="163" y="725" width="67" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-QL-33G">
+                                <rect key="frame" x="155" y="725" width="80" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="skip">
-                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
                                 <connections>
-                                    <segue destination="uvD-7m-by4" kind="presentation" modalPresentationStyle="fullScreen" id="PBV-W6-N2i"/>
+                                    <action selector="buttonSkip:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ze9-kc-eeh"/>
+                                    <segue destination="uvD-7m-by4" kind="presentation" identifier="goToSetupProfile" modalPresentationStyle="fullScreen" id="PBV-W6-N2i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,14 +73,24 @@
                         <outlet property="btnNext" destination="6VW-X1-kNh" id="flh-Vv-Hpm"/>
                         <outlet property="logoOnBoard" destination="6sk-bh-hiz" id="jbJ-lB-p0n"/>
                         <outlet property="pageControl" destination="eiW-2C-MZQ" id="xLI-7e-gKQ"/>
-                        <outlet property="skipBtn" destination="gUb-77-HXk" id="dHT-qf-hby"/>
                         <outlet property="textOnBoard" destination="2kW-W9-DfN" id="KL8-NG-txX"/>
                         <outlet property="titleIntro" destination="q4E-oh-pp4" id="4lt-1s-6kc"/>
+                        <segue destination="cvr-Mb-Gmt" kind="presentation" identifier="skipOnboarding" modalPresentationStyle="fullScreen" id="sdH-EC-gyj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.84615384615384" y="64.691943127962077"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="lNE-5P-7II">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="cvr-Mb-Gmt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gqH-E0-2CN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuX-Lu-InE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="155"/>
         </scene>
         <!--SetupProfile-->
         <scene sceneID="SaD-P7-czH">

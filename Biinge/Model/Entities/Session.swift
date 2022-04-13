@@ -14,18 +14,20 @@ class Session: BaseEntity {
     public var end: Date?
     public var targetEnd: Date?
     public var appSession: Date?
+    public var streakCount: Int = 0
     
     required init() {
         self.id = nil
         self.appSession = nil
     }
     
-    init(id: String?, start: Date?, end: Date?, targetEnd: Date?, appSession: Date? = Settings.shared.currentSessionStart) {
+    init(id: String?, start: Date?, end: Date?, targetEnd: Date?, appSession: Date? = Settings.shared.currentSessionStart, streakCount: Int = 0) {
         self.id = id
         self.start = start
         self.end = end
         self.targetEnd = targetEnd
         self.appSession = appSession
+        self.streakCount = streakCount
     }
     
     func isObey() -> Bool? {
