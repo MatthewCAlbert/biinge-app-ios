@@ -81,7 +81,7 @@ class NotificationHelper: NSObject {
         }
     }
     
-    func requestNotification(title: String, body: String, sound: UNNotificationSound, badge: Int, notificationType: NotificationType, category: String = Notification.Category.session) {
+    func requestNotification(title: String, body: String, sound: UNNotificationSound, badge: Int, notificationType: NotificationType, category: String = Notification.Category.session, delayInitialSeconds: Double = 5) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
@@ -91,7 +91,7 @@ class NotificationHelper: NSObject {
         let identifier = notificationType
         var request = UNNotificationRequest(identifier: notificationType.rawValue, content: content, trigger: nil)
         if notificationType == NotificationType.Local {
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delayInitialSeconds, repeats: false)
             request = UNNotificationRequest(identifier: identifier.rawValue, content: content, trigger: trigger)
         } else if notificationType == NotificationType.Scheduled {
             let date = Date(timeIntervalSinceNow: 5)

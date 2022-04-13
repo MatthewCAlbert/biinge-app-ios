@@ -9,7 +9,12 @@ import UIKit
 
 class BreakViewController: UIViewController {
 
-    let texts = ["Sit in an upright position with neutral shoulders. Rotate the neck clockwise for 10-30 seconds, and vice versa.","Take a grab-able foods like fruit, cut-up veggies, and drink a glass of water!","Let’s strech your body by turning your body to the right and left while doing inhale and exhale.","Close the screen for a while to relax your eyes. Looking at a bright screen for long time can cause eye strain and headache."]
+    let texts = [
+        "Sit in an upright position with neutral shoulders. Rotate the neck clockwise for 10-30 seconds, and vice versa.",
+        "Take a grab-able foods like fruit, cut-up veggies, and drink a glass of water!",
+        "Let’s strech your body by turning your body to the right and left while doing inhale and exhale.",
+        "Close the screen for a while to relax your eyes. Looking at a bright screen for long time can cause eye strain and headache."
+    ]
     
     //var
     var a1 : UIImage!
@@ -120,15 +125,5 @@ class BreakViewController: UIViewController {
         tipsText.text = texts.randomElement()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
