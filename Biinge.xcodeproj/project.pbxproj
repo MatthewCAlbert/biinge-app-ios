@@ -22,6 +22,9 @@
 		3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA1EF72804430500C88313 /* Profile.storyboard */; };
 		3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA1EF92804433F00C88313 /* ProfileViewController.swift */; };
 		3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA1EFB2804747100C88313 /* CircularProgressView.swift */; };
+		3CEED7122806A751003BC9C3 /* TimeUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CEED7112806A751003BC9C3 /* TimeUp.storyboard */; };
+		3CEED7142806B927003BC9C3 /* TimeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEED7132806B927003BC9C3 /* TimeUpViewController.swift */; };
+		3CEED7162806BF5F003BC9C3 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEED7152806BF5F003BC9C3 /* Pulse.swift */; };
 		4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFB2804278200D788DA /* SessionHelper.swift */; };
 		4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123DFE28043D9700D788DA /* NSDate+Ext.swift */; };
 		4C123E01280448A300D788DA /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E00280448A200D788DA /* Date+Ext.swift */; };
@@ -31,6 +34,10 @@
 		4C123E0B2804612E00D788DA /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0A2804612E00D788DA /* Call.swift */; };
 		4C123E0D2804619400D788DA /* CallAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0C2804619400D788DA /* CallAudio.swift */; };
 		4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E0E2804656E00D788DA /* CallHelper.swift */; };
+		4C123E1528052EE800D788DA /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E1428052EE800D788DA /* Counter.swift */; };
+		4C123E2128055CEA00D788DA /* ShareViewContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C123E2028055CEA00D788DA /* ShareViewContent.xib */; };
+		4C123E232805609D00D788DA /* ShareViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E222805609D00D788DA /* ShareViewContent.swift */; };
+		4C43C4D42805CE940067B111 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43C4D32805CE940067B111 /* Toast.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -66,6 +73,7 @@
 		4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32432803CC6700E58F89 /* TestViewController.swift */; };
 		4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */; };
 		4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF324828041D0B00E58F89 /* AVHelper.swift */; };
+		4CC76FFC2805787D00D43AC4 /* ShareProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC76FFB2805787D00D43AC4 /* ShareProfileViewController.swift */; };
 		A83621E628051A4F0096F631 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83621E528051A4F0096F631 /* HistoryViewController.swift */; };
 		A83621E828051A5B0096F631 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83621E728051A5B0096F631 /* History.storyboard */; };
 		A843C9082802D14700C0E5B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A843C9072802D14700C0E5B5 /* InfoViewController.swift */; };
@@ -92,6 +100,9 @@
 		3CDA1EF72804430500C88313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		3CDA1EF92804433F00C88313 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3CDA1EFB2804747100C88313 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Biinge/Scenes/Profile/CircularProgressView.swift; sourceTree = SOURCE_ROOT; };
+		3CEED7112806A751003BC9C3 /* TimeUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeUp.storyboard; sourceTree = "<group>"; };
+		3CEED7132806B927003BC9C3 /* TimeUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUpViewController.swift; sourceTree = "<group>"; };
+		3CEED7152806BF5F003BC9C3 /* Pulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
 		4C123DFB2804278200D788DA /* SessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
 		4C123DFE28043D9700D788DA /* NSDate+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Ext.swift"; sourceTree = "<group>"; };
 		4C123E00280448A200D788DA /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
@@ -102,6 +113,10 @@
 		4C123E0C2804619400D788DA /* CallAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAudio.swift; sourceTree = "<group>"; };
 		4C123E0E2804656E00D788DA /* CallHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHelper.swift; sourceTree = "<group>"; };
 		4C123E122804727900D788DA /* Biinge.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Biinge.entitlements; sourceTree = "<group>"; };
+		4C123E1428052EE800D788DA /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		4C123E2028055CEA00D788DA /* ShareViewContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareViewContent.xib; sourceTree = "<group>"; };
+		4C123E222805609D00D788DA /* ShareViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewContent.swift; sourceTree = "<group>"; };
+		4C43C4D32805CE940067B111 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -139,6 +154,7 @@
 		4CAF32432803CC6700E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		4CAF324828041D0B00E58F89 /* AVHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVHelper.swift; sourceTree = "<group>"; };
+		4CC76FFB2805787D00D43AC4 /* ShareProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareProfileViewController.swift; sourceTree = "<group>"; };
 		A83621E528051A4F0096F631 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A83621E728051A5B0096F631 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		A843C9072802D14700C0E5B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -230,8 +246,19 @@
 				33A7F3F82806C8190024B3B4 /* Settings */,
 				3CDA1EF72804430500C88313 /* Profile.storyboard */,
 				3CDA1EF92804433F00C88313 /* ProfileViewController.swift */,
+				4CC76FFB2805787D00D43AC4 /* ShareProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		3CEED7102806A731003BC9C3 /* TimeUp */ = {
+			isa = PBXGroup;
+			children = (
+				3CEED7112806A751003BC9C3 /* TimeUp.storyboard */,
+				3CEED7132806B927003BC9C3 /* TimeUpViewController.swift */,
+				3CEED7152806BF5F003BC9C3 /* Pulse.swift */,
+			);
+			path = TimeUp;
 			sourceTree = "<group>";
 		};
 		4C123DFD28043D8800D788DA /* Extension */ = {
@@ -251,6 +278,31 @@
 				4C123E0C2804619400D788DA /* CallAudio.swift */,
 			);
 			path = Call;
+			sourceTree = "<group>";
+		};
+		4C123E1328052ED600D788DA /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				4C123E1428052EE800D788DA /* Counter.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		4C123E1B28055A9E00D788DA /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				4C123E2028055CEA00D788DA /* ShareViewContent.xib */,
+				4C123E222805609D00D788DA /* ShareViewContent.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		4C43C4D22805CE8A0067B111 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				4C43C4D32805CE940067B111 /* Toast.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		4C60566E27FFF3DF0022D107 /* Fonts */ = {
@@ -357,7 +409,6 @@
 				4C6056772801400F0022D107 /* Themes */,
 				4C97D12627FE80D4005989A7 /* Model */,
 				4C97D12927FE815D005989A7 /* Scenes */,
-				4C97D12027FE75B6005989A7 /* Workers */,
 				4C97D12A27FE8175005989A7 /* Utilities */,
 				4C97D10727FE09D6005989A7 /* AppDelegate.swift */,
 				4C97D10927FE09D6005989A7 /* SceneDelegate.swift */,
@@ -368,13 +419,6 @@
 				4CAF32242803228200E58F89 /* BiingeModel.xcdatamodeld */,
 			);
 			path = Biinge;
-			sourceTree = "<group>";
-		};
-		4C97D12027FE75B6005989A7 /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Workers;
 			sourceTree = "<group>";
 		};
 		4C97D12627FE80D4005989A7 /* Model */ = {
@@ -392,6 +436,7 @@
 		4C97D12927FE815D005989A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3CEED7102806A731003BC9C3 /* TimeUp */,
 				A83621E428051A370096F631 /* History */,
 				3CDA1EF628041F2D00C88313 /* Profile */,
 				A84A1923280029D7003BB8F4 /* OnBoarding */,
@@ -405,6 +450,9 @@
 		4C97D12A27FE8175005989A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4C43C4D22805CE8A0067B111 /* Toast */,
+				4C123E1B28055A9E00D788DA /* Share */,
+				4C123E1328052ED600D788DA /* Counter */,
 				4C123E092804611A00D788DA /* Call */,
 				4C123DFD28043D8800D788DA /* Extension */,
 				4CAF32452803D64C00E58F89 /* Helper */,
@@ -552,8 +600,10 @@
 			files = (
 				4C60567627FFF4100022D107 /* SFProDisplay-Regular.ttf in Resources */,
 				A843C90D28037DE600C0E5B5 /* TabBar.storyboard in Resources */,
+				4C123E2128055CEA00D788DA /* ShareViewContent.xib in Resources */,
 				4C97D11C27FE0A67005989A7 /* .gitignore in Resources */,
 				3391DFB92804629500DD3C30 /* FailStoryboard.storyboard in Resources */,
+				3CEED7122806A751003BC9C3 /* TimeUp.storyboard in Resources */,
 				3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */,
 				4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */,
 				4C97D11427FE09D8005989A7 /* LaunchScreen.storyboard in Resources */,
@@ -584,7 +634,9 @@
 				A84A1921280017D6003BB8F4 /* SetTimeViewController.swift in Sources */,
 				4C97D10C27FE09D6005989A7 /* HomeViewController.swift in Sources */,
 				4C123E08280460FF00D788DA /* CallManager.swift in Sources */,
+				4CC76FFC2805787D00D43AC4 /* ShareProfileViewController.swift in Sources */,
 				A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */,
+				4C123E1528052EE800D788DA /* Counter.swift in Sources */,
 				A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */,
 				3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */,
 				4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */,
@@ -599,6 +651,7 @@
 				3CDA1EFA2804433F00C88313 /* ProfileViewController.swift in Sources */,
 				4C123E0F2804656E00D788DA /* CallHelper.swift in Sources */,
 				4CAF323628033C3500E58F89 /* PointHistory.swift in Sources */,
+				4C43C4D42805CE940067B111 /* Toast.swift in Sources */,
 				4C90F1272801575400C9FF4F /* UserProfile.swift in Sources */,
 				3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
@@ -606,6 +659,7 @@
 				33A7F3FA2806C8350024B3B4 /* SettingsViewController.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
+				4C123E232805609D00D788DA /* ShareViewContent.swift in Sources */,
 				4C123E01280448A300D788DA /* Date+Ext.swift in Sources */,
 				4C123E0B2804612E00D788DA /* Call.swift in Sources */,
 				4C123DFC2804278200D788DA /* SessionHelper.swift in Sources */,
@@ -620,7 +674,9 @@
 				4C123E06280454AC00D788DA /* ProviderDelegate.swift in Sources */,
 				4C97D10827FE09D6005989A7 /* AppDelegate.swift in Sources */,
 				3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */,
+				3CEED7162806BF5F003BC9C3 /* Pulse.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
+				3CEED7142806B927003BC9C3 /* TimeUpViewController.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
 				4C123E0D2804619400D788DA /* CallAudio.swift in Sources */,
 				4CAF323428033C0200E58F89 /* PointHistoryRepository.swift in Sources */,
@@ -769,7 +825,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8CKV7N92SQ;
+				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;
@@ -801,7 +857,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8CKV7N92SQ;
+				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BIInge;

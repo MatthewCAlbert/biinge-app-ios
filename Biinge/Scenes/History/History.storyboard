@@ -113,19 +113,24 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wog-Bu-Whi">
-                                        <rect key="frame" x="149" y="40" width="43" height="24"/>
+                                        <rect key="frame" x="149" y="40" width="188" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                                         <color key="textColor" red="0.098039215686274508" green="0.64313725490196072" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvW-Lu-Kwk">
-                                        <rect key="frame" x="149" y="100" width="43" height="24"/>
+                                        <rect key="frame" x="149" y="100" width="188" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-cq-QT6" customClass="CircularProgressView" customModule="Biinge" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="15" width="113" height="115"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -195,6 +200,7 @@
                     <connections>
                         <outlet property="accExView" destination="fL9-58-2aI" id="3Tu-a0-FK6"/>
                         <outlet property="accLabel" destination="wog-Bu-Whi" id="0mc-dO-ase"/>
+                        <outlet property="circularAccuracyView" destination="X3u-cq-QT6" id="9p5-Ny-V6d"/>
                         <outlet property="dateTextField" destination="Pj2-SZ-o3c" id="jEj-z2-okS"/>
                         <outlet property="excLabel" destination="pvW-Lu-Kwk" id="4Qt-QH-qA4"/>
                         <outlet property="pointsLabel" destination="ynl-pS-NYu" id="VbH-Wp-I0y"/>

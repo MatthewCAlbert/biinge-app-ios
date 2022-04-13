@@ -10,7 +10,11 @@ import UIKit
 class FailViewController: UIViewController {
 
     //let
-    let texts = ["Binge-watching for hours is one of the activities of a sedentary, which can increases the risk of death 20%-30% higher than people who have sufficient physical activity. Therefore it needs to be limited.", "If you’re watching a series, end your session in the middle of an episode. It usually concludes the last episode’s conflicts and cliffhangers, so you don’t crave more.", "Binge-watch with friends! They won’t want you to watch it without them, holding your binge-watching craving at bay until your next get-together."]
+    let texts = [
+        "Binge-watching for hours is one of the activities of a sedentary, which can increases the risk of death 20%-30% higher than people who have sufficient physical activity. Therefore it needs to be limited.",
+        "If you’re watching a series, end your session in the middle of an episode. It usually concludes the last episode’s conflicts and cliffhangers, so you don’t crave more.",
+        "Binge-watch with friends! They won’t want you to watch it without them, holding your binge-watching craving at bay until your next get-together."
+    ]
     
     //var
     var a1 : UIImage!

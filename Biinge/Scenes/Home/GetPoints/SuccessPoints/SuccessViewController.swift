@@ -10,9 +10,11 @@ import UIKit
 class SuccessViewController: UIViewController {
     
     //randomText
-    let texts = ["People who took more microbreaks to relax, socialize or engage in cognitive activities had increased positive affect at life.","Make today a productive day by checking what to do next in your agenda! Accomplish your binge-watch target? Done. Accomplish your tasks? Coming right up!","Binge-watching is an easy way to spend time together in strengthen romantic relationships, because it serves as a fun activity in sharing the same interest."]
-    
-    
+    let texts = [
+        "People who took more microbreaks to relax, socialize or engage in cognitive activities had increased positive affect at life.",
+        "Make today a productive day by checking what to do next in your agenda! Accomplish your binge-watch target? Done. Accomplish your tasks? Coming right up!",
+        "Binge-watching is an easy way to spend time together in strengthen romantic relationships, because it serves as a fun activity in sharing the same interest."
+    ]
     
     //var
     var a1 : UIImage!
@@ -76,7 +78,7 @@ class SuccessViewController: UIViewController {
     
     //buat animated images
     var animatedImage: UIImage!
-    
+    @IBOutlet weak var streakLbl: UILabel!
     
     //buat IBOutlet
     @IBOutlet weak var viewImage: UIImageView!
@@ -153,5 +155,11 @@ class SuccessViewController: UIViewController {
         textView.text = texts.randomElement()
         
         congratsText.text = "We appreciate your effort \(UserProfile.shared.username ?? "Watcher")!🥳"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        streakLbl.text = String(format: "%d Streak", UserProfile.shared.streak)
     }
 }

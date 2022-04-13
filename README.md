@@ -10,33 +10,37 @@
 - UserDefaults
 - CoreData
 - CallKit
+- Combine
 
 ## Features
 
+- [x] Dark Mode
+- [x] Splash Screen
 - [x] Onboarding
-- [ ] Set Preferences
+- [x] Set Preferences (only current Session)
 - [x] Set Profile (username)
-- [ ] Set Profile (photo)
+- [x] Set Profile (photo)
 - [x] Timer
 - [x] Set Timer
 - [ ] Notification
 - [ ] Notification as Call
-- [ ] Point Works
-- [ ] Share to Social Media
+- [x] Point Works
+- [x] Share to Social Media
 - [ ] Settings
-- [ ] Leaderboard
+- [ ] History
+- [ ] Leaderboard (dropped)
 
 ## Backend Wise
 
 - [x] CoreData Abstraction
 - [x] Set Preferences
 - [x] Set Profile (username)
-- [ ] Set Profile (photo)
+- [x] Set Profile (photo)
 - [x] Notification
 - [x] Notification as Call
 - [x] Point Works
-- [ ] Share to Social Media
-- [ ] Leaderboard
+- [x] Share to Social Media (Render + Templating)
+- [ ] Leaderboard (dropped)
 
 ## Bugs
 

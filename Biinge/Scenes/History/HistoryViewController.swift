@@ -11,6 +11,7 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var circularAccuracyView: CircularProgressView!
     
     //View Outlet
     @IBOutlet weak var pointsView: UIView!
@@ -27,8 +28,12 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var totalMinutesLabel: UILabel!
     
     let datePicker = UIDatePicker()
-    var image: UIImage = UIImage(named: "setan.jpg")!
-    
+    var image: UIImage = UIImage(data: UserProfile.shared.pic as Data)!
+    var totalWatchPerDay: Int = 0
+    var accPerDay: Int = 0
+    var excPerDay: Int = 0
+    var pointsPerDay: Int = 0
+    var streaksPerDay: Int = 0
     
 
     override func viewDidLoad() {
@@ -46,12 +51,12 @@ class HistoryViewController: UIViewController {
         profilePic.layer.cornerRadius = profilePic.frame.size.width/2
         profilePic.clipsToBounds = true
         
-        createDatePicker()
+        self.loadDayData(Date())
         
+        self.createDatePicker()
     }
     
     func createDatePicker() {
-        
         //date picker mode
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .inline
@@ -69,16 +74,47 @@ class HistoryViewController: UIViewController {
         dateTextField.textAlignment = .center
     }
     
-    @objc func donePressed() {
-        //formatter
+    func loadDayData(_ date: Date) {
+        //formatter to show date on textfield
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
+        let dateSelectedString = formatter.string(from: date)
+        dateTextField.text = dateSelectedString
         
-        let datePicked = formatter.string(from: datePicker.date)
-        dateTextField.text = datePicked
-        self.view.endEditing(true)
+        //Date picked to get user data per date
+        let dateSelected = datePicker.date
+        
+        //Set total binge-watched from date selected
+        totalWatchPerDay = SessionHelper.shared.getDayTotalTimeInSecond(dateSelected)
+        let (h, m) = (totalWatchPerDay / 3600, (totalWatchPerDay % 3600) / 60)
+        
+        totalHoursLabel.text = String(h)
+        totalMinutesLabel.text = String(m)
+        
+        //Set Points from date selected
+        self.pointsPerDay = SessionHelper.shared.getDayTotalPoint(date)
+        pointsLabel.text = "\(pointsPerDay) \nPoints"
+        
+        //Set Streaks from date selected
+        self.streaksPerDay = UserProfile.shared.streak
+        streaksLabel.text = "\(streaksPerDay) \nStreaks"
+        
+        
+        //Set Accomplish & Exceed from date selected
+        let (acc, exc) = SessionHelper.shared.getDayDoneSessionSuccessAndFail(dateSelected)
+        accPerDay = acc
+        excPerDay = exc
+        accLabel.text = "\(accPerDay)/\(accPerDay + excPerDay)"
+        excLabel.text = "\(excPerDay)/\(accPerDay + excPerDay)"
 
+        self.circularAccuracyView.accomplish = accPerDay
+        self.circularAccuracyView.exceed = excPerDay
+    }
+    
+    @objc func donePressed() {
+        self.loadDayData(datePicker.date)
+        self.view.endEditing(true)
     }
 
     //MARK: - Shape the UIView
