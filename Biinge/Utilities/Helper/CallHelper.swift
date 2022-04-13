@@ -98,19 +98,10 @@ class CallHelper {
     private func onFailedToInvoke() {
         print("failed to invoke")
         self.failedToInvokeCount += 1
-        
-        // Do something here
     }
     
     func onFailedToAnswer() {
         print("failed to answer")
-        
-        // Do something here
-//        do {
-//            try SessionHelper.shared.end()
-//        } catch {
-//
-//        }
     }
     
     func onSuccessToAnswer() {
@@ -118,11 +109,11 @@ class CallHelper {
         self.callStateConnected = false
         
         // Do something here
-//        do {
-//            try SessionHelper.shared.end()
-//        } catch {
-//
-//        }
+        do {
+            try SessionHelper.shared.end()
+        } catch {
+
+        }
     }
     
 }

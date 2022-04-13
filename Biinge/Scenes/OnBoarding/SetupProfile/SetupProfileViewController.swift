@@ -11,6 +11,7 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
     var image: UIImage = UIImage(named: "PersonPlaceholder")!
     let editImage: UIImage = UIImage(named: "circleedit.png")!
     var pic: NSData? = nil
+    var picSet = false
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -62,8 +63,10 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
             Toast.show(message: "Please fill your username first", controller: self)
             return
         }
-        UserProfile.shared.pic = pic!
-        UserProfile.shared.profileImageSet = true
+        if self.picSet {
+            UserProfile.shared.pic = pic!
+            UserProfile.shared.profileImageSet = true
+        }
         performSegue(withIdentifier: "goToOnboardingSetReminder", sender: self)
     }
 
@@ -79,6 +82,7 @@ class SetupProfileViewController: UIViewController, UITextFieldDelegate{
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
+        self.picSet = true
     }
     
 }

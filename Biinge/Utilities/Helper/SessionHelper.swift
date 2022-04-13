@@ -176,6 +176,9 @@ class SessionHelper {
         self.sessionTimer.end()
         self.sessionMessage.running = false
         
+        // End call if any
+        AppDelegate.shared.callManager.endFirst()
+        
         // Add to active session record
         do {
             found.end = Date()
