@@ -37,6 +37,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="tapSettings" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K2P-YN-VEP"/>
+                                            <segue destination="49l-Lw-gJO" kind="presentation" id="CHi-Yy-UUn"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4lh-pd-cLi">
@@ -300,6 +301,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36.92307692307692" y="62.559241706161131"/>
+        </scene>
+        <!--SettingStoryboard-->
+        <scene sceneID="gK0-fW-H38">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingStoryboard" id="49l-Lw-gJO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lc9-A4-qmS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456" y="-186"/>
         </scene>
     </scenes>
     <resources>
