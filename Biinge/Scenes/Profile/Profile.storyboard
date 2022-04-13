@@ -29,6 +29,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgC-Mi-uwT">
                                 <rect key="frame" x="0.0" y="44" width="390" height="167"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6w-jC-Pbh">
+                                        <rect key="frame" x="314.66666666666669" y="14.333333333333337" width="46.333333333333314" height="30.666666666666671"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system">
+                                            <color key="baseForegroundColor" name="Primary"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapSettings" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K2P-YN-VEP"/>
+                                            <segue destination="49l-Lw-gJO" kind="presentation" id="CHi-Yy-UUn"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4lh-pd-cLi">
                                         <rect key="frame" x="312" y="54.999999999999993" width="50" height="77.333333333333314"/>
                                         <subviews>
@@ -300,6 +311,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36.92307692307692" y="62.559241706161131"/>
+        </scene>
+        <!--SettingStoryboard-->
+        <scene sceneID="gK0-fW-H38">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingStoryboard" id="49l-Lw-gJO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lc9-A4-qmS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456" y="-186"/>
         </scene>
         <!--Profile-->
         <scene sceneID="KQv-by-Mxe">

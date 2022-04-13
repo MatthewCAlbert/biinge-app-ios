@@ -15,6 +15,8 @@
 		3391DFBD2804634B00DD3C30 /* SuccessStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */; };
 		3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391DFBE2804636B00DD3C30 /* BreakViewController.swift */; };
 		3391DFC12804637900DD3C30 /* BreakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */; };
+		33A7F3FA2806C8350024B3B4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7F3F92806C8350024B3B4 /* SettingsViewController.swift */; };
+		33A7F3FC2806C8500024B3B4 /* SettingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A7F3FB2806C8500024B3B4 /* SettingStoryboard.storyboard */; };
 		3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */; };
 		3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */; };
 		3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA1EF72804430500C88313 /* Profile.storyboard */; };
@@ -91,6 +93,8 @@
 		3391DFBC2804634B00DD3C30 /* SuccessStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessStoryboard.storyboard; sourceTree = "<group>"; };
 		3391DFBE2804636B00DD3C30 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		3391DFC02804637900DD3C30 /* BreakStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreakStoryboard.storyboard; sourceTree = "<group>"; };
+		33A7F3F92806C8350024B3B4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		33A7F3FB2806C8500024B3B4 /* SettingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingStoryboard.storyboard; sourceTree = "<group>"; };
 		3C2DA3D028009A3F00B1BCE4 /* SetupProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetupProfile.storyboard; sourceTree = "<group>"; };
 		3C2DA3D228009D3500B1BCE4 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		3CDA1EF72804430500C88313 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -218,6 +222,15 @@
 			path = MissionFailed;
 			sourceTree = "<group>";
 		};
+		33A7F3F82806C8190024B3B4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				33A7F3F92806C8350024B3B4 /* SettingsViewController.swift */,
+				33A7F3FB2806C8500024B3B4 /* SettingStoryboard.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3C2DA3CD28009A1A00B1BCE4 /* SetupProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +243,7 @@
 		3CDA1EF628041F2D00C88313 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				33A7F3F82806C8190024B3B4 /* Settings */,
 				3CDA1EF72804430500C88313 /* Profile.storyboard */,
 				3CDA1EF92804433F00C88313 /* ProfileViewController.swift */,
 				4CC76FFB2805787D00D43AC4 /* ShareProfileViewController.swift */,
@@ -600,6 +614,7 @@
 				4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */,
 				4C97D12D27FE83FF005989A7 /* Home.storyboard in Resources */,
 				A83621E828051A5B0096F631 /* History.storyboard in Resources */,
+				33A7F3FC2806C8500024B3B4 /* SettingStoryboard.storyboard in Resources */,
 				3C2DA3D128009A3F00B1BCE4 /* SetupProfile.storyboard in Resources */,
 				3CDA1EF82804430500C88313 /* Profile.storyboard in Resources */,
 				4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */,
@@ -641,6 +656,7 @@
 				3CDA1EFC2804747100C88313 /* CircularProgressView.swift in Sources */,
 				4CAF322E2803261B00E58F89 /* CDPreferencePreset+CoreDataProperties.swift in Sources */,
 				3391DFBB280462AD00DD3C30 /* SuccessViewController.swift in Sources */,
+				33A7F3FA2806C8350024B3B4 /* SettingsViewController.swift in Sources */,
 				4C90F1232801523500C9FF4F /* Settings.swift in Sources */,
 				4C90F14A2802D5C600C9FF4F /* SessionRepository.swift in Sources */,
 				4C123E232805609D00D788DA /* ShareViewContent.swift in Sources */,
