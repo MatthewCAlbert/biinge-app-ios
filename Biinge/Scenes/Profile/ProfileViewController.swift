@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController {
         self._username = UserProfile.shared.username ?? "No Username"
         
         let lifetimeTotalWatchtime = SessionHelper.shared.getLifetimeTotalTimeInSecond()
-        (hour, minute, _) = (lifetimeTotalWatchtime / 3600, (lifetimeTotalWatchtime % 3600) / 60, (lifetimeTotalWatchtime % 3600) % 60)
+        (hour, minute) = (lifetimeTotalWatchtime / 3600, (lifetimeTotalWatchtime % 3600) / 60)
         
         watchTotalLabel.text = "\(hour) hr \(minute) min"
         accomLabel.text = "\(_accomplish)/\(_accomplish+_exceed)"

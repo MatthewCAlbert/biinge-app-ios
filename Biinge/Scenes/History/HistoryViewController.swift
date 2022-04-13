@@ -8,12 +8,10 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
-    
-    //let circularView = CircularHistoryView()
 
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var circleProgress: CircularHistoryView!
+    @IBOutlet weak var circularAccuracyView: CircularProgressView!
     
     //View Outlet
     @IBOutlet weak var pointsView: UIView!
@@ -53,39 +51,12 @@ class HistoryViewController: UIViewController {
         profilePic.layer.cornerRadius = profilePic.frame.size.width/2
         profilePic.clipsToBounds = true
         
-        //Default Today's Date
-        let todayFormat = DateFormatter()
-        todayFormat.dateStyle = .medium
-        todayFormat.timeStyle = .none
-        let dateSelected = todayFormat.string(from: Date())
-        dateTextField.text = dateSelected
+        self.loadDayData(Date())
         
-        //Default total binge-watched using today's date
-        totalWatchPerDay = SessionHelper.shared.getDayTotalTimeInMinute(Date())
-        totalHoursLabel.text = String(format: "%02d", totalWatchPerDay / 60)
-        totalMinutesLabel.text = String(format: "%02d", totalWatchPerDay % 60)
-
-        //Set Points from today's date
-        pointsLabel.text = "\(pointsPerDay) \nPoints"
-        
-        //Set Streaks from today's date
-        streaksLabel.text = "\(streaksPerDay) \nStreaks"
-        
-        //Set Accomplish & Exceed from today's date
-        let (acc, exc) = SessionHelper.shared.getDayDoneSessionSuccessAndFail(Date())
-        accPerDay = acc
-        excPerDay = exc
-        accLabel.text = "\(accPerDay)/\(accPerDay + excPerDay)"
-        excLabel.text = "\(excPerDay)/\(accPerDay + excPerDay)"
-//        circularView._accomplish = accPerDay
-//        circularView._exceed = excPerDay
-        
-        createDatePicker()
-
+        self.createDatePicker()
     }
     
     func createDatePicker() {
-        
         //date picker mode
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .inline
@@ -103,26 +74,30 @@ class HistoryViewController: UIViewController {
         dateTextField.textAlignment = .center
     }
     
-    @objc func donePressed() {
+    func loadDayData(_ date: Date) {
         //formatter to show date on textfield
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
-        let dateSelectedString = formatter.string(from: datePicker.date)
+        let dateSelectedString = formatter.string(from: date)
         dateTextField.text = dateSelectedString
         
         //Date picked to get user data per date
         let dateSelected = datePicker.date
         
         //Set total binge-watched from date selected
-        totalWatchPerDay = SessionHelper.shared.getDayTotalTimeInMinute(dateSelected)
-        totalHoursLabel.text = String(format: "%02d", totalWatchPerDay / 60)
-        totalMinutesLabel.text = String(format: "%02d", totalWatchPerDay % 60)
+        totalWatchPerDay = SessionHelper.shared.getDayTotalTimeInSecond(dateSelected)
+        let (h, m) = (totalWatchPerDay / 3600, (totalWatchPerDay % 3600) / 60)
+        
+        totalHoursLabel.text = String(h)
+        totalMinutesLabel.text = String(m)
         
         //Set Points from date selected
+        self.pointsPerDay = SessionHelper.shared.getDayTotalPoint(date)
         pointsLabel.text = "\(pointsPerDay) \nPoints"
         
         //Set Streaks from date selected
+        self.streaksPerDay = UserProfile.shared.streak
         streaksLabel.text = "\(streaksPerDay) \nStreaks"
         
         
@@ -132,11 +107,13 @@ class HistoryViewController: UIViewController {
         excPerDay = exc
         accLabel.text = "\(accPerDay)/\(accPerDay + excPerDay)"
         excLabel.text = "\(excPerDay)/\(accPerDay + excPerDay)"
-        
-        //Pass value to circular bar
-//        circularView._accomplish = accPerDay
-//        circularView._exceed = excPerDay
-        
+
+        self.circularAccuracyView.accomplish = accPerDay
+        self.circularAccuracyView.exceed = excPerDay
+    }
+    
+    @objc func donePressed() {
+        self.loadDayData(datePicker.date)
         self.view.endEditing(true)
     }
 

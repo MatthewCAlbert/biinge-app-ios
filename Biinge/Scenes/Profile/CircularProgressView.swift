@@ -14,6 +14,25 @@ class CircularProgressView: UIView {
     var _accomplish: Int = UserProfile.shared.accomplish
     var _exceed: Int = UserProfile.shared.exceed
 
+    var accomplish: Int {
+        set(newValue) {
+            self._accomplish = newValue
+            self.createCircularPath()
+        }
+        get {
+            return self._accomplish
+        }
+    }
+    
+    var exceed: Int {
+        set(newValue) {
+            self._exceed = newValue
+            self.createCircularPath()
+        }
+        get {
+            return self._exceed
+        }
+    }
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -42,10 +61,6 @@ class CircularProgressView: UIView {
             trackLayer.strokeColor = trackColor.cgColor
         }
     }
-    var accomplish: Int {   
-        set { _accomplish = newValue }
-        get { return _accomplish}
-      }
     
     
     fileprivate func createCircularPath() {
