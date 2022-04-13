@@ -21,6 +21,14 @@
         </array>
     </customFonts>
     <scenes>
+        <!--FailStoryboard-->
+        <scene sceneID="1K3-aR-cpq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FailStoryboard" id="TwB-TA-N7D" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0l4-2C-0N8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789" y="544"/>
+        </scene>
         <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -127,6 +135,9 @@
                         <outlet property="watchReminderLabel" destination="FcP-Tg-o5Z" id="ED0-bv-bor"/>
                         <outlet property="watchTimeLabel" destination="Une-TK-3sY" id="yDs-5r-bW8"/>
                         <segue destination="wJM-gt-Qir" kind="presentation" identifier="goToInfo" id="8kK-bR-ibQ"/>
+                        <segue destination="ViP-b4-PvT" kind="presentation" identifier="homeToBreakSplash" modalPresentationStyle="fullScreen" id="cTc-Bu-ytI"/>
+                        <segue destination="xC5-1o-wAI" kind="presentation" identifier="homeToStreakSplash" modalPresentationStyle="fullScreen" id="P7S-D3-7Jq"/>
+                        <segue destination="TwB-TA-N7D" kind="presentation" identifier="homeToFailSplash" modalPresentationStyle="fullScreen" id="L7o-wY-qcZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CG9-Mb-05J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957" y="849"/>
+            <point key="canvasLocation" x="434" y="876"/>
         </scene>
         <!--Set Time View Controller-->
         <scene sceneID="Uya-TB-g7w">
@@ -257,6 +268,22 @@
                 <exit id="jhK-oM-dhu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1846" y="96"/>
+        </scene>
+        <!--SuccessStoryboard-->
+        <scene sceneID="e8C-Mg-Tma">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SuccessStoryboard" id="xC5-1o-wAI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLM-bO-FzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="544"/>
+        </scene>
+        <!--BreakStoryboard-->
+        <scene sceneID="19Y-gc-hhO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BreakStoryboard" id="ViP-b4-PvT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0g-CD-5V4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173" y="545"/>
         </scene>
     </scenes>
     <resources>

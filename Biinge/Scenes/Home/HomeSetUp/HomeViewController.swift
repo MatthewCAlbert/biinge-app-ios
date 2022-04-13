@@ -43,6 +43,7 @@ class HomeViewController: UIViewController {
     }
     
     var sessionSubscriber: AnyCancellable?
+    var endMessageSubscriber: AnyCancellable?
 
     
     // MARK: UI Lifecycle + Trigger
@@ -57,6 +58,7 @@ class HomeViewController: UIViewController {
         
         usernameLabel.text = "Hi, \(UserProfile.shared.username ?? "Watcher")!"
         
+        // Subscribe
         self.sessionSubscriber = SessionHelper.shared.publisher.sink(
             receiveCompletion: { completion in
                 switch completion {
@@ -82,6 +84,20 @@ class HomeViewController: UIViewController {
                 }
             }
         )
+        self.endMessageSubscriber = SessionHelper.shared.publishedEndSubject.sink(
+            receiveValue: { sessionEndMessage in
+                switch sessionEndMessage.type {
+                    case .success:
+                        self.performSegue(withIdentifier: "homeToBreakSplash", sender: self)
+                    case .streak:
+                        self.performSegue(withIdentifier: "homeToStreakSplash", sender: self)
+                    case .failed:
+                        self.performSegue(withIdentifier: "homeToFailSplash", sender: self)
+                    case .none:
+                        print("got none end message")
+                }
+            }
+        )
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,7 +111,6 @@ class HomeViewController: UIViewController {
         
         watchReminderLabel.text = watchLimitMessage
         breakReminderLabel.text = breakLimitMessage
-        
     }
     
     @IBAction func changeModePressed(_ sender: UIButton) {

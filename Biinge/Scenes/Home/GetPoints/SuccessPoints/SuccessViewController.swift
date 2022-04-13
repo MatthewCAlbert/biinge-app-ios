@@ -78,7 +78,7 @@ class SuccessViewController: UIViewController {
     
     //buat animated images
     var animatedImage: UIImage!
-    
+    @IBOutlet weak var streakLbl: UILabel!
     
     //buat IBOutlet
     @IBOutlet weak var viewImage: UIImageView!
@@ -155,5 +155,11 @@ class SuccessViewController: UIViewController {
         textView.text = texts.randomElement()
         
         congratsText.text = "We appreciate your effort \(UserProfile.shared.username ?? "Watcher")!🥳"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        streakLbl.text = String(format: "%d Streak", UserProfile.shared.streak)
     }
 }

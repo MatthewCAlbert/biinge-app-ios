@@ -8,6 +8,16 @@
 import Foundation
 import Combine
 
+enum SessionEndMessageType: Int {
+    case none, failed, success, streak
+}
+
+// Message for Session End
+struct SessionEndMessage {
+    let id = UUID()
+    var type: SessionEndMessageType = SessionEndMessageType.none
+}
+
 // Message for Frontend Timer
 struct SessionMessage: Codable {
     var totalElapsedInSeconds: Int = 0
@@ -39,6 +49,7 @@ class SessionHelper {
         didSet { publishedSubject.send(self.sessionMessage) }
     }
     private let publishedSubject = PassthroughSubject<SessionMessage, Never>()
+    let publishedEndSubject = PassthroughSubject<SessionEndMessage, Never>()
     
     // Timer
     private var sessionTimer = Counter()
@@ -167,10 +178,12 @@ class SessionHelper {
         // Add to active session record
         do {
             found.end = Date()
+            var sessionEndMessageObj = SessionEndMessage()
             
             // MARK: probably need to add extra requirement because it can be abused lol (spam start/end)
             if (found.end! - found.start!).second! < minimumSessionCriteriaSeconds { // 5 seconds
                 self.abort()
+                publishedEndSubject.send(sessionEndMessageObj)
                 return
             }
             
@@ -186,21 +199,26 @@ class SessionHelper {
                         // add streak
                         found.streakCount = lastSessionFound.streakCount + 1
                         UserProfile.shared.streak = found.streakCount
+                        sessionEndMessageObj.type = SessionEndMessageType.streak
                     } else {
                         // add points non-streak
                         try PointHelper.shared.addPoints(action: PointActionType.restSuccess)
+                        sessionEndMessageObj.type = SessionEndMessageType.success
                     }
                 } else {
                     // add points non-streak
                     try PointHelper.shared.addPoints(action: PointActionType.restSuccess)
+                    sessionEndMessageObj.type = SessionEndMessageType.success
                 }
             } else {
                 // if failed
                 UserProfile.shared.exceed += 1
                 UserProfile.shared.streak = 0
+                sessionEndMessageObj.type = SessionEndMessageType.failed
             }
             
             _ = try self.sessionRepository.update(found)
+            publishedEndSubject.send(sessionEndMessageObj)
         } catch let error{
             self.abort()
             throw error
