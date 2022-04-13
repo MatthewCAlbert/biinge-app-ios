@@ -25,6 +25,7 @@
         <attribute name="appSession" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="sessionId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="streakCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="targetEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -37,6 +38,6 @@
     <elements>
         <element name="CDPointHistory" positionX="-36" positionY="9" width="128" height="89"/>
         <element name="CDPreferencePreset" positionX="-18" positionY="54" width="128" height="74"/>
-        <element name="CDSession" positionX="-54" positionY="-9" width="128" height="119"/>
+        <element name="CDSession" positionX="-54" positionY="-9" width="128" height="134"/>
     </elements>
 </model>

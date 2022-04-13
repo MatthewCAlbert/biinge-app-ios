@@ -24,6 +24,7 @@ class SessionRepository {
             end: cd.end,
             targetEnd: cd.targetEnd,
             appSession: cd.appSession,
+            sessionId: cd.sessionId?.uuidString,
             streakCount: Int(cd.streakCount)
         )
     }
@@ -130,6 +131,7 @@ class SessionRepository {
             session.end = entity.end
             session.targetEnd = entity.targetEnd
             session.appSession = entity.appSession ?? Settings.shared.currentSessionStart
+            session.sessionId = entity.sessionId != nil ? UUID(uuidString: entity.sessionId!) : nil
             session.streakCount = Int32(entity.streakCount)
             
             if !self.repository.save() {
