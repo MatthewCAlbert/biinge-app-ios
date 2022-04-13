@@ -71,11 +71,18 @@ class ProfileViewController: UIViewController {
     }
     
     func setView(view: UIView){
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 1
-        view.layer.shadowOffset = .zero
-        view.layer.shadowRadius = 1
+        // corner radius
         view.layer.cornerRadius = 10
+
+        // border
+        view.layer.borderWidth = 0.0
+        view.layer.borderColor = UIColor.black.cgColor
+
+        // shadow
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = .zero
+        view.layer.shadowOpacity = 0.1
+        view.layer.shadowRadius = 6.0
     }
     
     @IBAction func tapSettings() {
