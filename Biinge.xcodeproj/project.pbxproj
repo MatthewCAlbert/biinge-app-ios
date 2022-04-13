@@ -71,6 +71,7 @@
 		4CAF32442803CC6700E58F89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32432803CC6700E58F89 /* TestViewController.swift */; };
 		4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */; };
 		4CAF324928041D0B00E58F89 /* AVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF324828041D0B00E58F89 /* AVHelper.swift */; };
+		A832A5ED2806D6F200637367 /* CircularHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832A5EC2806D6F200637367 /* CircularHistoryView.swift */; };
 		4CC76FFC2805787D00D43AC4 /* ShareProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC76FFB2805787D00D43AC4 /* ShareProfileViewController.swift */; };
 		A83621E628051A4F0096F631 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83621E528051A4F0096F631 /* HistoryViewController.swift */; };
 		A83621E828051A5B0096F631 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83621E728051A5B0096F631 /* History.storyboard */; };
@@ -150,6 +151,7 @@
 		4CAF32432803CC6700E58F89 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4CAF32462803D7BC00E58F89 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		4CAF324828041D0B00E58F89 /* AVHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVHelper.swift; sourceTree = "<group>"; };
+		A832A5EC2806D6F200637367 /* CircularHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularHistoryView.swift; sourceTree = "<group>"; };
 		4CC76FFB2805787D00D43AC4 /* ShareProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareProfileViewController.swift; sourceTree = "<group>"; };
 		A83621E528051A4F0096F631 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A83621E728051A5B0096F631 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				A83621E528051A4F0096F631 /* HistoryViewController.swift */,
+				A832A5EC2806D6F200637367 /* CircularHistoryView.swift */,
 				A83621E728051A5B0096F631 /* History.storyboard */,
 			);
 			path = History;
@@ -623,6 +626,7 @@
 				A84A192628002B1E003BB8F4 /* DefaultReminderViewController.swift in Sources */,
 				4C123E1528052EE800D788DA /* Counter.swift in Sources */,
 				A843C90B28037DDA00C0E5B5 /* TabBarViewController.swift in Sources */,
+				A832A5ED2806D6F200637367 /* CircularHistoryView.swift in Sources */,
 				3C2DA3D328009D3500B1BCE4 /* SetupProfileViewController.swift in Sources */,
 				4C123DFF28043D9700D788DA /* NSDate+Ext.swift in Sources */,
 				4CAF32472803D7BC00E58F89 /* NotificationHelper.swift in Sources */,

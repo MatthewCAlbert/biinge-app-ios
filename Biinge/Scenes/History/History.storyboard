@@ -182,6 +182,11 @@
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-cq-QT6">
+                                <rect key="frame" x="138" y="599" width="113" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -195,6 +200,7 @@
                     <connections>
                         <outlet property="accExView" destination="fL9-58-2aI" id="3Tu-a0-FK6"/>
                         <outlet property="accLabel" destination="wog-Bu-Whi" id="0mc-dO-ase"/>
+                        <outlet property="circleProgress" destination="X3u-cq-QT6" id="R50-hS-XFg"/>
                         <outlet property="dateTextField" destination="Pj2-SZ-o3c" id="jEj-z2-okS"/>
                         <outlet property="excLabel" destination="pvW-Lu-Kwk" id="4Qt-QH-qA4"/>
                         <outlet property="pointsLabel" destination="ynl-pS-NYu" id="VbH-Wp-I0y"/>

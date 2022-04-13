@@ -252,6 +252,35 @@ class SessionHelper {
         }
     }
     
+    func getDayDoneSessionSuccessAndFail(_ date: Date = Date()) -> (Int, Int) {
+        // Get today's beginning & end
+        let dateFrom = calendar.startOfDay(for: date)
+        let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
+
+        let todayPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
+            NSPredicate(format: "end != nil"),
+            NSPredicate(format: "%@ >= start", dateFrom as NSDate),
+            NSPredicate(format: "start < %@", dateTo! as NSDate)
+        ])
+
+        do {
+            let rows = try sessionRepository.getAll(predicate: todayPredicate)
+            var accPerDay: Int = 0
+            var excPerDay: Int = 0
+            for row in rows {
+                if row.isObey()! {
+                    accPerDay += 1
+                } else {
+                    excPerDay += 1
+                }
+            }
+            return (accPerDay, excPerDay)
+
+        } catch {
+            return (0, 0)
+        }
+    }
+  
     func getDayTotalTimeInSecond(_ date: Date = Date()) -> Int {
         let rows = self.getDayFinishedSessions(date)
         let res = rows.reduce(0) { $0 + (($1.end! - $1.start!).second ?? 0) }
@@ -276,7 +305,6 @@ class SessionHelper {
     // TODO: Fix this pls
     
     func getDayStreak() {
-        
     }
     
     private func evaluateDay(_ date: Date = Date()) {
