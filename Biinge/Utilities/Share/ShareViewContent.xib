@@ -150,6 +150,11 @@ with my total watch time of</string>
                     <rect key="frame" x="278" y="1061" width="77" height="74"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byt-Hp-wYb" customClass="CircularProgressView" customModule="Biinge" customModuleProvider="target">
+                    <rect key="frame" x="543" y="760" width="312" height="312"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Rhh-aA-fsp"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -158,6 +163,7 @@ with my total watch time of</string>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="accuracyRateLbl" destination="8E4-5p-jUv" id="YEa-7P-Z4K"/>
+                <outlet property="circularView" destination="Byt-Hp-wYb" id="5qj-1K-Xco"/>
                 <outlet property="longestStreakLbl" destination="Cci-BC-dSU" id="0Q6-0V-6js"/>
                 <outlet property="monthYearLbl" destination="Dse-66-QsA" id="ooK-Em-RhO"/>
                 <outlet property="sessionSuccessLbl" destination="8Vu-dS-P3D" id="U4k-ms-DOD"/>

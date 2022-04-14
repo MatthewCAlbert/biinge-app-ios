@@ -16,6 +16,7 @@ class ShareViewContent: UIView {
     @IBOutlet weak var totalWatchTimeLbl: UILabel!
     @IBOutlet weak var accuracyRateLbl: UILabel!
     @IBOutlet weak var userProfileImg: UIImageView!
+    @IBOutlet weak var circularView: CircularProgressView!
     
     override open func awakeFromNib() {
         super.awakeFromNib()
