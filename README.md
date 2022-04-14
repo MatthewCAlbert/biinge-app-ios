@@ -47,7 +47,8 @@
 - CallerID Profile Picture not yet working.
 - Welcome Onboarding Slider Dots will crash if pressed.
 - Profile Page, total point sometimes not updated.
-- Home Lifecycle, unknownly caused many visual bugs.
+- Notification only runs on the first break session
+- TargetEnd Miscalculation 
 
 ## Development
 
