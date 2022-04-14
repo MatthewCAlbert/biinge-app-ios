@@ -55,13 +55,22 @@
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" name="Primary"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" name="Primary"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="QAu-HT-ELL" kind="presentation" modalPresentationStyle="fullScreen" id="Cq6-f8-Ce5"/>
+                                    <action selector="onSlideBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0P1-cK-LeZ"/>
+                                    <segue destination="QAu-HT-ELL" kind="presentation" modalPresentationStyle="fullScreen" id="rbq-ch-uDl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-Dr-0Np">
+                                <rect key="frame" x="150" y="515" width="115" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
+                                <color key="textColor" name="Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,6 +84,7 @@
                         <outlet property="descLabel" destination="F3y-rX-fQb" id="HJA-1K-o2u"/>
                         <outlet property="rewardBtn" destination="R8y-WH-awm" id="IRf-G0-981"/>
                         <outlet property="timeUpBtn" destination="39D-Tw-w4N" id="nj0-LL-RdI"/>
+                        <outlet property="timerLabel" destination="UNy-Dr-0Np" id="C8m-X5-C5E"/>
                         <outlet property="titleLabel" destination="cor-r1-ipE" id="ev1-7t-uzK"/>
                     </connections>
                 </viewController>

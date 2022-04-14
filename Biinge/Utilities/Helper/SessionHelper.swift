@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 enum SessionEndMessageType: Int {
-    case none, failed, success, streak
+    case none, failed, success, streak, timeUp
 }
 
 // Message for Session End
@@ -20,9 +20,11 @@ struct SessionEndMessage {
 
 // Message for Frontend Timer
 struct SessionMessage: Codable {
-    var totalElapsedInSeconds: Int = 0
     var sessionElapsedInSeconds: Int = 0
+    var miniSessionElapsedInSeconds: Int = 0
+    var isPaused: Bool = false
     var running: Bool = false
+    var currentMiniSessionLengthSeconds: Int = 0
 }
 
 // Will also function as timer facade
@@ -30,9 +32,10 @@ class SessionHelper {
     
     static let shared = SessionHelper()
     let sessionRepository = SessionRepository.shared
+    let pointHistoryRepository = PointHistoryRepository.shared
     
     // MARK: Const
-    let minimumSessionCriteriaSeconds = 5
+    let minimumSessionCriteriaSeconds = 10
     
     // Predicate Helper
     let currentSessionPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
@@ -55,8 +58,10 @@ class SessionHelper {
     private var sessionTimer = Counter()
     private var sessionTimeSubscriber: AnyCancellable?
     
-    private var totalWatchDaySeconds: Int = 0
     private var notificationCalled: Bool = false
+    private var currentRunningSessionId: String?
+    
+    public var isLastMiniSession: Bool = false
     
     private init() {
         // Get the current calendar with local time zone
@@ -77,23 +82,26 @@ class SessionHelper {
         
         // Re-entry total watch time
         UserProfile.shared.points = self.getLifetimeTotalPoint()
-        self.totalWatchDaySeconds = self.getDayTotalTimeInSecond()
     }
     
     private func onTick(_ timeElapsed: Int) {
-        self.totalWatchDaySeconds += 1 // this maybe wont be accurate
-        self.sessionMessage.sessionElapsedInSeconds = timeElapsed
-        self.sessionMessage.totalElapsedInSeconds = self.totalWatchDaySeconds
+        self.sessionMessage.miniSessionElapsedInSeconds = timeElapsed
+        self.sessionMessage.sessionElapsedInSeconds += 1
         
         // Check for notification
-        if !self.notificationCalled {
-            let timeLimit = Settings.shared.sessionLengthInMinute * 60
-            let reminderBeforeSeconds = 60
-            if timeElapsed >= timeLimit - reminderBeforeSeconds {
+        if !self.notificationCalled && self.sessionMessage.miniSessionElapsedInSeconds > minimumSessionCriteriaSeconds {
+            let timeLimit = self.sessionMessage.currentMiniSessionLengthSeconds
+            let reminderBeforeSeconds = 45
+            if timeElapsed >= (timeLimit - reminderBeforeSeconds) {
                 // Send notification request
                 self.notificationCalled = true
+                
+                var sessionEndMessageObj = SessionEndMessage()
+                sessionEndMessageObj.type = SessionEndMessageType.timeUp
+                self.publishedEndSubject.send(sessionEndMessageObj)
+                
                 if Settings.shared.notificationType == NotificationPreferenceType.callNotif {
-                    CallHelper.shared.call(delayInitialSeconds: 1.5, timeoutSeconds: 60.0)
+                    CallHelper.shared.call(delayInitialSeconds: 1.5, timeoutSeconds: Double(reminderBeforeSeconds))
                     self.callNotification()
                 } else {
                     self.callNotification()
@@ -128,6 +136,7 @@ class SessionHelper {
         }
     }
     
+    // Start or resume
     func start() throws {
         // Check existing active session
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
@@ -135,10 +144,17 @@ class SessionHelper {
             NSPredicate(format: "appSession != %@", Settings.shared.currentSessionStart as NSDate)
         ])
         let founds = try sessionRepository.getAll(predicate: predicate)
+        let sessionId = self.currentRunningSessionId
         
         // Start Timer
+        if sessionId == nil {
+            self.sessionMessage.sessionElapsedInSeconds = 0
+        }
+        
         self.sessionTimer.start(0)
+        self.sessionMessage.isPaused = false
         self.sessionMessage.running = true
+        self.isLastMiniSession = false
         
         if !founds.isEmpty {
             _ = try sessionRepository.deleteMany(predicate: predicate)
@@ -156,15 +172,76 @@ class SessionHelper {
                 let newSession = Session()
                 newSession.start = Date()
                 newSession.end = nil
-                let targetEnd = NSDate().addMinutes(minutesToAdd: Settings.shared.sessionLengthInMinute
-                )
+                newSession.sessionId = sessionId
+                
+                // Calculate left target with rest
+                var availableRestSecond = Settings.shared.targetRestInMinute * 60
+                if let sessionId = sessionId {
+                    let commonSession = try sessionRepository.getAll(commonSessionId: sessionId)
+                    let sessionSpent = commonSession.reduce(0) { $0 + ($1.end != nil ? ($1.end! - $1.start!).second! : 0) }
+                    
+                    let maxSessionLength = Settings.shared.sessionLengthInMinute * 60
+                    // Is last session
+                    if maxSessionLength - sessionSpent <= availableRestSecond {
+                        availableRestSecond = maxSessionLength - sessionSpent
+                        self.isLastMiniSession = true
+                    }
+                }
+                self.sessionMessage.currentMiniSessionLengthSeconds = availableRestSecond
+                
+                let targetEnd = NSDate().addSeconds(secondsToAdd: availableRestSecond)
                 newSession.targetEnd = targetEnd as Date
                 
-                _ = try self.sessionRepository.create(newSession)
+                let createdSession = try self.sessionRepository.create(newSession, enableHeadSessionId: true)
+                self.currentRunningSessionId = createdSession.id
             } catch let error{
+                self.currentRunningSessionId = nil
                 self.abort()
                 throw error
             }
+        }
+    }
+    
+    func autoDeterminePauseEnd() throws {
+        if !self.isLastMiniSession {
+            try self.pause()
+        } else {
+            try self.end()
+        }
+    }
+    
+    // Rest
+    func pause() throws {
+        // Must find an active session
+        guard let found = try sessionRepository.getOneLastSession(isDone: false) else { return }
+        
+        // End timer
+        self.sessionTimer.end()
+        self.sessionMessage.miniSessionElapsedInSeconds = 0
+        self.sessionMessage.isPaused = true
+        
+        // End call if any
+        AppDelegate.shared.callManager.endFirst()
+        
+        // Add to active session record as PAUSED
+        do {
+            found.end = Date()
+            var sessionEndMessageObj = SessionEndMessage()
+            
+            // MARK: probably need to add extra requirement because it can be abused lol (spam start/end)
+            if (found.end! - found.start!).second! < minimumSessionCriteriaSeconds { // 5 seconds
+                self.abort()
+                publishedEndSubject.send(sessionEndMessageObj)
+                return
+            }
+            
+            if found.isObey()! {
+                try PointHelper.shared.addPoints(action: PointActionType.restSuccess)
+                sessionEndMessageObj.type = SessionEndMessageType.success
+            }
+        } catch let error{
+            self.abort()
+            throw error
         }
     }
     
@@ -175,6 +252,9 @@ class SessionHelper {
         // End timer
         self.sessionTimer.end()
         self.sessionMessage.running = false
+        self.sessionMessage.sessionElapsedInSeconds = 0
+        self.currentRunningSessionId = nil
+        self.isLastMiniSession = false
         
         // End call if any
         AppDelegate.shared.callManager.endFirst()
@@ -195,24 +275,16 @@ class SessionHelper {
                 let lastSession = try sessionRepository.getOneLastSession(isDone: true)
                 UserProfile.shared.accomplish += 1
                 
+                // add points streak
+                try PointHelper.shared.addPoints(action: PointActionType.sessionSuccess)
+                sessionEndMessageObj.type = SessionEndMessageType.streak
+                
                 if let lastSessionFound = lastSession {
                     if lastSessionFound.isObey()! {
-                        // add points streak
-                        try PointHelper.shared.addPoints(action: PointActionType.restSuccessStreak)
-                        
                         // add streak
                         found.streakCount = lastSessionFound.streakCount + 1
                         UserProfile.shared.streak = found.streakCount
-                        sessionEndMessageObj.type = SessionEndMessageType.streak
-                    } else {
-                        // add points non-streak
-                        try PointHelper.shared.addPoints(action: PointActionType.restSuccess)
-                        sessionEndMessageObj.type = SessionEndMessageType.success
                     }
-                } else {
-                    // add points non-streak
-                    try PointHelper.shared.addPoints(action: PointActionType.restSuccess)
-                    sessionEndMessageObj.type = SessionEndMessageType.success
                 }
             } else {
                 // if failed
@@ -241,30 +313,79 @@ class SessionHelper {
     
     func getLifetimeTotalPoint() -> Int {
         do {
-            let rows = try sessionRepository.getAll(predicate: NSPredicate(format: "end != nil"))
-            let res = rows.reduce(0) { $0 + (
-                $1.isObey()! ?
-                    $1.streakCount > 0 ? PointReward.restSuccessStreak : PointReward.restSuccess : 0
-            ) }
-            return res
+            let rows = try pointHistoryRepository.getAll(predicate: nil)
+            let res = rows.reduce(0) { $0 + $1.amount }
+            return Int(res)
         } catch {
             return 0
         }
     }
     
-    func getDayFinishedSessions(_ date: Date = Date()) -> [Session] {
+    func getDayStartEnd(_ date: Date = Date()) -> (NSDate, NSDate) {
         // Get today's beginning & end
         let dateFrom = calendar.startOfDay(for: date)
         let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
+        
+        return (dateFrom as NSDate, dateTo! as NSDate)
+    }
+    
+    func getFinishedSessions(_ date: Date? = nil, aggregateBreak: Bool = false) -> [Session] {
+        var predicate = [
+            NSPredicate(format: "end != nil")
+        ]
+        if let date = date {
+            let (dateFrom, dateTo) = self.getDayStartEnd(date)
+            predicate.append(NSPredicate(format: "start >= %@", dateFrom))
+            predicate.append(NSPredicate(format: "end < %@", dateTo))
+        }
+        let sortDescriptors = [
+            NSSortDescriptor(key: "start", ascending: true)
+        ]
+        
+        do {
+            let rows = try sessionRepository.getAll(predicate: NSCompoundPredicate(andPredicateWithSubpredicates: predicate), sortDescriptors: sortDescriptors)
+            if !aggregateBreak {
+                return rows
+            }
+            
+            // Aggregate Rows
+            if rows.isEmpty {
+                return []
+            }
+            
+            var newRows = [Session]()
+            var lastSessionId: String?
+            for row in rows {
+                if let lastSessionId = lastSessionId {
+                    if lastSessionId != row.sessionId {
+                        newRows.append(row)
+                    } else {
+                        // Same then shift end & targetEnd
+                        newRows.last?.end = row.end
+                        newRows.last?.targetEnd = row.targetEnd
+                        newRows.last?.streakCount = row.streakCount
+                    }
+                } else{
+                    newRows.append(row)
+                }
+                lastSessionId = row.sessionId!
+            }
+            return newRows
+        } catch {
+            return []
+        }
+    }
+    
+    func getDayPointHistory(_ date: Date = Date()) -> [PointHistory] {
+        let (dateFrom, dateTo) = self.getDayStartEnd(date)
 
         let todayPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
-            NSPredicate(format: "end != nil"),
-            NSPredicate(format: "start >= %@", dateFrom as NSDate),
-            NSPredicate(format: "end < %@", dateTo! as NSDate)
+            NSPredicate(format: "createdAt >= %@", dateFrom ),
+            NSPredicate(format: "createdAt < %@", dateTo)
         ])
         
         do {
-            let rows = try sessionRepository.getAll(predicate: todayPredicate)
+            let rows = try pointHistoryRepository.getAll(predicate: todayPredicate)
             return rows
         } catch {
             return []
@@ -272,7 +393,7 @@ class SessionHelper {
     }
     
     func getDayDoneSessionSuccessAndFail(_ date: Date = Date()) -> (Int, Int) {
-        let rows = self.getDayFinishedSessions(date)
+        let rows = self.getFinishedSessions(date, aggregateBreak: true)
         var accPerDay: Int = 0
         var excPerDay: Int = 0
         for row in rows {
@@ -286,22 +407,19 @@ class SessionHelper {
     }
   
     func getDayTotalTimeInSecond(_ date: Date = Date()) -> Int {
-        let rows = self.getDayFinishedSessions(date)
+        let rows = self.getFinishedSessions(date)
         let res = rows.reduce(0) { $0 + (($1.end! - $1.start!).second ?? 0) }
         return res
     }
     
     func getDayTotalPoint(_ date: Date = Date()) -> Int {
-        let rows = self.getDayFinishedSessions(date)
-        let res = rows.reduce(0) { $0 + (
-            $1.isObey()! ?
-                $1.streakCount > 0 ? PointReward.restSuccessStreak : PointReward.restSuccess : 0
-        ) }
-        return res
+        let rows = self.getDayPointHistory(date)
+        let res = rows.reduce(0) { $0 + $1.amount }
+        return Int(res)
     }
     
     func getDayStreak(_ date: Date = Date()) -> Int {
-        let rows = self.getDayFinishedSessions(date)
+        let rows = self.getFinishedSessions(date, aggregateBreak: true)
         let res = rows.reduce(0) { $0 + (
             $1.isObey()! ?
                 $1.streakCount > 0 ? 1 : 0 : 0
@@ -311,23 +429,6 @@ class SessionHelper {
 
     func getDayTotalTimeInMinute(_ date: Date = Date()) -> Int {
         return self.getDayTotalTimeInSecond(date) / 60
-    }
-    
-    
-    // MARK: Down below is unfinished or ambiguous functions
-    // TODO: Fix this pls
-    
-    func getDayStreak() {
-    }
-    
-    private func evaluateDay(_ date: Date = Date()) {
-        let dateFrom = calendar.startOfDay(for: date)
-        let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
-        if (date as NSDate).isLessThanDate(dateToCompare: dateTo! as NSDate) {
-            print("Cannot evaluate non-passed day")
-            return
-        }
-        // TODO: if failed target
     }
     
     

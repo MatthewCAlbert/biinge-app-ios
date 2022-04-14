@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class SetTimeViewController: UIViewController {
     
@@ -13,13 +14,33 @@ class SetTimeViewController: UIViewController {
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var breakTimePicker: UIPickerView!
     
-    let breakChoice = ["15", "20", "30", "45", "60"]
-    var strBreakTime: String = ""
+    let breakChoice = ["01", "02", "15", "20", "30", "45", "60"]
+    var strBreakTime: String = "0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         breakTimePicker.dataSource = self
         breakTimePicker.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let currentSessionLength = Settings.shared.sessionLengthInMinute * 60
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "HH:mm"
+        let (h, m, _) = (currentSessionLength / 3600, (currentSessionLength % 3600) / 60, (currentSessionLength % 3600) % 60)
+        let date = dateFormatter.date(from: "\(h):\(m)")
+        watchTimePicker.date = date!
+        
+        self.setBreakDefaultValue(item: String(Settings.shared.targetRestInMinute))
+    }
+    
+    func setBreakDefaultValue(item: String){
+        if let indexPosition = breakChoice.firstIndex(of: item){
+            breakTimePicker.selectRow(indexPosition, inComponent: 0, animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,13 +66,21 @@ class SetTimeViewController: UIViewController {
         
         
         //Set Time Limit Message
-        homeVC.watchLimitMessage = "remaining from \(hoursWatchLimitTime)h \(minutesWatchLimitTime)m of your watch time limit"
-        homeVC.breakLimitMessage = "minutes remaining from \(strBreakTime) minutes of your break time"
+        SetTimerRelay.shared.sessionMessage.watchReminderLabel = "remaining from \(hoursWatchLimitTime)h \(minutesWatchLimitTime)m of your watch time limit"
+        SetTimerRelay.shared.sessionMessage.breakReminderLabel = "minutes remaining from \(strBreakTime) minutes of your break time"
         
         let totalWatchMinutes = (Int(hoursWatchLimitTime) ?? 0) * 60 + (Int(minutesWatchLimitTime) ?? 0)
         
+        var decidedBreak = Int(strBreakTime) ?? 0
+        if decidedBreak < 1 {
+            decidedBreak = 1
+        }
+        
         Settings.shared.sessionLengthInMinute = totalWatchMinutes
-        Settings.shared.targetRestInMinute = Int(strBreakTime) ?? 0
+        Settings.shared.targetRestInMinute = decidedBreak
+        SetTimerRelay.shared.sessionMessage.sessionTimerLimitSeconds = totalWatchMinutes * 60
+        SetTimerRelay.shared.sessionMessage.breakTimerLimitSeconds = decidedBreak
+        
         
     }
     

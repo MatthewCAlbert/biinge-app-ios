@@ -37,40 +37,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JJI-gW-XUP" customClass="CircularProgressView" customModule="Biinge" customModuleProvider="target">
+                                <rect key="frame" x="50" y="267" width="296" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="remaining from 03h 00m of your watch time limit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcP-Tg-o5Z">
-                                <rect key="frame" x="81" y="426" width="228" height="93"/>
+                                <rect key="frame" x="81" y="414" width="228" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Une-TK-3sY">
-                                <rect key="frame" x="16" y="367" width="358" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--:--:--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Une-TK-3sY">
+                                <rect key="frame" x="16" y="355" width="358" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="80"/>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="64"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5c-es-XKl">
-                                <rect key="frame" x="16" y="367" width="358" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--:--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5c-es-XKl">
+                                <rect key="frame" x="16" y="355" width="358" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="80"/>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="64"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mja-1z-41M">
-                                <rect key="frame" x="242" y="638" width="104" height="48"/>
+                                <rect key="frame" x="50" y="626" width="104" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start" cornerStyle="medium">
-                                    <color key="baseBackgroundColor" red="0.023529411764705882" green="0.37254901960784315" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play" cornerStyle="medium">
+                                    <color key="baseBackgroundColor" name="Blue"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hBa-87-HTc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EET-a8-TPz">
+                                <rect key="frame" x="242" y="626" width="104" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="End" cornerStyle="medium">
+                                    <color key="baseBackgroundColor" name="BurningRed"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="endPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wBK-Ct-wNo"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hm-ge-x56">
-                                <rect key="frame" x="45" y="638" width="104" height="48"/>
+                                <rect key="frame" x="129" y="691" width="133" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Set time" cornerStyle="medium">
@@ -89,22 +105,22 @@
                                     <action selector="changeModePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yNf-xZ-S0a"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can start your binge-watching session.                 No worries, we will remind the times!" textAlignment="center" lineBreakMode="clip" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-5t-5lh">
-                                <rect key="frame" x="31" y="117" width="329" height="145"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can start your binge-watching session.                 No worries, we will remind the times!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-5t-5lh">
+                                <rect key="frame" x="31" y="159" width="329" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="minutes remaining from 30 minutes of your break time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4A-gW-U6V">
-                                <rect key="frame" x="68" y="426" width="255" height="93"/>
+                                <rect key="frame" x="68" y="414" width="255" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                                 <color key="textColor" name="Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm2-Lm-5LM">
-                                <rect key="frame" x="348" y="56" width="26" height="37"/>
+                                <rect key="frame" x="348" y="44" width="26" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.023529411764705882" green="0.37254901960784315" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
@@ -113,8 +129,8 @@
                                     <action selector="infoPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Nej-NF-1Wu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi, Username!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-9Y-6ZL">
-                                <rect key="frame" x="31" y="117" width="315" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi, Username!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-9Y-6ZL">
+                                <rect key="frame" x="38" y="75" width="315" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="30"/>
                                 <color key="textColor" name="Black"/>
@@ -129,7 +145,10 @@
                     <connections>
                         <outlet property="breakReminderLabel" destination="f4A-gW-U6V" id="i6p-HK-ndk"/>
                         <outlet property="breakTimeLabel" destination="T5c-es-XKl" id="5Es-Hi-rbA"/>
+                        <outlet property="endBtn" destination="EET-a8-TPz" id="AJ8-JP-9rA"/>
+                        <outlet property="progressBarView" destination="JJI-gW-XUP" id="rjH-0s-870"/>
                         <outlet property="setTimeBtn" destination="8Hm-ge-x56" id="Il0-Yv-EY4"/>
+                        <outlet property="subtitleLbl" destination="AFk-5t-5lh" id="pOx-W3-G0j"/>
                         <outlet property="timerStartEndBtn" destination="Mja-1z-41M" id="VQ6-3z-4iq"/>
                         <outlet property="usernameLabel" destination="g1P-9Y-6ZL" id="mDy-6Q-Nlw"/>
                         <outlet property="watchReminderLabel" destination="FcP-Tg-o5Z" id="ED0-bv-bor"/>
@@ -138,6 +157,7 @@
                         <segue destination="ViP-b4-PvT" kind="presentation" identifier="homeToBreakSplash" modalPresentationStyle="fullScreen" id="cTc-Bu-ytI"/>
                         <segue destination="xC5-1o-wAI" kind="presentation" identifier="homeToStreakSplash" modalPresentationStyle="fullScreen" id="P7S-D3-7Jq"/>
                         <segue destination="TwB-TA-N7D" kind="presentation" identifier="homeToFailSplash" modalPresentationStyle="fullScreen" id="L7o-wY-qcZ"/>
+                        <segue destination="bWn-Tu-9MY" kind="presentation" identifier="homeToRestPulsing" modalPresentationStyle="fullScreen" id="e35-j8-eaV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,6 +305,14 @@
             </objects>
             <point key="canvasLocation" x="1173" y="545"/>
         </scene>
+        <!--TimeUp-->
+        <scene sceneID="tvl-Bf-0Zq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TimeUp" id="bWn-Tu-9MY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyW-1X-C24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="545"/>
+        </scene>
     </scenes>
     <resources>
         <image name="film" catalog="system" width="128" height="93"/>
@@ -292,6 +320,12 @@
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="Black">
             <color red="0.086000002920627594" green="0.086000002920627594" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue">
+            <color red="0.024000000208616257" green="0.37299999594688416" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BurningRed">
+            <color red="1" green="0.11800000071525574" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DisabledBtn">
             <color red="0.83471196889999999" green="0.83471196889999999" blue="0.83471196889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

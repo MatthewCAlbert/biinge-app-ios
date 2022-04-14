@@ -9,7 +9,7 @@ import Foundation
 
 struct PointReward {
     static let restSuccess = 5
-    static let restSuccessStreak = 10
+    static let sessionSuccess = 10
 }
 
 
@@ -26,8 +26,8 @@ class PointHelper {
         switch action {
             case .restSuccess:
                 newHistory.amount = Int32(PointReward.restSuccess)
-            case .restSuccessStreak:
-                newHistory.amount = Int32(PointReward.restSuccessStreak)
+            case .sessionSuccess:
+                newHistory.amount = Int32(PointReward.sessionSuccess)
         }
         newHistory.createdAt = Date()
         newHistory.action = action

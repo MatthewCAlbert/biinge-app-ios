@@ -110,7 +110,7 @@ class CallHelper {
         
         // Do something here
         do {
-            try SessionHelper.shared.end()
+            try SessionHelper.shared.autoDeterminePauseEnd()
         } catch {
 
         }

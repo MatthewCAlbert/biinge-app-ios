@@ -71,4 +71,11 @@ extension NSDate {
         //Return Result
         return dateWithMinutesAdded
     }
+    
+    func addSeconds(secondsToAdd: Int) -> NSDate {
+        let dateWithSecondsAdded: NSDate = self.addingTimeInterval(Double(secondsToAdd))
+
+        //Return Result
+        return dateWithSecondsAdded
+    }
 }

@@ -44,6 +44,13 @@ class SessionRepository {
             throw error
         }
     }
+    
+    func getAll(commonSessionId: String) throws -> [Session] {
+        let sortDescriptors = [
+            NSSortDescriptor(key: "start", ascending: false)
+        ]
+        return try self.getAll(predicate: NSPredicate(format: "sessionId == %@", commonSessionId), sortDescriptors: sortDescriptors)
+    }
 
     func getOne(predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]? = nil) throws -> Session? {
         let result = self.repository.get(predicate: predicate, sortDescriptors: sortDescriptors)
@@ -118,7 +125,7 @@ class SessionRepository {
         }
     }
     
-    func create(_ entity: Session) throws -> Session {
+    func create(_ entity: Session, enableHeadSessionId: Bool = false) throws -> Session {
         let result = repository.create()
         switch result {
         case .success(let session):
@@ -131,7 +138,11 @@ class SessionRepository {
             session.end = entity.end
             session.targetEnd = entity.targetEnd
             session.appSession = entity.appSession ?? Settings.shared.currentSessionStart
-            session.sessionId = entity.sessionId != nil ? UUID(uuidString: entity.sessionId!) : nil
+            if enableHeadSessionId {
+                session.sessionId = entity.sessionId != nil ? UUID(uuidString: entity.sessionId!) : session.id
+            } else {
+                session.sessionId = entity.sessionId != nil ? UUID(uuidString: entity.sessionId!) : nil
+            }
             session.streakCount = Int32(entity.streakCount)
             
             if !self.repository.save() {

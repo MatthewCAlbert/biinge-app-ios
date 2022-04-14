@@ -38,6 +38,7 @@
 		4C123E2128055CEA00D788DA /* ShareViewContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C123E2028055CEA00D788DA /* ShareViewContent.xib */; };
 		4C123E232805609D00D788DA /* ShareViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C123E222805609D00D788DA /* ShareViewContent.swift */; };
 		4C43C4D42805CE940067B111 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43C4D32805CE940067B111 /* Toast.swift */; };
+		4C43C4D628076FD40067B111 /* SetTimerRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43C4D528076FD40067B111 /* SetTimerRelay.swift */; };
 		4C60567327FFF4100022D107 /* SFCompactDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */; };
 		4C60567427FFF4100022D107 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */; };
 		4C60567527FFF4100022D107 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */; };
@@ -117,6 +118,7 @@
 		4C123E2028055CEA00D788DA /* ShareViewContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareViewContent.xib; sourceTree = "<group>"; };
 		4C123E222805609D00D788DA /* ShareViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewContent.swift; sourceTree = "<group>"; };
 		4C43C4D32805CE940067B111 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		4C43C4D528076FD40067B111 /* SetTimerRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerRelay.swift; sourceTree = "<group>"; };
 		4C60566F27FFF4100022D107 /* SFCompactDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		4C60567027FFF4100022D107 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		4C60567127FFF4100022D107 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 				4C123DFB2804278200D788DA /* SessionHelper.swift */,
 				4C123E0228044CC200D788DA /* PointHelper.swift */,
 				4C123E0E2804656E00D788DA /* CallHelper.swift */,
+				4C43C4D528076FD40067B111 /* SetTimerRelay.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				3391DFBF2804636B00DD3C30 /* BreakViewController.swift in Sources */,
 				3CEED7162806BF5F003BC9C3 /* Pulse.swift in Sources */,
 				4C97D10A27FE09D6005989A7 /* SceneDelegate.swift in Sources */,
+				4C43C4D628076FD40067B111 /* SetTimerRelay.swift in Sources */,
 				3CEED7142806B927003BC9C3 /* TimeUpViewController.swift in Sources */,
 				4C90F16B2802E11400C9FF4F /* CoreDataRepository.swift in Sources */,
 				4C123E0D2804619400D788DA /* CallAudio.swift in Sources */,
@@ -824,7 +828,7 @@
 				CODE_SIGN_ENTITLEMENTS = Biinge/Biinge.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
@@ -839,7 +843,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = morning.group11.biinge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -857,7 +861,7 @@
 				CODE_SIGN_ENTITLEMENTS = Biinge/Biinge.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GXV96JYG87;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Biinge/Info.plist;
@@ -872,7 +876,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = morning.group11.biinge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
