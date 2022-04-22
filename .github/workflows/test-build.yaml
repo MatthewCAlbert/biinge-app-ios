@@ -30,6 +30,6 @@ jobs:
         run: |
           xcodebuild -project Biinge.xcodeproj \
             -scheme Biinge \
-            -destination 'platform:iOS Simulator,OS:${{ matrix.ios }},name:iPhone'
+            -destination 'platform=iOS Simulator,OS=${{ matrix.ios }},name=iPhone'
             build \
             | xcpretty && exit ${PIPESTATUS[0]}
