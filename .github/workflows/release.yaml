@@ -1,0 +1,22 @@
+name: CD TestFlight
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*.*.*'
+    paths-ignore:
+      - '**/README.md'
+
+jobs:
+  build-and-deploy:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: echo "Test Release"
+
+      - name: Deploy
+        run: echo "Test Release"
