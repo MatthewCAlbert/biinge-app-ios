@@ -22,3 +22,4 @@ jobs:
           project: Biinge.xcodeproj
           configuration: Release
           action: build
+          allow-provisioning-updates: true
