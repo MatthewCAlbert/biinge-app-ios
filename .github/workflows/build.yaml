@@ -12,19 +12,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v1
 
-      - uses: yukiarrr/ios-build-action@v1.5.0
-        with:
-          project-path: Biinge.xcodeproj
-          p12-base64: ${{ secrets.P12_BASE64 }}
-          mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
-          certificate-password: ${{ secrets.CERTIFICATE_PASSWORD }}
-          code-signing-identity: 'iPhone Developer'
-          export-method: 'development'
-          build-sdk: 'iOS 15.0'
-          build-destination: 'generic/platform=iOS'
-          team-id: ${{ secrets.TEAM_ID }}
+      - name: Force XCode 11.3
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+
+      - name: Build Test
+        run: xcodebuild clean build -project Biinge.xcodeproj
