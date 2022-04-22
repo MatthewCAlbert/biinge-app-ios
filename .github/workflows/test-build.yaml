@@ -21,6 +21,4 @@ jobs:
         with:
           project: Biinge.xcodeproj
           configuration: Release
-          scheme: Biinge
-          destination: platform=iOS
           action: build
