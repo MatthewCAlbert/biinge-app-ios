@@ -18,6 +18,7 @@ jobs:
       matrix:
         include:
           - ios: "15.0"
+          - destination: platform=iOS Simulator,OS=15.0,name=iPhone 13
 
     steps:
       - uses: actions/checkout@v2
@@ -26,9 +27,20 @@ jobs:
         with:
           xcode-version: '13.1'
 
-      - name: Build Test (${{ matrix.ios }})
+      - name: Build (${{ matrix.ios }})
         run: |
           xcodebuild -project Biinge.xcodeproj \
             -scheme Biinge \
-            -destination 'platform=iOS Simulator,OS=${{ matrix.ios }},name=iPhone 13' \
-            build | xcpretty && exit ${PIPESTATUS[0]}
+            -destination '${{matrix.destination}}' \
+            build \
+            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO \
+            | xcpretty && exit ${PIPESTATUS[0]}
+
+      # - name: Test (${{ matrix.ios }})
+      #   run: |
+      #     xcodebuild -project Biinge.xcodeproj \
+      #       -scheme Biinge \
+      #       -destination '${{matrix.destination}}' \
+      #       clean test \
+      #       CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO \
+      #       | xcpretty && exit ${PIPESTATUS[0]}
